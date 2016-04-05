@@ -1,0 +1,38 @@
+.banneralert{
+	/*position:fixed;
+	  width:100%;
+	  left:0;
+	Add by js */
+
+	background:#F43530;/* for IE8- */
+	background:rgba(0.95,0.21,0.19,.75);
+	font-family:"微软雅黑", "Microsoft Yahei";
+	font-size:13px;
+}
+.banneralert .bannercontainer{
+	margin:2px 8px;/* Do not use padding in ".banneralert", use margin here. */
+}
+.banneralert .bannertitlebar{
+	color:#FFF;
+	font-weight:bold;
+	margin-bottom:1px;
+}
+.banneralert .bannericon{
+	height:16px;
+	width:16px;
+	margin-right:7px;
+	vertical-align:middle;
+}
+.banneralert .bannercontent{
+	color:#FFF;
+}
+.banneralert .bannerhandle{
+	text-align:center;
+	height:6px;
+	width:35px;
+	background:#999;
+	border-radius:3px;
+	margin:3px auto;
+	cursor:hand;/* for IE6- */
+	cursor:pointer;
+}

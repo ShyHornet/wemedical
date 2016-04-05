@@ -1,0 +1,24 @@
+[ 2016-04-03T11:06:57+08:00 ] ::1 /wemedical/login&signup/signup.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001678s ]
+ERR: 无法加载模块:Login&signup/signup
+
+[ 2016-04-03T11:07:02+08:00 ] ::1 /wemedical/login&signup/signup.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+ERR: 无法加载模块:Login&signup/signup
+
+[ 2016-04-03T11:07:06+08:00 ] ::1 /wemedical/login&signup/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+ERR: 无法加载模块:Login&signup
+
+[ 2016-04-03T11:07:06+08:00 ] ::1 /wemedical/login&signup/signup.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+ERR: 无法加载模块:Login&signup/signup
+
