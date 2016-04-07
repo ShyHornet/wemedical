@@ -5,7 +5,6 @@ body {
   font-family: "Lato-Light";
   height: 100%;
   -webkit-tap-highlight-color: transparent;
-  background-color: #fbf9fe;
   display: block;
 }
 * {
@@ -25,7 +24,7 @@ body {
   font-family: "Lato-Light";
   text-align: center;
   font-size: 34px;
-  color: #50e3c2;
+  color: #26bd9f;
   font-weight: 300;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -35,42 +34,78 @@ body {
   margin-bottom: 10px;
 }
 .content {
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  min-height: 400px;
+  margin-bottom: 40px;
 }
-footer {
+div.panel_top {
+  height: 40px;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 5px solid #34495e;
+  background-color: #1abc9c;
+}
+div.panel_top .p_l {
+  color: #fff;
+  font-size: 18px;
+  margin: 13px auto 13px 10%;
+  max-width: 4em;
+}
+div.panel_top .p_r {
+  color: #fff;
+  font-size: 18px;
+  right: 15%;
+  max-width: 6em;
+  position: absolute;
+}
+div.panel_bottom {
+  height: 40px;
+  border-radius: 0px 0px 20px 20px;
+  border-bottom: 5px solid #34495e;
+  background-color: #1abc9c;
+}
+div.panel_bottom .p_l {
+  color: #fff;
+  font-size: 18px;
+  margin: 13px auto 13px 10%;
+  max-width: 4em;
+}
+div.panel_bottom .p_r {
+  color: #fff;
+  font-size: 18px;
+  right: 15%;
+  max-width: 6em;
+  position: absolute;
+}
+div.panel_middle {
+  padding: 15px;
+  background-color: #ecf0f1;
+}
+div.panel_middle img {
+  width: 72px;
+  height: 72px;
+  border: 3px solid #1abc9c;
+  border-radius: 72px;
+  margin: 0 auto 0 10px;
+}
+div.panel_middle_section {
+  border-top: 3px solid #ddd;
+  padding: 15px;
+  background-color: #ecf0f1;
+}
+div.panel_middle_section img {
+  width: 72px;
+  height: 72px;
+  border: 3px solid #1abc9c;
+  border-radius: 72px;
+  margin: 0 auto 0 10px;
+}
+div.panel {
   margin-top: 20px;
-  background-color: #50e3c2;
-  border-top: thin solid #cacaca;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  bottom: 0px;
-  font-weight: 300;
 }
-footer p {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 2.5px;
-  margin-bottom: 2.5px;
+.icon {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  fill: currentColor;
 }
-div.result {
-  border: 1px solid #E5E5E5;
-  background: #FFC;
-  color: #F12C20;
-  padding: 8px 20px;
-  float: auto;
-  margin: 20px;
-  display: none;
-}
-.weui_cell_ft > a {
-  margin-top: 15px;
-  margin-bottom: 15px;
+svg {
+  color: #26bd9f;
 }

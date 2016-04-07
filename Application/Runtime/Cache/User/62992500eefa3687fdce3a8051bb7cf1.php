@@ -7,61 +7,97 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
+<link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
+
 <meta >
 <title>微信挂号平台</title>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="/wemedical/Public/JS/flat-ui.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
 <script src="/wemedical/Public/JS/banneralert.min.js"></script>
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
-<script src="/wemedical/Public/JS/city-picker.js"></script>
-<script src="/wemedical/Public/JS/jquery-weui.js"></script>
+
+<!-- <script src="/wemedical/Public/JS/jquery-weui.js"></script> -->
 
 <script src="/wemedical/Public/JS/jquery.form.js"></script>
 <script src="/wemedical/Public/JS/jquery.cookie.js"></script>
+
+  <script src="/wemedical/Public/JS/main.js"></script>
 </head>
 
 
 
 <body>
-  <div class="header">
-    <div class="page_title">
-      微信挂号平台
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+        <div class="navbar-brand" >
+          <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
+          <a  href="#" >微挂号</a>
+        </div>
+
     </div>
-    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-01">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#fakelink">医院信息</a></li>
+        <li><a href="#fakelink">预约挂号</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" action="#" role="search">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生">
+            <span class="input-group-btn">
+              <button type="submit" class="btn"><span class="fui-search"></span></button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div><!-- /.navbar-collapse -->
+    </nav><!-- /navbar -->
+    <div class="container-fluid"style="margin-top:40px;margin-bottom:120px;">
+        <div class="content">
   <form id="loginForm" method="get" action="">
 
-  <div class="content">
-
-      <div class="weui_cells weui_cells_form">
-        <div class="weui_cell" id="name">
-          <div class="weui_cell_hd"><label class="weui_label" >姓名</label>
-          </div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="text"  name="name" placeholder="请输入真实姓名" >
-          </div>
+    <div class="row-fluid">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" id="name" placeholder="请输入真实姓名"/>
+            </div>
         </div>
-        <div class="weui_cell">
-          <div class="weui_cell_hd"><label class="weui_label" >身份证</label>
-          </div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="text" id="id_card" name="id_card" placeholder="请输入身份证号" required>
-          </div>
-        </div>
-
-      </div>
-      <div class="weui_cells_title">登陆角色(医生为医院内部注册)</div>
-      <div class="weui_cells weui_cells_form">
-              <div class="weui_cell weui_cell_switch">
-                  <div class="weui_cell_hd weui_cell_primary">医生</div>
-                  <div class="weui_cell_ft">
-                      <input class="weui_switch" type="checkbox"/>
-                  </div>
-              </div>
-          </div>
-    <a href="User-index-signup" target="_self" ><div class="weui_cells_tips" align="center" > 没有账号？立即注册</div></a>
-    <input class="weui_btn weui_btn_primary" type="submit" id="login" value="登陆">
     </div>
+    <div class="row-fluid">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input class="form-control" type="text" name="id_card" id="id_card_num" placeholder="请输入身份证号码"/>
+            </div>
+        </div>
+    </div>
+
+      <div class="weui_cells_title">登陆角色(医生为医院内部注册)</div>
+      <div class="row-fluid">
+        <div class="col-lg-6">
+          <select class="form-control select select-primary select-block mbl">
+              <optgroup label="角色">
+                  <option value="1">患者</option>
+                  <option value="0">医生</option>
+              </optgroup>
+          </select>
+        </div>
+      </div>
+    <div class="weui_cells_tips" align="center" > <a href="User-index-signup" target="_self" >没有账号？立即注册</a></div>
+    <center>
+        <button class="btn btn-hg btn-primary btn-wide" style="margin-top:20px;" id="login">登录</button>
+    </center>
     </form>
+      </div>
+  </div>
+
     <script>
+$("select").select2({dropdownCssClass: 'dropdown-inverse'});
 	$.validator.setDefaults({
 
 		submitHandler: function() {

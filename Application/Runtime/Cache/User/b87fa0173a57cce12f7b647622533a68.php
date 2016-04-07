@@ -1,5 +1,5 @@
+<?php if (!defined('THINK_PATH')) exit();?>
 
-{__NOLAYOUT__}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
     <!-- Loading Bootstrap -->
-    <link href="__PUBLIC__/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-    <link href="__PUBLIC__/css/flat-ui.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/weui.min.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/main.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/banneralert.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery-weui.css">
-    <script src="__PUBLIC__/JS/jquery-weui.js"></script>
-    <script src="__PUBLIC__/JS/flat-ui.min.js"></script>
+    <link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
+    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
+    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
+    <script src="/wemedical/Public/JS/jquery-weui.js"></script>
+    <script src="/wemedical/Public/JS/flat-ui.min.js"></script>
 
 
 
@@ -37,7 +37,7 @@
         <span class="sr-only">Toggle navigation</span>
       </button>
         <div class="navbar-brand" >
-          <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="__PUBLIC__/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
+          <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
           <a  href="#" >微挂号</a>
         </div>
 
@@ -61,36 +61,35 @@
     </nav><!-- /navbar -->
     <div class="container-fluid">
 
-<volist name="list" id="vo">
-<div class="panel">
+<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel">
 <div class="panel_top">
   <p style="width:90%">
-    <span class="p_l">{$vo.name}</span>
-    <span class="p_r">{$vo.title}</span>
+    <span class="p_l"><?php echo ($vo["name"]); ?></span>
+    <span class="p_r"><?php echo ($vo["title"]); ?></span>
   </p>
 </div>
 <div class="panel_middle">
-    <img src="__PUBLIC__/images/img.png" alt="" />
+    <img src="/wemedical/Public/images/img.png" alt="" />
     <span style="position:absolute;right:20%">
     <ul style="list-style:none;">
-      <li>科室:{$vo.department}</li>
-      <li>专长:{$vo.specialism}</li>
-      <li><a data-toggle="collapse" data-target="#panle-collapse-{$i}">查看简介</a></li>
+      <li>科室:<?php echo ($vo["department"]); ?></li>
+      <li>专长:<?php echo ($vo["specialism"]); ?></li>
+      <li><a data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>">查看简介</a></li>
 
 </div>
-<div class="collapse" id="panle-collapse-{$i}">
+<div class="collapse" id="panle-collapse-<?php echo ($i); ?>">
  <div class="panel_middle_section">
-    <span style="margin-left:90%;" id="panle-collapse-{$i}-close" class="fui-cross-circle"  aria-hidden="false"></span><br>
+    <span style="margin-left:90%;" id="panle-collapse-<?php echo ($i); ?>-close" class="fui-cross-circle"  aria-hidden="false"></span><br>
     <a>简介</a>
-    <p>{$vo.intro}</p>
+    <p><?php echo ($vo["intro"]); ?></p>
     <a>专家出诊时间:</a>
-    <p>周日：8:30~12:00</p><a data-toggle="collapse" data-target="#panle-collapse-{$i}-1">查看排班表</a>
+    <p>周日：8:30~12:00</p><a data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>-1">查看排班表</a>
  </div>
 </div>
-<div class="collapse" id="panle-collapse-{$i}-1">
+<div class="collapse" id="panle-collapse-<?php echo ($i); ?>-1">
 <div class="panel_middle_section">
 
-   <span style="margin-left:90%;" class="fui-cross-circle" id="panle-collapse-{$i}-1-close" aria-hidden="true"></span><br>
+   <span style="margin-left:90%;" class="fui-cross-circle" id="panle-collapse-<?php echo ($i); ?>-1-close" aria-hidden="true"></span><br>
    <a>简介</a>
    <p>擅长治疗 擅用虫类药治疗疑难病证。对类风湿性关节炎、风湿性关节炎、退行性关节病、结节病、荨麻疹、银屑病、冠心病、糖尿病、浅表性胃炎、有较好的疗效。</p>
    <a>专家出诊时间:</a>
@@ -100,21 +99,20 @@
 <div class="panel_bottom">
   <p style="width:90%">
 
-    <span class="p_l">剩余号源: {$vo.register_remains}</span>
+    <span class="p_l">剩余号源: <?php echo ($vo["register_remains"]); ?></span>
     <span class="p_r">立即预约</span>
   </p>
 </div>
 </div>
 <script>
-$("#panle-collapse-{$i}-close").click(function(){
-       $("#panle-collapse-{$i}").collapse('hide');
+$("#panle-collapse-<?php echo ($i); ?>-close").click(function(){
+       $("#panle-collapse-<?php echo ($i); ?>").collapse('hide');
 });
-$("#panle-collapse-{$i}-1-close").click(function(){
-       $("#panle-collapse-{$i}-1").collapse('hide');
+$("#panle-collapse-<?php echo ($i); ?>-1-close").click(function(){
+       $("#panle-collapse-<?php echo ($i); ?>-1").collapse('hide');
 });
 
-</script>
-</volist>
+</script><?php endforeach; endif; else: echo "" ;endif; ?>
 
 </div>
 <footer>
