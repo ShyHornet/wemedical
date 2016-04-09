@@ -30,48 +30,52 @@
 
 
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-        <div class="navbar-brand" >
-          <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
-          <a  href="#" >微挂号</a>
-        </div>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+      <div class="navbar-brand" style="padding-top:5px;">
+        <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
+      </div>
 
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-01">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#fakelink">医院信息</a></li>
-        <li><a href="#fakelink">预约挂号</a></li>
-      </ul>
-      <form class="navbar-form navbar-right" action="#" role="search">
-        <div class="form-group">
-          <div class="input-group">
-            <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生">
-            <span class="input-group-btn">
-              <button type="submit" class="btn"><span class="fui-search"></span></button>
-            </span>
-          </div>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav">
+      <li ><a href="#fakelink">医院信息</a></li>
+        <li class="active"><a href="#fakelink">登陆注册</a></li>
+      <li><a href="#fakelink">预约挂号</a></li>
+      <li><a href="#fakelink">我的预约</a></li>
+      <li><a href="#fakelink">个人中心</a></li>
+    </ul>
+    <form class="navbar-form navbar-right" action="#" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
+          <span class="input-group-btn">
+            <button type="submit" class="btn"><span class="fui-search"></span></button>
+          </span>
         </div>
-      </form>
-    </div><!-- /.navbar-collapse -->
-    </nav><!-- /navbar -->
+      </div>
+    </form>
+  </div><!-- /.navbar-collapse -->
+  </nav><!-- /navbar -->
     <div class="container-fluid"style="margin-top:40px;margin-bottom:120px;">
         <div class="content">
   <form id="loginForm" method="get" action="">
 
     <div class="row-fluid">
         <div class="col-lg-6">
-            <div class="form-group">
+            <div class="form-group input-group">
+                <span class="input-group-addon" >姓名</span>
                 <input class="form-control" type="text" name="name" id="name" placeholder="请输入真实姓名"/>
             </div>
         </div>
     </div>
     <div class="row-fluid">
         <div class="col-lg-6">
-            <div class="form-group">
+            <div class="form-group input-group">
+              <span class="input-group-addon" >身份证</span>
                 <input class="form-control" type="text" name="id_card" id="id_card_num" placeholder="请输入身份证号码"/>
             </div>
         </div>

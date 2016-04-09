@@ -35,7 +35,7 @@ $(function(){
   $('#form').ajaxForm({
     beforeSubmit:function(){
 //       $('#result').html('').hide();
-//       $.post('/wemedical/index.php/User-Index-checkIdUnique-id-'+$('#idCard_num').val(),function(data){
+//       $.post('/wemedical/index.php/Home-Login-checkIdUnique-id-'+$('#idCard_num').val(),function(data){
 // if (data.status==0){
 //   $('#result').html(data.info).show();
 //         // $("body").showbanner({
@@ -50,7 +50,7 @@ $(function(){
     },
     success:function(data){
       if(data.status==1){
-       window.location.href = '/wemedical/index.php/User-Index-login';
+       window.location.href = '/wemedical/index.php/Home-Login-login';
       }else {
        $("body").showbanner({
           title : "错误",
@@ -71,16 +71,18 @@ $(function(){
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
       <span class="sr-only">Toggle navigation</span>
     </button>
-      <div class="navbar-brand" >
-        <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
-        <a  href="#" >微挂号</a>
+      <div class="navbar-brand" style="padding-top:5px;">
+        <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
       </div>
 
   </div>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#fakelink">医院信息</a></li>
+      <li ><a href="#fakelink">医院信息</a></li>
+        <li class="active"><a href="#fakelink">登陆注册</a></li>
       <li><a href="#fakelink">预约挂号</a></li>
+      <li><a href="#fakelink">我的预约</a></li>
+      <li><a href="#fakelink">个人中心</a></li>
     </ul>
     <form class="navbar-form navbar-right" action="#" role="search">
       <div class="form-group">
@@ -103,17 +105,18 @@ $(function(){
 
 <div class="container">
 <div class="content">
-<form id="form" method="post" action="/wemedical/index.php/User-Index-insert">
+<form id="form" method="post" action="/wemedical/index.php/Home-Login-insert">
 <div class="weui_cells_title">手机短信验证</div>
 <div class="row-fluid">
-  <div class="col-lg-6">
-    <div class="form-group">
+  <div class="col-sm-6">
+    <div class="input-group form-group">
+      <span class="input-group-addon" >手机</span>
         <input class="form-control" type="text" name="phone_num" id="phone_num" placeholder="请输入手机号码" />
     </div>
   </div>
 </div>
 <div class="row-fluid">
-<div class="col-lg-6">
+<div class="col-sm-6">
   <div class="input-group">
     <input class="form-control" type="text"   onChange="veriCode(this.value)"  placeholder="请输入验证码">
       <span class="input-group-btn">
@@ -125,29 +128,35 @@ $(function(){
 <input type="text" style="display:none;" name="vcode" id="vcode_status" value="0" >
 <div class="weui_cells_title">个人信息</div>
 <div class="row-fluid">
-    <div class="col-lg-6">
-        <div class="form-group">
-            <input class="form-control" type="text" name="name" placeholder="请输入真实姓名"/>
-        </div>
+  <div class="col-xs-12">
+    <div class="form-group input-group">
+       <span class="input-group-addon" >姓名</span>
+        <input class="form-control" type="text" name="name" placeholder="请输入真实姓名"/>
     </div>
-</div>
-<div class="row-fluid">
-  <div class="col-lg-6">
-    <select class="form-control select select-primary select-block mbl">
-        <optgroup label="性别">
-            <option value="1">男</option>
-            <option value="0">女</option>
-        </optgroup>
-    </select>
   </div>
 </div>
+
+<div class="row-fluid">
+  <div class="col-lg-6">
+    <div class="input-group form-group">
+      <select data-toggle="select" class="form-control select select-primary mrs mbm" width="100px">
+          <optgroup label="性别">
+              <option value="1">男</option>
+              <option value="0">女</option>
+          </optgroup>
+      </select>
+    </div>
+  </div>
+</div>
+
 
 <script>
 $("select").select2({dropdownCssClass: 'dropdown-inverse'});
 </script>
 <div class="row-fluid">
     <div class="col-lg-6">
-        <div class="form-group">
+        <div class="form-group input-group">
+          <span class="input-group-addon" >身份证</span>
             <input class="form-control" type="text" name="idCard_num" id="idCard_num" placeholder="请输入身份证号码"/>
         </div>
     </div>
@@ -186,7 +195,7 @@ captcha_img.click(function(){
     }
 });
 </script> -->
-<body>
+</body>
 
 <footer>
 <p>Powered by HJW</p>

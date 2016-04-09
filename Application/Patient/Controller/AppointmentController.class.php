@@ -1,7 +1,7 @@
 <?php
-namespace User\Controller;
+namespace Patient\Controller;
 use Think\Controller;
-class MenuController extends Controller {
+class AppointmentController extends Controller {
   public function index(){
       $list= array(
         1=>array(
@@ -18,7 +18,7 @@ class MenuController extends Controller {
         "department"=>"外科",
         "specialism"=>"心脏外科",
         "intro"=>"擅用虫类药治疗疑难病证。对类风湿性关节炎、风湿性关节炎、退行性关节病、结节病、荨麻疹、银屑病、冠心病、糖尿病、浅表性胃炎、有较好的疗效。",
-        "register_remains"=>3
+        "register_remains"=>0
       ),
       3=>array(
       "name" => "张XX",
@@ -26,7 +26,7 @@ class MenuController extends Controller {
       "department"=>"儿科",
       "specialism"=>"小儿麻痹",
       "intro"=>"擅用虫类药治疗疑难病证。对类风湿性关节炎、风湿性关节炎、退行性关节病、结节病、荨麻疹、银屑病、冠心病、糖尿病、浅表性胃炎、有较好的疗效。",
-      "register_remains"=>7
+      "register_remains"=>4
       )
       );
       $this->assign('list',$list);

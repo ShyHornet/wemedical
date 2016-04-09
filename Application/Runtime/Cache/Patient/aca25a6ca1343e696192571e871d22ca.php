@@ -1,56 +1,58 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Flat UI Free 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  -->
+<head>
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
+<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
+<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
+<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
+<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
+<link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
+
+<meta >
+<title>微信挂号平台</title>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-    <!-- Loading Bootstrap -->
-    <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="/wemedical/Public/JS/flat-ui.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 
-    <!-- Loading Flat UI -->
-    <link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
-    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
-    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
-    <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
-    <script src="/wemedical/Public/JS/jquery-weui.js"></script>
-    <script src="/wemedical/Public/JS/flat-ui.min.js"></script>
+<script src="/wemedical/Public/JS/banneralert.min.js"></script>
+<script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
 
+<!-- <script src="/wemedical/Public/JS/jquery-weui.js"></script> -->
 
+<script src="/wemedical/Public/JS/jquery.form.js"></script>
+<script src="/wemedical/Public/JS/jquery.cookie.js"></script>
 
-    <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <script src="/wemedical/Public/JS/main.js"></script>
+</head>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
-  </head>
   <body>
     <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
         <span class="sr-only">Toggle navigation</span>
       </button>
-        <div class="navbar-brand" >
-          <!-- <span ><svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg></span> -->
-          <a  href="#" >微挂号</a>
+        <div class="navbar-brand" style="padding-top:5px;">
+          <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
         </div>
 
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-01">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#fakelink">医院信息</a></li>
-        <li><a href="#fakelink">预约挂号</a></li>
+        <li ><a href="#fakelink">医院信息</a></li>
+          <li ><a href="#fakelink">登陆注册</a></li>
+        <li class="active"><a href="#fakelink">预约挂号</a></li>
+        <li><a href="#fakelink">我的预约</a></li>
+        <li><a href="#fakelink">个人中心</a></li>
       </ul>
       <form class="navbar-form navbar-right" action="#" role="search">
         <div class="form-group">
           <div class="input-group">
-            <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生">
+            <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
             <span class="input-group-btn">
               <button type="submit" class="btn"><span class="fui-search"></span></button>
             </span>
@@ -100,7 +102,10 @@
   <p style="width:90%">
 
     <span class="p_l">剩余号源: <?php echo ($vo["register_remains"]); ?></span>
-    <span class="p_r">立即预约</span>
+    <?php if($vo['register_remains'] > 5 ): ?><span class="p_r"><button class="btn btn-xs  btn-success">立即预约</button></span>
+    <?php else: if($vo['register_remains'] > 0): ?><span class="p_r"><button class="btn btn-xs  btn-warning">立即预约</button></span>
+      <?php else: ?><span class="p_r"><button class="btn btn-xs" disabled>暂无号源</button></span><?php endif; endif; ?>
+    <!-- <span class="p_r"><button class="btn btn-xs  btn-success">立即预约</button></span> -->
   </p>
 </div>
 </div>
@@ -115,7 +120,7 @@ $("#panle-collapse-<?php echo ($i); ?>-1-close").click(function(){
 </script><?php endforeach; endif; else: echo "" ;endif; ?>
 
 </div>
-<footer>
+<footer >
 <p>Powered by HJW</p>
 <p>weMedical © All rights reserved 2016 </p>
 </footer>
