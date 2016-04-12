@@ -1,3 +1,4 @@
+
 //短信验证码发送&倒计时
 var wait=60;
 function textCountDown(){
@@ -108,6 +109,7 @@ function veriCode(code){
 
 
 }
+
 (function () {
     'use strict';
     if (window && window.addEventListener) {

@@ -55,3 +55,4 @@ use Think\Controller;
   	$Verify->entry();
   }
 }
+?>
