@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
-
+<link href="/wemedical/Public/css/animate.min.css" rel="stylesheet">
 <meta >
 <title>微信挂号平台</title>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
@@ -48,7 +48,7 @@
       <li><a href="#fakelink">我的预约</a></li>
       <li><a href="#fakelink">个人中心</a></li>
     </ul>
-    <form class="navbar-form navbar-right" action="#" role="search">
+    <!-- <form class="navbar-form navbar-right" action="#" role="search">
       <div class="form-group">
         <div class="input-group">
           <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
@@ -57,32 +57,36 @@
           </span>
         </div>
       </div>
-    </form>
+    </form> -->
   </div><!-- /.navbar-collapse -->
   </nav><!-- /navbar -->
     <div class="container-fluid"style="margin-top:40px;margin-bottom:120px;">
         <div class="content">
-  <form id="loginForm" method="get" action="">
+          <div class="alert" id="login_result" role="alert" style="display:none;"></div>
+  <form id="loginForm" method="post" action="/wemedical/index.php/Home-Login-checkLogin">
 
-    <div class="row-fluid">
+    <div class="row">
         <div class="col-lg-6">
-            <div class="form-group input-group">
-                <span class="input-group-addon" >姓名</span>
-                <input class="form-control" type="text" name="name" id="name" placeholder="请输入真实姓名"/>
+            <div class="form-group input-group "id="name_animate_box">
+                <span class="input-group-addon login-field-icon fui-user" ></span>
+
+                <input class="form-control login-field" type="text" name="name" id="name" placeholder="请输入真实姓名"/>
             </div>
         </div>
     </div>
-    <div class="row-fluid">
+    <div class="alert alert-danger" id="name_error" role="alert" style="display:none;"></div>
+    <div class="row">
         <div class="col-lg-6">
-            <div class="form-group input-group">
-              <span class="input-group-addon" >身份证</span>
+            <div class="form-group input-group" id="id_card_num_animate_box">
+                <span class="input-group-addon login-field-icon fui-document" ></span>
                 <input class="form-control" type="text" name="id_card" id="id_card_num" placeholder="请输入身份证号码"/>
             </div>
         </div>
     </div>
+    <div class="alert alert-danger" id="id_card_error" role="alert" style="display:none;"></div>
 
       <div class="weui_cells_title">登陆角色(医生为医院内部注册)</div>
-      <div class="row-fluid">
+      <div class="row">
         <div class="col-lg-6">
           <select class="form-control select select-primary select-block mbl">
               <optgroup label="角色">
@@ -92,9 +96,9 @@
           </select>
         </div>
       </div>
-    <div class="weui_cells_tips" align="center" > <a href="User-index-signup" target="_self" >没有账号？立即注册</a></div>
+    <div class="weui_cells_tips" align="center" > <a href="/wemedical/index.php/Home-Login-signup" target="_self" >没有账号？立即注册</a></div>
     <center>
-        <button class="btn btn-hg btn-primary btn-wide" style="margin-top:20px;" id="login">登录</button>
+        <button class="btn btn-hg btn-primary btn-wide" style="margin-top:20px;width:90%;" id="login">登录</button>
     </center>
     </form>
       </div>
@@ -102,77 +106,61 @@
 
     <script>
 $("select").select2({dropdownCssClass: 'dropdown-inverse'});
-	$.validator.setDefaults({
-
-		submitHandler: function() {
-
-			alert("login!");
-
-		}
-
-	});
 	$().ready(function() {
+    var name = $("#name").val();
+    var id_card = $("#id_card_num").val();
+    $('#loginForm').ajaxForm({
+      beforeSubmit:function(){
+        $('#login_result').removeClass("alert-success alert-danger",1000,"ease-out").html("").hide();
+      },
+      success:function(data){
+        console.log(data);
+        if(data.status==1){
+        $('#login_result').addClass("alert-success").html(data.info).show();
+
+        }else {
+         $('#login_result').addClass("alert-danger").html(data.info).show();
+        }
+
+      },
+      dataType:'json'
+    });
+
+
+
 
 		$("#loginForm").validate({
 		rules:{
 			name:{
-			   required:true,
-			   minlength:2
-				},
+         checkName:true
+       },
 			 id_card:{
-				 required:true,
-				 minlength:15,
-				 maxlength:19
+        checkId:true
       }
-			  },
-		messages:{
-			name:{
-				required:function(){
-					$("body").showbanner({
-						title : "错误",
-						handle : false,
-						content : "姓名不能为空!",
-						show_duration:0,
-						hide_duration:0
-						});
-
-				},
-			   minlength:function(){
-
-				$("body").showbanner({
-						title : "错误",
-						handle : false,
-						content : "姓名至少为两位字符!"
-						});
-						}
-				},
-				id_card:{
-					required:function(){
-					$("body").showbanner({
-						title : "错误",
-						handle : false,
-						content : "身份证号不能为空!"
-						});
-
-				},
-					minlength:function(){
-            $("body").showbanner({
-    						title : "错误",
-    						handle : false,
-    						content : "身份证号至少为18位!"
-    						});
-          },
-					maxlength:function(){
-						$("body").showbanner({
-						title : "错误",
-						handle : false,
-						content : "身份证号最多19位!"
-						});
-						}
-			}
-}
+			  }
 });
+$.validator.addMethod("checkName",function(value,element,params){
+  $("#name_error").html("").hide();
+  var nameRegex = /^[\u4e00-\u9fa5]{2,}$/;
+  return this.optional(element)||nameRegex.test(value);
+},function(){
+    $("#name_error").html("姓名至少为两位中文字符").show();
+    $("#name_animate_box").removeClass("shake animated");
+    $("#name_animate_box").toggleClass("shake animated");
 });
+$.validator.addMethod("checkId",function(value,element,params){
+  $("#id_card_error").html("").hide();
+  var idRegex15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+  var idRegex18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+  return this.optional(element)||idRegex15.test(value)||idRegex18.test(value);
+},function(){
+    $("#id_card_error").html("身份证号格式不正确").show();
+    $("#id_card_num_animate_box").removeClass("shake animated");
+    $("#id_card_num_animate_box").toggleClass("shake animated");
+});
+
+});
+
     </script>
 </body>
 

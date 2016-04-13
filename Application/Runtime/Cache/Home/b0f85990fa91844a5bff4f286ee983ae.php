@@ -50,7 +50,7 @@ $(function(){
     },
     success:function(data){
       if(data.status==1){
-       window.location.href = '/wemedical/index.php/Home-Login-login';
+       window.location.href = '/wemedical/index.php/Home-Login-index';
       }else {
        $("body").showbanner({
           title : "错误",
@@ -106,18 +106,22 @@ $(function(){
 <div class="container">
 <div class="content">
 <form id="form" method="post" action="/wemedical/index.php/Home-Login-insert">
+
 <div class="weui_cells_title">手机短信验证</div>
-<div class="row-fluid">
+<div class="row">
   <div class="col-sm-6">
     <div class="input-group form-group">
-      <span class="input-group-addon" >手机</span>
+      <span class="input-group-addon login-field-icon glyphicon glyphicon-earphone" style="top:0px;"></span>
         <input class="form-control" type="text" name="phone_num" id="phone_num" placeholder="请输入手机号码" />
     </div>
   </div>
 </div>
-<div class="row-fluid">
+  <div class="alert alert-danger" id="phone_error" role="alert" style="display:none;"></div>
+
+
+<div class="row">
 <div class="col-sm-6">
-  <div class="input-group">
+  <div class="input-group form-group">
     <input class="form-control" type="text"   onChange="veriCode(this.value)"  placeholder="请输入验证码">
       <span class="input-group-btn">
         <button class="btn btn-default mrs" type="button" onClick="textCountDown()"  id="vcode" style="margin-left:1px;">点击发送</button>
@@ -125,18 +129,20 @@ $(function(){
     </div>
   </div>
 </div>
+<div class="alert alert-danger" id="vcode_error" role="alert"style="display:none;"></div>
+<div class="alert alert-success" id="vcode_ok" role="alert"style="display:none;"></div>
 <input type="text" style="display:none;" name="vcode" id="vcode_status" value="0" >
 <div class="weui_cells_title">个人信息</div>
-<div class="row-fluid">
-  <div class="col-xs-12">
-    <div class="form-group input-group">
-       <span class="input-group-addon" >姓名</span>
+<div class="row">
+  <div class="col-lg-6">
+    <div class=" input-group form-group">
+       <span class="input-group-addon login-field-icon fui-user" ></span>
         <input class="form-control" type="text" name="name" placeholder="请输入真实姓名"/>
     </div>
   </div>
 </div>
 
-<div class="row-fluid">
+<div class="row">
   <div class="col-lg-6">
     <div class="input-group form-group">
       <select data-toggle="select" class="form-control select select-primary mrs mbm" width="100px">
@@ -153,16 +159,16 @@ $(function(){
 <script>
 $("select").select2({dropdownCssClass: 'dropdown-inverse'});
 </script>
-<div class="row-fluid">
+<div class="row">
     <div class="col-lg-6">
         <div class="form-group input-group">
-          <span class="input-group-addon" >身份证</span>
+          <span class="input-group-addon login-field-icon fui-document" ></span>
             <input class="form-control" type="text" name="idCard_num" id="idCard_num" placeholder="请输入身份证号码"/>
         </div>
     </div>
 </div>
     <center>
-        <button class="btn btn-hg btn-primary btn-wide">注册</button>
+        <button style="width:90%;" class="btn btn-hg btn-primary btn-wide">注册</button>
     </center>
 </div>
 

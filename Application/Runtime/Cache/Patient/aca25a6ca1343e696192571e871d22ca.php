@@ -13,6 +13,7 @@
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/datepicker.min.css" rel="stylesheet" type="text/css">
+<link href="/wemedical/Public/css/animate.min.css" rel="stylesheet" type="text/css">
 
 <!-- <link href="/wemedical/Public/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
 
@@ -70,15 +71,15 @@
     </nav><!-- /navbar -->
 
     <div class="container-fluid">
-      <div class="row"width="96%" style="margin:0 2%;">
-        <div class="col-xs-2">
-        <span class="fui-arrow-left"></span>
+      <div class="row"width="100%" style="background:#1abc9c;height:50px;margin-top:-30px;">
+        <div style="float:left; margin-top:11.25px;margin-left:24%;margin-right:3%;">
+        <span  class="fui-arrow-left" id="preDay"></span>
         </div>
-        <div class="col-xs-8">
-        <input type='text' class="form-control datepicker-here" id="treat_date" data-language='zh' value="<?php echo date('Y-m-d'); ?>"/>
+        <div class=""style="float:left;text-align:center;width:35%;margin-top:4px;">
+        <input type='text' class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-language='zh' value="<?php echo date('Y-m-d'); ?>"/>
         </div>
-        <div class="col-xs-2">
-          <span class="fui-arrow-right"></span>
+        <div class="" style="float:left;margin-top:11.25px;margin-right:22%;margin-left:3%;">
+          <span class="fui-arrow-right" id="nxtDay"></span>
         </div>
       </div>
 <script type="text/javascript">
@@ -86,10 +87,25 @@
     minDate:new Date(),
     startDate:new Date()
   })
+  $("#preDay").click(function(){
+    var datePicker = $("#treat_date").datepicker().data('datepicker');
+    var dateInSeconds = Math.floor(datePicker.date.getTime());
+    var newDate = new Date(dateInSeconds + 60*60*24*1000);
+    datePicker.date = newDate;
+    datePicker.selectDate(newDate);
+  });
+  $("#nxtDay").click(function(){
+    var datePicker = $("#treat_date").datepicker().data('datepicker');
+    var dateInSeconds = Math.floor(datePicker.date.getTime());
+    var newDate = new Date(dateInSeconds + 60*60*24*1000);
+    datePicker.date = newDate;
+    datePicker.selectDate(newDate);
+  });
+
 </script>
 
 <div id="doc_info">
-<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel" >
+<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel fadeInLeft animated " >
 <div class="panel_top">
     <span class="p_l"><?php echo ($vo["name"]); ?></span>
     <span class="p_r"><?php echo ($vo["title"]); ?></span>
@@ -205,7 +221,7 @@ $(function(){
     var win = $(window);
     win.scroll(function () {
       if ($(document).height() - win.height() == win.scrollTop()){
-            $.getJSON("Patient-Appointment-getThreeMore",{num:i},function(json){
+            $.getJSON("/wemedical/index.php/Patient-Appointment-getThreeMore",{num:i},function(json){
                 if(json){
                     var str = "";
                     $.each(json,function(index,array){
@@ -258,7 +274,7 @@ $(function(){
                         //               "").collapse('hide');});\$(\"#panle-collapse-"+(i+3+j)+
                         //               "-1-close\").click(function(){$("#panle-collapse-"+(i*3+j)+
                         //               "-1").collapse('hide');});";
-                          var str = "<div class=\"panel\">"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
+                          var str = "<div class=\"panel fadeInLeftBig animated\">"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
 
 
                         $("#doc_info").append(str);

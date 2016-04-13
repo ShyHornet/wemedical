@@ -8,10 +8,26 @@ use Think\Controller;
   	public function signup(){
   		$this->display('signup');
   		}
+      public function checkLogin($name='',$id_card=''){
+        if (!empty($name)&&!empty($id_card)) {
+              $Patient = new \Think\Model("Patient");
+              $map['idCard_num'] = $id_card;
+              $map['name'] = $name;
+              $count = count($Patient->where($map)->select());
+              if ($count==1){
+                $this->success("验证成功");
+
+              }else{
+              $this->error("用户名或身份证号错误");
+
+              }
+        }
+
+      }
       public function checkIdUnique($id='') {
           if (!empty($id)) {
-              $Form = new \Think\Model("Patient");
-              if ($Form->getByIdCard_num($id)) {
+              $Patient = new \Think\Model("Patient");
+              if ($Patient->getByIdCard_num($id)) {
 
                   $this->error('该身份证号已注册过!');
               } else {

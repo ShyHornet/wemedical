@@ -1,0 +1,34 @@
+<body>
+  <div class="msg">
+    <div class="weui_msg">
+      <div class="weui_icon_area">
+        <i class="weui_icon_success weui_icon_msg"></i>
+      </div>
+
+    <div class="weui_text_area">
+      <h2 class="weui_msg_title">注册成功</h2>
+      <p class="weui_msg_desc"style="display:none;"></p>
+    </div>
+    </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+  $(".weui_msg_desc").show();
+  wait = 4;
+  function countDown(){
+    if (wait==0){
+window.location = "__URL__-index";
+
+    }
+    $(".weui_msg_desc").html("正在跳转:("+wait+"s )");
+
+    wait--;
+    console.log(wait);
+    setTimeout(function(){
+      countDown()
+    },1000);
+  }
+  countDown();
+
+</script>
