@@ -11,17 +11,17 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
+<link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/datepicker.min.css" rel="stylesheet" type="text/css">
 <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="/wemedical/Public/css/loadingSpinner.css" rel="stylesheet" type="text/css">
 
 <!-- <link href="/wemedical/Public/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
 
 <meta >
 <title>微信挂号平台</title>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="/wemedical/Public/JS/flat-ui.min.js"></script>
-<script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
 
 <script src="/wemedical/Public/JS/banneralert.min.js"></script>
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
@@ -39,6 +39,56 @@
 </head>
 
   <body >
+    <div  class="modal fade" id="register_confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">挂号确认</h4>
+          </div>
+          <div class="modal-body">
+            <span style="float:left;margin-top:13px;margin-right:5px;" class="fui-document"></span><span ><h6>号源信息</h6></span>
+            <table class="table table-striped" width="100%">
+              <tbody>
+                <tr>
+                  <td>就诊日期</td>
+                  <td>2016-04-11</td>
+                </tr>
+                <tr>
+                  <td>就诊星期</td>
+                  <td>星期一</td>
+                </tr>
+                <tr>
+                  <td>就诊时段</td>
+                  <td>下午</td>
+                </tr>
+                <tr>
+                  <td>就诊科室</td>
+                  <td>神经外科</td>
+                </tr>
+                <tr>
+                  <td>医师姓名</td>
+                  <td>王XX</td>
+                </tr>
+                <tr>
+                  <td>号源类型</td>
+                  <td>副主任医师</td>
+                </tr>
+                <tr>
+                  <td>挂号费</td>
+                  <td>￥10.0</td>
+                </tr>
+              </tbody>
+            </table>
+            <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
+          </div>
+          <div class="modal-footer">
+            <a type="button" class="btn btn-primary btn-xxs" data-dismiss="modal">确定</a>
+            <a type="button" class="btn btn-default btn-xxs">取消</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
@@ -69,40 +119,32 @@
       </form>
     </div><!-- /.navbar-collapse -->
     </nav><!-- /navbar -->
-
     <div class="container-fluid">
+
       <div class="row"width="100%" style="background:#1abc9c;height:50px;margin-top:-30px;">
         <div style="float:left; margin-top:11.25px;margin-left:24%;margin-right:3%;">
         <span  class="fui-arrow-left" id="preDay"></span>
         </div>
         <div class=""style="float:left;text-align:center;width:35%;margin-top:4px;">
-        <input type='text' class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-language='zh' value="<?php echo date('Y-m-d'); ?>"/>
+        <input type='text' class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-language='zh'  value="<?php echo date('Y-m-d'); ?>"/>
         </div>
         <div class="" style="float:left;margin-top:11.25px;margin-right:22%;margin-left:3%;">
           <span class="fui-arrow-right" id="nxtDay"></span>
         </div>
       </div>
 <script type="text/javascript">
-  $("#treat_date").datepicker({
-    minDate:new Date(),
-    startDate:new Date()
-  })
-  $("#preDay").click(function(){
-    var datePicker = $("#treat_date").datepicker().data('datepicker');
-    var dateInSeconds = Math.floor(datePicker.date.getTime());
-    var newDate = new Date(dateInSeconds + 60*60*24*1000);
-    datePicker.date = newDate;
-    datePicker.selectDate(newDate);
-  });
-  $("#nxtDay").click(function(){
-    var datePicker = $("#treat_date").datepicker().data('datepicker');
-    var dateInSeconds = Math.floor(datePicker.date.getTime());
-    var newDate = new Date(dateInSeconds + 60*60*24*1000);
-    datePicker.date = newDate;
-    datePicker.selectDate(newDate);
-  });
+  // $("#treat_date").datepicker({
+  //   minDate:new Date(),
+  //   startDate:new Date()
+  // })
+  // $("#preDay").click(function()
+  //   datePicker.date = newDate;
+  //   datePicker.selectDate(newDate);
+  // });
+  // $("#nxtDay").click(function());
 
 </script>
+
 
 <div id="doc_info">
 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel fadeInLeft animated " >
@@ -142,69 +184,26 @@
 <div class="panel_bottom">
   <p >
 
-    <span class="p_l" >剩余号源: <?php echo ($vo["register_remains"]); ?></span>
-    <?php if($vo['register_remains'] > 5 ): ?><span class="p_r"><button class="btn btn-xs  btn-success" data="<?php echo ($vo["doctor_id"]); ?>" data-toggle="modal" data-target="#myModal">立即预约</button></span>
+    <span class="p_l" >剩余号源:</span>
+    <!-- <?php if($vo['register_remains'] > 5 ): ?><span class="p_r"><button class="btn btn-xs  btn-success" data="<?php echo ($vo["doctor_id"]); ?>" data-toggle="modal" data-target="#myModal">立即预约</button></span>
     <?php else: if($vo['register_remains'] > 0): ?><span class="p_r"><button class="btn btn-xs  btn-warning" data="<?php echo ($vo["doctor_id"]); ?>" data-toggle="modal" data-target="#myModal">立即预约</button></span>
-      <?php else: ?><span class="p_r"><button class="btn btn-xs" data="<?php echo ($vo["doctor_id"]); ?>" disabled>暂无号源</button></span><?php endif; endif; ?>
-    <!-- <span class="p_r"><button class="btn btn-xs  btn-success">立即预约</button></span> -->
+      <?php else: ?><span class="p_r"><button class="btn btn-xs" data="<?php echo ($vo["doctor_id"]); ?>" disabled>暂无号源</button></span><?php endif; endif; ?> -->
+    <span class="p_r"><button class="btn btn-xs  btn-success" data-toggle="modal" data-target="#register_confirm">立即预约</button></span>
   </p>
 </div>
 </div><?php endforeach; endif; else: echo "" ;endif; ?>
+<div class="spinner"style="display:none;">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
 </div>
+</div>
+
 </div>
 
 
 <!-- Modal -->
-<div  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">挂号确认</h4>
-      </div>
-      <div class="modal-body">
-        <span style="float:left;margin-top:13px;margin-right:5px;" class="fui-document"></span><span ><h6>号源信息</h6></span>
-        <table class="table table-striped" width="100%">
-          <tbody>
-            <tr>
-              <td>就诊日期</td>
-              <td>2016-04-11</td>
-            </tr>
-            <tr>
-              <td>就诊星期</td>
-              <td>星期一</td>
-            </tr>
-            <tr>
-              <td>就诊时段</td>
-              <td>下午</td>
-            </tr>
-            <tr>
-              <td>就诊科室</td>
-              <td>神经外科</td>
-            </tr>
-            <tr>
-              <td>医师姓名</td>
-              <td>王XX</td>
-            </tr>
-            <tr>
-              <td>号源类型</td>
-              <td>副主任医师</td>
-            </tr>
-            <tr>
-              <td>挂号费</td>
-              <td>￥10.0</td>
-            </tr>
-          </tbody>
-        </table>
-        <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <script>
 $(function(){
@@ -221,6 +220,9 @@ $(function(){
     var win = $(window);
     win.scroll(function () {
       if ($(document).height() - win.height() == win.scrollTop()){
+        $(".spinner").show();
+        setTimeout(function(){
+          },1000);
             $.getJSON("/wemedical/index.php/Patient-Appointment-getThreeMore",{num:i},function(json){
                 if(json){
                     var str = "";
@@ -294,6 +296,7 @@ $(function(){
                     return false;
                 }
             });
+            $(".spinner").hide();
         }
     });
 });

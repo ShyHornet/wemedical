@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
-
+<link href="/wemedical/Public/css/animate.min.css" rel="stylesheet">
 <meta >
 <title>微信挂号平台</title>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
@@ -34,19 +34,6 @@
 $(function(){
   $('#form').ajaxForm({
     beforeSubmit:function(){
-//       $('#result').html('').hide();
-//       $.post('/wemedical/index.php/Home-Login-checkIdUnique-id-'+$('#idCard_num').val(),function(data){
-// if (data.status==0){
-//   $('#result').html(data.info).show();
-//         // $("body").showbanner({
-//         //    title : "错误",
-//         //    handle : false,
-//         //    content : data.info
-//         //    });
-//         return false;
-// }
-      // },'json');
-
     },
     success:function(data){
       if(data.status==1){
@@ -162,7 +149,7 @@ $("select").select2({dropdownCssClass: 'dropdown-inverse'});
 <div class="row">
     <div class="col-lg-6">
         <div class="form-group input-group">
-          <span class="input-group-addon login-field-icon fui-document" ></span>
+          <span class="input-group-addon icon-profile" ></span>
             <input class="form-control" type="text" name="idCard_num" id="idCard_num" placeholder="请输入身份证号码"/>
         </div>
     </div>

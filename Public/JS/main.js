@@ -109,7 +109,6 @@ function veriCode(code){
 
 
 }
-
 (function () {
     'use strict';
     if (window && window.addEventListener) {
