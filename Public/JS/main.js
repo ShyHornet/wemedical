@@ -109,6 +109,61 @@ function veriCode(code){
 
 
 }
+function showIntroPanle(contentToFill,showIntroLink){
+  if (contentToFill.html().trim()==""){
+      contentToFill.html("");
+    contentToFill.html("<span style=\"margin-left:90%;\"  class=\"fui-cross-circle panle-collapse-close\"  aria-hidden=\"false\"></span><br><a>简介</a>");
+    var id   = showIntroLink.attr("data-id");
+    console.log(id);
+   $.getJSON("Patient-Appointment-getIntro",{id:id},function(json){
+     if (json) {
+       $.each(json,function(index,array){
+         console.log(array);
+         contentToFill.append("<p>"+array['intro']+"</p>");
+         var period_convert = "";
+         if(array['period']=="0"){
+           period_convert = "8:30~12:00";
+         }else{
+            period_convert = "14:30~18:00";
+
+         }
+
+         contentToFill.append("<a>医生出诊时间:</a><p>"+period_convert+"</p>");
+          var work_days_array = (jQuery.parseJSON(array['work_days']))['work_days'];
+          var work_days_trans = "每星期";
+          for (var i = 0; i < work_days_array.length; i++) {
+
+            if (work_days_array[i]==1){
+              switch (i) {
+                case 0:work_days_trans+="一、";
+                break;
+                case 1:work_days_trans+="二、";
+                break;
+                case 2:work_days_trans+="三、";
+                break;
+                case 3:work_days_trans+="四、";
+                break;
+                case 4:work_days_trans+="五、 ";
+                  break;
+                default:break;
+
+              }
+            }
+
+          }
+          contentToFill.append("<p>"+work_days_trans.substring(0,work_days_trans.length-1)+"出诊。"+"</p>");
+     });
+   }
+   });
+   $(".panle-collapse-close").click(function(){
+     //用于关闭预约面板的中间页
+
+   $(this).parent(".panel_middle_section").parent(".collapse").collapse('hide');
+   });
+ }else {
+   return;
+ }
+}
 (function () {
     'use strict';
     if (window && window.addEventListener) {

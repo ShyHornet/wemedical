@@ -1,5 +1,4 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<!DOCTYPE html>
 <html lang="en">
 <!--  -->
 <head>
@@ -133,15 +132,48 @@
         </div>
       </div>
 <script type="text/javascript">
-  // $("#treat_date").datepicker({
-  //   minDate:new Date(),
-  //   startDate:new Date()
-  // })
-  // $("#preDay").click(function()
-  //   datePicker.date = newDate;
-  //   datePicker.selectDate(newDate);
-  // });
-  // $("#nxtDay").click(function());
+  $("#treat_date").datepicker({
+    minDate:new Date(),
+    startDate:new Date()
+  })
+  $("#preDay").click(function(){/*选择前一天*/
+    var datePicker = $("#treat_date").datepicker().data('datepicker');
+    var dateInSeconds = datePicker.date.getTime();
+    var newDate = (new Date(dateInSeconds - 60*60*24*1000));/*当前时间减一天*/
+    /*时分秒归0，方便比较时间*/
+    newDate.setUTCHours("-8");/*当前时区为8，归0默认为8点，所以将时区-8，得到标准格林威治时间*/
+    newDate.setUTCMinutes("0");
+    newDate.setUTCSeconds("0");
+    console.log(newDate);
+    var now = new Date();
+    now.setUTCHours("-8");
+    now.setUTCMinutes("0");
+    now.setUTCSeconds("0");
+    console.log(now);
+    if (newDate<now){ /*如果要选择的日期早于当前时间则将日期选择器归为当前日期*/
+      var current = new Date();
+      datePicker.date = current;
+        datePicker.selectDate(current);
+      return;
+    }
+    datePicker.date = newDate;
+    datePicker.selectDate(newDate);
+  });
+  $("#nxtDay").click(function(){/*选择后一天*/
+    var datePicker = $("#treat_date").datepicker().data('datepicker');
+    var dateInSeconds = datePicker.date.getTime();
+    var newDate = (new Date(dateInSeconds + 60*60*24*1000));
+    newDate.setUTCHours("0");
+    newDate.setUTCMinutes("0");
+    newDate.setUTCSeconds("0");
+
+    var now = new Date();
+    now.setUTCHours("0");
+    now.setUTCMinutes("0");
+    now.setUTCSeconds("0");
+    datePicker.date = newDate;
+    datePicker.selectDate(newDate);
+  });
 
 </script>
 
@@ -154,37 +186,73 @@
 </div>
 <div class="panel_middle">
     <div class="hd">
-      <img  src="/wemedical/Public/images/img.png" alt="" />
+      <img  src="/wemedical/Public/images/img2.jpeg" alt="" />
     </div>
     <div class="bd">
       <p>科室:<?php echo ($vo["department"]); ?></p>
       <p>专长:<?php echo ($vo["specialism"]); ?></p>
-      <p><a data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>">查看简介</a></p>
+      <p><a class="show_intro" data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>">查看简介</a></p>
  </div>
 </div>
-<div class="collapse" id="panle-collapse-<?php echo ($i); ?>">
- <div class="panel_middle_section">
-    <span style="margin-left:90%;"  class="fui-cross-circle panle-collapse-close"  aria-hidden="false"></span><br>
-    <a>简介</a>
-    <p><?php echo ($vo["intro"]); ?></p>
-    <a>专家出诊时间:</a>
-    <p>周日：8:30~12:00</p><a data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>-1">查看排班表</a>
+<div class="collapse intro" id="panle-collapse-<?php echo ($i); ?>" data-id="<?php echo ($vo["doctor_id"]); ?>">
+ <div class="panel_middle_section" style="min-height:100px;" >
+
  </div>
 </div>
 <div class="collapse" id="panle-collapse-<?php echo ($i); ?>-1">
 <div class="panel_middle_section">
-
-   <span style="margin-left:90%;" class="fui-cross-circle panle-collapse-close"  aria-hidden="false"></span><br>
-   <a>简介</a>
-   <p>擅长治疗 擅用虫类药治疗疑难病证。对类风湿性关节炎、风湿性关节炎、退行性关节病、结节病、荨麻疹、银屑病、冠心病、糖尿病、浅表性胃炎、有较好的疗效。</p>
-   <a>专家出诊时间:</a>
-   <p>周日：8:30~12:00</p>
+    <span style="margin-left:90%;"  class="fui-cross-circle panle-collapse-close"  aria-hidden="false"></span><br>
+  <ul class="media-list">
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="img-rounded img-responsvie" src="/wemedical/Public/images/img.png" width="64px"height="64px" alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+        <b class="media-heading">一只傻鸟</b>
+        <p>这位医生真是太神了，解决了我常年的风湿病困扰!</p>
+      </div>
+    </li>
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object img-rounded img-responsvie" src="/wemedical/Public/images/img.png" width="64px"height="64px" alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+        <b class="media-heading">另一只傻鸟</b>
+        <p>这位医生很有办法!遇到他真是我的幸运！</p>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img class="media-object img-rounded img-responsvie" src="/wemedical/Public/images/img2.jpeg" width="64px"height="64px" alt="...">
+            </a>
+          </div>
+          <div class="media-body">
+          <b class="media-heading">王xx</b>
+          <p>为患者解决病痛是我的职责！</p>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object img-rounded img-responsvie" src="/wemedical/Public/images/img.png" width="64px"height="64px" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <b class="media-heading">另一只傻鸟</b>
+            <p>现在像您这样的好医生真的不多！</p>
+            </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
 </div>
 <div class="panel_bottom">
   <p >
 
-    <span class="p_l" >剩余号源:</span>
+    <span class="p_l" >挂号费用:<?php echo ($vo['cost']); ?>￥</span>
     <!-- <?php if($vo['register_remains'] > 5 ): ?><span class="p_r"><button class="btn btn-xs  btn-success" data="<?php echo ($vo["doctor_id"]); ?>" data-toggle="modal" data-target="#myModal">立即预约</button></span>
     <?php else: if($vo['register_remains'] > 0): ?><span class="p_r"><button class="btn btn-xs  btn-warning" data="<?php echo ($vo["doctor_id"]); ?>" data-toggle="modal" data-target="#myModal">立即预约</button></span>
       <?php else: ?><span class="p_r"><button class="btn btn-xs" data="<?php echo ($vo["doctor_id"]); ?>" disabled>暂无号源</button></span><?php endif; endif; ?> -->
@@ -204,19 +272,11 @@
 
 <!-- Modal -->
 
-
-<script>
-$(function(){
-$(".panle-collapse-close").click(function(){
-  //用于关闭预约面板的中间页
-
-$(this).parent(".panel_middle_section").parent(".collapse").collapse('hide');
-});
-});
-</script>
 <script >
 $(function(){
-    var i = 1; //设置当前页数
+    var i = 1;
+    var j = 1;
+    //设置当前页数
     var win = $(window);
     win.scroll(function () {
       if ($(document).height() - win.height() == win.scrollTop()){
@@ -227,20 +287,16 @@ $(function(){
                 if(json){
                     var str = "";
                     $.each(json,function(index,array){
-                       var j = 1;
+
                         var name = array['name'];
                         var title = array['title'];
                         var department = array['department'];
                         var specialism = array['specialism'];
-                        var intro = array['intro'];
-                        var register_remains = array['register_remains'];
-                        var treatment_period = array['treatment_period'];
-                        var treatment_period_convert = (function(){if(treatment_period==0){
-                          return "8:30~12:00";
-                        }else {
-                          return "14:30~18:00";
-                        }}());
-                        console.log(treatment_period_convert);
+                        var doctor_id = array['doctor_id'];
+                        //var intro = array['intro'];
+                        //var register_remains = array['register_remains'];
+                        var cost = array['cost'];
+
                         var panel_top = "<div class=\"panel_top\">"+
                                         "<span class=\"p_l\">"+name+"</span>"+
                                         "<span class=\"p_r\">"+title+"</span>"+
@@ -250,16 +306,10 @@ $(function(){
                                                "<div class=\"bd\">"+
                                                "<p>科室:"+department+"</p>"+
                                                "<p>专长:"+specialism+"</p>"+
-                                               "<p><a data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
+                                               "<p><a class=\"show_intro\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
                                                "查看简介</a></p></div></div>";
-                        var panel_middle_s2 = "<div class=\"collapse\" id=\"panle-collapse-"+(i+3+j)+"\">"+
-                                                 "<div class=\"panel_middle_section\">"+
-                                                    "<span style=\"margin-left:90%;\"class=\"fui-cross-circle panle-collapse-close\"  aria-hidden=\"false\"></span><br>"+
-                                                    "<a>简介</a>"+
-                                                    "<p>"+intro+"</p>"+
-                                                    "<a>专家出诊时间:</a>"+
-                                                    "<p>周日:"+treatment_period_convert+"</p>"+
-                                                    "<a data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"-1\">查看排班表</a></div></div>";
+                        var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+(i+3+j)+"\" data-id=\""+doctor_id+"\">"+
+                                                 "<div class=\"panel_middle_section\"></div></div>";
                         var panel_middle_s3 = "<div class=\"collapse\" id=\"panle-collapse-"+(i+3+j)+"-1\">"+
                                                  "<div class=\"panel_middle_section\">"+
                                                  "<span style=\"margin-left:90%;\" class=\"fui-cross-circle panle-collapse-close\" aria-hidden=\"false\"></span><br>"+
@@ -269,24 +319,12 @@ $(function(){
                                                   "<p>周日：8:30~12:00</p></div></div>";
                         var panel_bottom = "<div class=\"panel_bottom\">"+
                                             "<p >"+
-                                            "<span class=\"p_l\">剩余号源:"+register_remains+"</span>"+
+                                            "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
                                             "<span class=\"p_r\"><button class=\"btn btn-xs  btn-success\">立即预约</button></span></p></div></div></div>";
-                        // var scripts = "\$(\"#panle-collapse-"+(i+3+j)+
-                        //               "-close\").click(function(){$("#panle-collapse-"+(i+3+j)+
-                        //               "").collapse('hide');});\$(\"#panle-collapse-"+(i+3+j)+
-                        //               "-1-close\").click(function(){$("#panle-collapse-"+(i*3+j)+
-                        //               "-1").collapse('hide');});";
-                          var str = "<div class=\"panel fadeInLeftBig animated\">"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
+                          var str = "<div class=\"panel fadeInLeftBig animated\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
 
 
                         $("#doc_info").append(str);
-                        $(".panle-collapse-close").click(function(){
-                          //用于关闭预约面板的中间页
-
-                        $(this).parent(".panel_middle_section").parent(".collapse").collapse('hide');
-                        });
-
-
                         j++;
                     });
                     i++;
@@ -295,7 +333,16 @@ $(function(){
                     alert("没有更多数据了。。。");
                     return false;
                 }
+
+
+                $('.intro').on('show.bs.collapse', function () {
+                  console.log("collapse show!");
+
+                  var content = $(this).children(".panel_middle_section");
+                  showIntroPanle(content,$(this));
+                });
             });
+
             $(".spinner").hide();
         }
     });
