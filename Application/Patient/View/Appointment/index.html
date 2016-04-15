@@ -338,6 +338,14 @@ $(function(){
 
 
                         $("#doc_info").append(str);
+                        //为新添加的预约面板添加显示简介事件
+                        var intro = "[data-id="+doctor_id+"]";
+                      $(intro).on('show.bs.collapse', function () {
+                        console.log("collapse show!");
+
+                        var content = $(this).children(".panel_middle_section");
+                        showIntroPanle(content,$(this));
+                      });
                         j++;
                     });
                     i++;
@@ -350,13 +358,7 @@ $(function(){
 
 
             });
-              //为新添加的预约面板添加显示简介事件
-            $('.intro').on('show.bs.collapse', function () {
-              console.log("collapse show!");
 
-              var content = $(this).children(".panel_middle_section");
-              showIntroPanle(content,$(this));
-            });
             $(".spinner").hide();
         }
     });

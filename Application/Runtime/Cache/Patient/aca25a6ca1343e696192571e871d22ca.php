@@ -314,8 +314,8 @@ $(function(){
                                                "<div class=\"bd\">"+
                                                "<p>科室:"+department+"</p>"+
                                                "<p>专长:"+specialism+"</p>"+
-                                               "<p><a class=\"show_intro\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
-                                               "查看简介</a></p></div></div>";
+                                               "<p><btn class=\"show_intro btn btn-xs btn-primary\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
+                                               "查看简介</btn></p></div></div>";
                         var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+(i+3+j)+"\" data-id=\""+doctor_id+"\">"+
                                                  "<div class=\"panel_middle_section\"></div></div>";
                         var panel_middle_s3 = "<div class=\"collapse\" id=\"panle-collapse-"+(i+3+j)+"-1\">"+
@@ -333,6 +333,14 @@ $(function(){
 
 
                         $("#doc_info").append(str);
+                        //为新添加的预约面板添加显示简介事件
+                        var intro = "[data-id="+doctor_id+"]";
+                      $(intro).on('show.bs.collapse', function () {
+                        console.log("collapse show!");
+
+                        var content = $(this).children(".panel_middle_section");
+                        showIntroPanle(content,$(this));
+                      });
                         j++;
                     });
                     i++;
@@ -345,13 +353,7 @@ $(function(){
 
 
             });
-              //为新添加的预约面板添加显示简介事件
-            $('.intro').on('show.bs.collapse', function () {
-              console.log("collapse show!");
 
-              var content = $(this).children(".panel_middle_section");
-              showIntroPanle(content,$(this));
-            });
             $(".spinner").hide();
         }
     });
