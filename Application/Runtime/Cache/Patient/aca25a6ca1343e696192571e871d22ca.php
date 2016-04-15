@@ -12,7 +12,7 @@
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/datepicker.min.css" rel="stylesheet" type="text/css">
-<link href="/wemedical/Public/css/animate.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet" type="text/css"> -->
 <!-- <link href="/wemedical/Public/css/loadingSpinner.css" rel="stylesheet" type="text/css"> -->
 
 <!-- <link href="/wemedical/Public/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
