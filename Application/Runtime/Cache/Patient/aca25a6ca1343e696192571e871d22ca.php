@@ -291,7 +291,7 @@ $(function(){
         $(".spinner").show();
         setTimeout(function(){
           },1000);
-            $.getJSON("/wemedical/index.php/Patient-Appointment-getThreeMore",{num:i},function(json){
+            $.getJSON("/wemedical/index.php/Patient-Appointment-getMore",{num:i},function(json){
                 if(json){
                     var str = "";
                     $.each(json,function(index,array){
@@ -329,7 +329,7 @@ $(function(){
                                             "<p >"+
                                             "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
                                             "<span class=\"p_r\"><button class=\"btn btn-xs  btn-success\">立即预约</button></span></p></div></div></div>";
-                          var str = "<div class=\"panel fadeInLeftBig animated\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
+                          var str = "<div class=\"panel\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
 
 
                         $("#doc_info").append(str);

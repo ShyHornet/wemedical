@@ -8,11 +8,11 @@ class AppointmentController extends Controller {
       $this->assign('list',$list);
       $this->display('index');
   }
-  public function getThreeMore(){
+  public function getMore(){
     $doc = M("Doctor");
     $num = intval($_GET['num']);
-    $start = $num*3;
-    $list= $doc->field('doctor_id,name,title,department,specialism,order_cost as cost')->order('doctor_id')->limit($start,3)->select();
+    $start = $num+3;
+    $list= $doc->field('doctor_id,name,title,department,specialism,order_cost as cost')->order('doctor_id')->limit($start,1)->select();
     echo json_encode($list);
 
   }
