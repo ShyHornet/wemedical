@@ -66,3 +66,37 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
 ERR: 无法加载控制器:User
 
+[ 2016-04-15T17:24:26+08:00 ] ::1 /wemedical/Wexin-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000185s ]
+
+[ 2016-04-15T17:24:44+08:00 ] ::1 /wemedical/Wexin-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-04-15T17:25:07+08:00 ] ::1 /wemedical/Wexin-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA /Applications/MAMP/htdocs/wemedical/Application/Wexin/Controller/IndexController.class.php 第 35 行.
+
+[ 2016-04-15T17:25:47+08:00 ] ::1 /wemedical/Wexin-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA /Applications/MAMP/htdocs/wemedical/Application/Wexin/Controller/IndexController.class.php 第 35 行.
+
