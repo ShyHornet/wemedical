@@ -193,7 +193,7 @@
     <div class="bd">
       <p>科室:{$vo.department}</p>
       <p>专长:{$vo.specialism}</p>
-      <p><a class="show_intro" data-toggle="collapse" data-target="#panle-collapse-{$i}">查看简介</a></p>
+      <p><btn class="show_intro btn btn-xs btn-primary" data-toggle="collapse" data-target="#panle-collapse-{$i}">查看简介</btn></p>
  </div>
 </div>
 <div class="collapse intro" id="panle-collapse-{$i}" data-id="{$vo.doctor_id}">
@@ -319,8 +319,8 @@ $(function(){
                                                "<div class=\"bd\">"+
                                                "<p>科室:"+department+"</p>"+
                                                "<p>专长:"+specialism+"</p>"+
-                                               "<p><a class=\"show_intro\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
-                                               "查看简介</a></p></div></div>";
+                                               "<p><btn class=\"show_intro btn btn-xs btn-primary\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
+                                               "查看简介</btn></p></div></div>";
                         var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+(i+3+j)+"\" data-id=\""+doctor_id+"\">"+
                                                  "<div class=\"panel_middle_section\"></div></div>";
                         var panel_middle_s3 = "<div class=\"collapse\" id=\"panle-collapse-"+(i+3+j)+"-1\">"+

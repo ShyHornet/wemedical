@@ -191,7 +191,7 @@
     <div class="bd">
       <p>科室:<?php echo ($vo["department"]); ?></p>
       <p>专长:<?php echo ($vo["specialism"]); ?></p>
-      <p><a class="show_intro" data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>">查看简介</a></p>
+      <p><btn class="show_intro btn btn-xs btn-primary" data-toggle="collapse" data-target="#panle-collapse-<?php echo ($i); ?>">查看简介</btn></p>
  </div>
 </div>
 <div class="collapse intro" id="panle-collapse-<?php echo ($i); ?>" data-id="<?php echo ($vo["doctor_id"]); ?>">
@@ -273,7 +273,9 @@
 <!-- Modal -->
 
 <script >
+
 $(function(){
+  //为现有的预约面板添加显示简介事件
   $('.intro').on('show.bs.collapse', function () {
     console.log("collapse show!");
 
@@ -343,6 +345,7 @@ $(function(){
 
 
             });
+              //为新添加的预约面板添加显示简介事件
             $('.intro').on('show.bs.collapse', function () {
               console.log("collapse show!");
 
