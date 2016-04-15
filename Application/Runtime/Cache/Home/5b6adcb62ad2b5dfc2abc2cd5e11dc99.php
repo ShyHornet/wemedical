@@ -8,13 +8,12 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/wemedical/Public/css/flat-ui.min.css" rel="stylesheet">
+<link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet">
 <meta >
 <title>微信挂号平台</title>
-<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="/wemedical/Public/JS/flat-ui.min.js"></script>
-<script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="/wemedical/Public/JS/jquery-2.2.3.min.js"></script>
+<script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
 
 <script src="/wemedical/Public/JS/banneralert.min.js"></script>
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>

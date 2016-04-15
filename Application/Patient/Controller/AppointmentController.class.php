@@ -8,11 +8,14 @@ class AppointmentController extends Controller {
       $this->assign('list',$list);
       $this->display('index');
   }
-  public function getMore(){
+  public function getMore($num){
     $doc = M("Doctor");
-    $num = intval($_GET['num']);
-    $start = $num+3;
+    $start = $num+2;
     $list= $doc->field('doctor_id,name,title,department,specialism,order_cost as cost')->order('doctor_id')->limit($start,1)->select();
+    if (count($list)==0){
+      echo json_encode(null);
+      return;
+    }
     echo json_encode($list);
 
   }

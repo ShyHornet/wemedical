@@ -4,25 +4,25 @@
 <head>
 <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
-<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
+<!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
-<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
+<!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css"> -->
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/datepicker.min.css" rel="stylesheet" type="text/css">
 <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet" type="text/css">
-<link href="/wemedical/Public/css/loadingSpinner.css" rel="stylesheet" type="text/css">
+<!-- <link href="/wemedical/Public/css/loadingSpinner.css" rel="stylesheet" type="text/css"> -->
 
 <!-- <link href="/wemedical/Public/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
 
 <meta >
 <title>微信挂号平台</title>
-<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="/wemedical/Public/JS/jquery-2.2.3.min.js"></script>
 <script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
 
-<script src="/wemedical/Public/JS/banneralert.min.js"></script>
+<!-- <script src="/wemedical/Public/JS/banneralert.min.js"></script> -->
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
 
 <!-- <script src="/wemedical/Public/JS/jquery-weui.js"></script> -->
@@ -270,7 +270,6 @@
 </div>
 
 
-<!-- Modal -->
 
 <script >
 
@@ -288,10 +287,10 @@ $(function(){
     var win = $(window);
     win.scroll(function () {
       if ($(document).height() - win.height() == win.scrollTop()){
-        $(".spinner").show();
-        setTimeout(function(){
-          },1000);
+           console.log(i);
             $.getJSON("/wemedical/index.php/Patient-Appointment-getMore",{num:i},function(json){
+              i++;
+
                 if(json){
                     var str = "";
                     $.each(json,function(index,array){
@@ -343,7 +342,7 @@ $(function(){
                       });
                         j++;
                     });
-                    i++;
+
                 }else{
 
                     alert("没有更多数据了。。。");
@@ -354,7 +353,6 @@ $(function(){
 
             });
 
-            $(".spinner").hide();
         }
     });
 });

@@ -129,7 +129,7 @@ function showIntroPanle(contentToFill,showIntroLink){
          }
 
          contentToFill.append("<a>医生出诊时间:</a><p>"+period_convert+"</p>");
-          var work_days_array = (jQuery.parseJSON(array['work_days']))['work_days'];
+          var work_days_array = ($.parseJSON(array['work_days']))['work_days'];
           var work_days_trans = "每星期";
           for (var i = 0; i < work_days_array.length; i++) {
 
