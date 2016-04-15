@@ -274,6 +274,12 @@
 
 <script >
 $(function(){
+  $('.intro').on('show.bs.collapse', function () {
+    console.log("collapse show!");
+
+    var content = $(this).children(".panel_middle_section");
+    showIntroPanle(content,$(this));
+  });
     var i = 1;
     var j = 1;
     //设置当前页数
@@ -335,14 +341,14 @@ $(function(){
                 }
 
 
-                $('.intro').on('show.bs.collapse', function () {
-                  console.log("collapse show!");
 
-                  var content = $(this).children(".panel_middle_section");
-                  showIntroPanle(content,$(this));
-                });
             });
+            $('.intro').on('show.bs.collapse', function () {
+              console.log("collapse show!");
 
+              var content = $(this).children(".panel_middle_section");
+              showIntroPanle(content,$(this));
+            });
             $(".spinner").hide();
         }
     });
