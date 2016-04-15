@@ -12,6 +12,8 @@ class IndexController extends Controller {
       }
     }
     public function oAuth(){
+      $appId = "wx422634c7132ba93b";
+      $appsercret = "9812ed4394deee07a0f07192f43091a2";
       //获得code
       if (isset($_GET['code'])){
 
