@@ -3,10 +3,10 @@
 var wait=60;
 function textCountDown(){
   if (wait == 60){
-    $.removeCookie('vcode',{path:'/'});
     sendTextVCode();
   }
 if (wait == 0){
+  $.removeCookie('vcode',{path:'/'});
  $("#vcode").removeAttr("disabled");
   $("#vcode").val("点击获取");
   wait = 60;
@@ -34,18 +34,13 @@ function sendTextVCode(){
   console.log(vcode);
   phone_num = $("#phone_num").val();
   if (phone_num == ''){      //判断手机号是否填写
-     $("#phone_num").parent(".form-group").addClass("has-error",1000, "easeIn",function(){
-setTimeout(function(){
-  $("#phone_num").parent(".form-group").removeClass("has-error",1000, "swing");
-},1000)
-
-
-     });
+  //    $("#phone_num").parent(".form-group").addClass("has-error");
+  // $("#phone_num").parent(".form-group").removeClass("has-error");
+     return;
+}
 
       //  $("#phone_num").parent(".form-group").removeClass("has-error", 2000, "easeOut");
 
-       return;
-  }
   var apikey = "08174a006a0fcb9c4b00a704a0253a2d";
   var base_url = "http://apis.baidu.com/kingtto_media/106sms/106sms";//基础url
   var header = {"apikey":apikey};//设置http-get请求头部
@@ -109,6 +104,51 @@ function veriCode(code){
 
 
 }
+///
+///预约挂号模块
+///
+
+function buildDocPanle(docInfoArray,pageNum,tumbImgUrl,date,week){
+  var name = docInfoArray['name'];
+  var title = docInfoArray['title'];
+  var department = docInfoArray['department'];
+  var specialism = docInfoArray['specialism'];
+  var doctor_id = docInfoArray['doctor_id'];
+  var orders = docInfoArray['Order'];
+  var remain_orders = docInfoArray['orders_per_day'];
+  orders.forEach(function(element, index, array){
+       if (element['date']==date) {
+         remain_orders--;
+       }
+
+  })
+  var weekStr=["星期日","星期一","星期二"，"星期三","星期四","星期五","星期六"];
+  //var intro = array['intro'];
+  //var register_remains = array['register_remains'];
+  var cost = docInfoArray['cost'];
+var period = docInfoArray['period']==0?"8:30~12:00":"14:30~18:00";
+  var panel_top = "<div class=\"panel_top\">"+
+                  "<span class=\"p_l\">"+name+"</span>"+
+                  "<span class=\"p_r\">"+title+"</span>"+
+                  "</div>";
+  var panel_middle_s1 = "<div class=\"panel_middle\"><div class=\"hd\">"+
+                         "<img src=\""+tumbImgUrl+"\" alt=\"\" /></div>"+
+                         "<div class=\"bd\">"+
+                         "<p><b>科室: </b>"+department+"</p>"+
+                         "<p><b>专长: </b>"+specialism+"</p>"+
+                         "<p><btn class=\"show_intro btn btn-xs btn-primary\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+pageNum+"\">"+
+                         "查看简介</btn><span class=\"btn btn-xs btn-success\" style=\"margin-left:25px;\">剩余号源:"+remain_orders+"</span></p></div></div>";
+  var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+pageNum+"\" data-id=\""+doctor_id+"\">"+
+                           "<div class=\"panel_middle_section\"></div></div>";
+  var panel_bottom = "<div class=\"panel_bottom\">"+
+                      "<p >"+
+                      "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
+                      "<span class=\"p_r\"><button class=\"btn btn-xs btn-success \" id=\"order_btn"+doctor_id+"\" data-id=\""+doctor_id+"\" data-date=\""+date+"\" data-ttle=\""+name+"\" data-dept=\""+department+"\" data data-cost=\""+cost+"\" data-period=\""+period+"\" data-week=\""+weekStr[week]+"\">立即预约</button></span></p></div></div></div>";
+    var str = "<div class=\"panel\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_bottom+"</div>";
+    return str;
+
+
+}
 function showIntroPanle(contentToFill,showIntroLink){
   if (contentToFill.html().trim()==""){
       contentToFill.html("");
@@ -129,26 +169,25 @@ function showIntroPanle(contentToFill,showIntroLink){
          }
 
          contentToFill.append("<a>医生出诊时间:</a><p>"+period_convert+"</p>");
-          var work_days_array = ($.parseJSON(array['work_days']))['work_days'];
+          var work_days = array['work_days'];
           var work_days_trans = "每星期";
-          for (var i = 0; i < work_days_array.length; i++) {
+          for (var i = 0; i < work_days.length; i++) {
 
-            if (work_days_array[i]==1){
-              switch (i) {
-                case 0:work_days_trans+="一、";
+              switch (work_days[i]) {
+                case '1':work_days_trans+="一、";
                 break;
-                case 1:work_days_trans+="二、";
+                case '2':work_days_trans+="二、";
                 break;
-                case 2:work_days_trans+="三、";
+                case '3':work_days_trans+="三、";
                 break;
-                case 3:work_days_trans+="四、";
+                case '4':work_days_trans+="四、";
                 break;
-                case 4:work_days_trans+="五、 ";
+                case '5':work_days_trans+="五、 ";
                   break;
                 default:break;
 
               }
-            }
+
 
           }
           contentToFill.append("<p>"+work_days_trans.substring(0,work_days_trans.length-1)+"出诊。"+"</p>");

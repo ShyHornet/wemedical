@@ -36,8 +36,8 @@
           <div class="alert" id="login_result" role="alert" style="display:none;"></div>
   <form id="loginForm" method="post" action="__URL__-checkLogin">
 
-    <div class="row">
-        <div class="col-lg-6">
+    <div class="row-fluid">
+        <div class="col-lg-12">
             <div class="form-group input-group "id="name_animate_box">
                 <span class="input-group-addon login-field-icon fui-user" ></span>
 
@@ -46,8 +46,8 @@
         </div>
     </div>
     <div class="alert alert-danger" id="name_error" role="alert" style="display:none;"></div>
-    <div class="row">
-        <div class="col-lg-6">
+    <div class="row-fluid">
+        <div class="col-lg-12">
             <div class="form-group input-group" id="id_card_num_animate_box">
                 <span class="input-group-addon login-field-icon icon-profile" ></span>
                 <input class="form-control" type="text" name="id_card" id="id_card_num" placeholder="请输入身份证号码"/>
@@ -57,10 +57,10 @@
     <div class="alert alert-danger" id="id_card_error" role="alert" style="display:none;"></div>
 
       <div class="weui_cells_title">登陆角色(医生为医院内部注册)</div>
-      <div class="row">
-        <div class="col-lg-6">
-          <select class="form-control select select-primary select-block mbl">
-              <optgroup label="角色">
+      <div class="row-fluid">
+        <div class="col-lg-12">
+          <select name="userType" id="userType" class="form-control select select-primary select-block mbl">
+              <optgroup  label="角色">
                   <option value="1">患者</option>
                   <option value="0">医生</option>
               </optgroup>
@@ -77,16 +77,29 @@
 
     <script>
 $("select").select2({dropdownCssClass: 'dropdown-inverse'});
+$("select").change(function(){
+       if($("#userType").val()==0){
+
+         $("#id_card_num").attr('placeholder','请输入密码');
+         $("#id_card_num").siblings("span").removeClass('icon-profile');
+         $("#id_card_num").siblings("span").addClass('fui-lock');
+       }else if($("#userType").val()==1) {
+        $("#id_card_num").attr('placeholder','请输入身份证号码');
+        $("#id_card_num").siblings("span").removeClass('fui-lock');
+        $("#id_card_num").siblings("span").addClass('icon-profile');
+       }
+
+});
 	$().ready(function() {
     var name = $("#name").val();
     var id_card = $("#id_card_num").val();
     $('#loginForm').ajaxForm({
       beforeSubmit:function(){
-        $('#login_result').removeClass("alert-success alert-danger",1000,"ease-out").html("").hide();
+        $('#login_result').removeClass("alert-success alert-danger").html("").hide();
       },
       success:function(data){
         console.log(data);
-        if(data.status==1){
+        if(data.status==1||data.status==2){
         $('#login_result').addClass("alert-success").html(data.info).show();
 
         }else {

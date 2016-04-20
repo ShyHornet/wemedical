@@ -8,20 +8,45 @@ use Think\Controller;
   	public function signup(){
   		$this->display('signup');
   		}
-      public function checkLogin($name='',$id_card=''){
-        if (!empty($name)&&!empty($id_card)) {
-              $Patient = new \Think\Model("Patient");
-              $map['idCard_num'] = $id_card;
-              $map['name'] = $name;
-              $count = count($Patient->where($map)->select());
-              if ($count==1){
-                $this->success("验证成功");
+      public function checkLogin($userType='',$name='',$id_card=''){
+       if ($userType==1) {//如果登陆角色是患者
+         if (isset($_SESSION['current_user'])&&(md5($name.$id_card)==$_SESSION['current_user']['user'])){
 
-              }else{
-              $this->error("用户名或身份证号错误");
+           $data['status'] = 2;//0,用户名或身份证错误;1,验证成功;2,用户已经登陆
+           $data['info'] = "用户已经登陆!自动跳转中...";
+           $data['url'] =  "Patient-Appointment-index";
+         $this->ajaxReturn($data);
 
-              }
-        }
+         }
+         if (!empty($name)&&!empty($id_card)) {
+               $Patient = new \Think\Model("Patient");
+               $map['idCard_num'] = $id_card;
+               $map['name'] = $name;
+               $array = $Patient->where($map)->select();
+               $count = count($array);
+               if ($count==1){
+                 session(array('name'=>'current_user','expire'=>3600));
+                 session('current_user.user',md5($name.$id_card));
+                 session('current_user.user_type','patient');
+                   session('current_user.user_id',$array[0]['patient_id']);
+                 // $_SESSION['current_user'] = array(
+                 //   'user_id' => $array[0]['patient_id'],
+                 //   'user_type' => 'patient');
+                   $data['status'] = 1;
+                   $data['info'] = "验证成功";
+                   $data['session'] = $_SESSION['current_user'];
+                 $this->ajaxReturn($data);
+
+
+               }else{
+               $this->error("用户名或身份证号错误");
+
+               }
+         }
+       }elseif ($userType==0) {//如果登陆角色是医生
+         
+       }
+
 
       }
       public function checkIdUnique($id='') {

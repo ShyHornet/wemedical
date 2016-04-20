@@ -109,7 +109,7 @@ body {
   display: inline-block;
   float: left;
   width: 76%;
-  padding: 2% 0 0 2%;
+  padding: 2% 0 0 5%;
 }
 .panel_middle .bd p {
   line-height: 1.3em;
@@ -145,7 +145,7 @@ body {
   display: inline-block;
   float: left;
   width: 76%;
-  padding: 2% 0 0 2%;
+  padding: 2% 0 0 5%;
 }
 .panel_middle_section .bd p {
   line-height: 1.3em;

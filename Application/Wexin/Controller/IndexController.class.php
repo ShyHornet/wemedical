@@ -19,7 +19,14 @@ class IndexController extends Controller {
 
         $code = $_GET['code'];
         //用code换取access_token
-        $URL="https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appId&secret=$appsercret&code=$code&grant_type=authorization_code";
+        $access_token_params = array(
+          'appid' =>$appId,
+          'secret'=>$appsercret,
+          'code'=>$code,
+          'grant_type'=>'authorization_code'
+        );
+        $access_token_query_string = http_build_query($access_token_params);
+        $URL='https://api.weixin.qq.com/sns/oauth2/access_token?'.$access_token_query_string;
         $access_token_json = json_decode(httpGet($URL),true);
         if (isset($access_token_json['access_token'])) {
           $access_token = $access_token_json['access_token'];

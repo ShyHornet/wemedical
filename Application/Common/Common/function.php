@@ -82,16 +82,16 @@ function checkId($id){
 if ($id == null){
   return false;
 }
-$url = "http://apis.baidu.com/apistore/idservice/id?id=$id";
+$url = "http://apis.baidu.com/apistore/idservice/id$id";
 $header = array(
   'apikey:08174a006a0fcb9c4b00a704a0253a2d',
 );
 $result = httpGet($url,$header);
 $resultArray = json_decode($result,true);
-if ($resultArray['errNum']==-1){
+if ($resultArray['errNum']!=0){
 return false;
 
-}elseif ($resultArray['errNum'] == 1){
+}elseif ($resultArray['retMsg'] == 'success'){
 return true;
 
 }
@@ -100,6 +100,7 @@ return true;
 }
 //http-get post函数
  function httpGet($url,$header = null, $data = null) {
+
 		$curl = curl_init();
     curl_setopt($curl, CURLOPT_HTTPHEADER  ,$header);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

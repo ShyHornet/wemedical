@@ -1,9 +1,17 @@
 <?php
-namespace Docter\Model;
-use Think\Model;
-class PatientModel extends Model{
+namespace Doctor\Model;
+use Think\Model\RelationModel;
+class DoctorModel extends RelationModel{
    protected $connection = 'DB_CONFIG';
-
+   protected $_link = array(
+     'Order'=>array(
+         'mapping_type'      => self::HAS_MANY,
+         'class_name'        => 'Order',
+         'foreign_key'=>'doctor_id',
+   'mapping_order' => 'order_id',
+   'condition'=>'DATEDIFF(date,CURDATE())>=1'
+         ),
+     );
    /* 定义自动验证 */
  //      protected $_validate = array(
  //          array('name', '/^[\x{4e00}-\x{9fa5}]{2,}$/u', '姓名少于两位或非中文字符!'),

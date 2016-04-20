@@ -51,31 +51,31 @@
               <tbody>
                 <tr>
                   <td>就诊日期</td>
-                  <td>2016-04-11</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>就诊星期</td>
-                  <td>星期一</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>就诊时段</td>
-                  <td>下午</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>就诊科室</td>
-                  <td>神经外科</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>医师姓名</td>
-                  <td>王XX</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>号源类型</td>
-                  <td>副主任医师</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>挂号费</td>
-                  <td>￥10.0</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
@@ -122,154 +122,39 @@
 
       <div class="row"width="100%" style="background:#1abc9c;height:50px;margin-top:-30px;">
         <div style="float:left; margin-top:11.25px;margin-left:24%;margin-right:3%;">
-        <span  class="fui-arrow-left" id="preDay"></span>
+        <span  class="fui-arrow-left" id="preDay" ></span>
         </div>
         <div class=""style="float:left;text-align:center;width:35%;margin-top:4px;">
-        <input type='text' class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-language='zh'  value="<?php echo date('Y-m-d'); ?>"/>
+          <input type="" id="tomorrow" value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"style="display:none;">
+        <input  class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date" data-language='zh' value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"/>
         </div>
         <div class="" style="float:left;margin-top:11.25px;margin-right:22%;margin-left:3%;">
           <span class="fui-arrow-right" id="nxtDay"></span>
         </div>
       </div>
 <script type="text/javascript">
-  $("#treat_date").datepicker({
-    minDate:new Date(),
-    startDate:new Date()
-  })
-  $("#preDay").click(function(){/*选择前一天*/
-    var datePicker = $("#treat_date").datepicker().data('datepicker');
-    var dateInSeconds = datePicker.date.getTime();
-    var newDate = (new Date(dateInSeconds - 60*60*24*1000));/*当前时间减一天*/
-    /*时分秒归0，方便比较时间*/
-    newDate.setUTCHours("-8");/*当前时区为8，归0默认为8点，所以将时区-8，得到标准格林威治时间*/
-    newDate.setUTCMinutes("0");
-    newDate.setUTCSeconds("0");
-    console.log(newDate);
-    var now = new Date();
-    now.setUTCHours("-8");
-    now.setUTCMinutes("0");
-    now.setUTCSeconds("0");
-    console.log(now);
-    if (newDate<now){ /*如果要选择的日期早于当前时间则将日期选择器归为当前日期*/
-      var current = new Date();
-      datePicker.date = current;
-        datePicker.selectDate(current);
-      return;
-    }
-    datePicker.date = newDate;
-    datePicker.selectDate(newDate);
-  });
-  $("#nxtDay").click(function(){/*选择后一天*/
-    var datePicker = $("#treat_date").datepicker().data('datepicker');
-    var dateInSeconds = datePicker.date.getTime();
-    var newDate = (new Date(dateInSeconds + 60*60*24*1000));
-    newDate.setUTCHours("0");
-    newDate.setUTCMinutes("0");
-    newDate.setUTCSeconds("0");
+$(function(){
+  //初始化日期选择器
+  var tomorrow = new Date($("#tomorrow").val());
+  tomorrow.setUTCHours("-8");
+  tomorrow.setUTCMinutes("0");
+  tomorrow.setUTCSeconds("0");
 
-    var now = new Date();
-    now.setUTCHours("0");
-    now.setUTCMinutes("0");
-    now.setUTCSeconds("0");
-    datePicker.date = newDate;
-    datePicker.selectDate(newDate);
-  });
+  $("#treat_date").datepicker({
+    minDate:tomorrow,
+    startDate:tomorrow,
+    dateFormat:"yyyy-m-dd"
+  })
+  $("#treat_date").datepicker().data('datepicker').date=tomorrow;
+  $("#treat_date").datepicker().data('datepicker').selectDate(tomorrow);
+
+
+});
 
 </script>
 
 
-<div id="doc_info">
-<volist name="list" id="vo">
-
-<div class="panel fadeInLeft animated " >
-<div class="panel_top">
-    <span class="p_l">{$vo.name}</span>
-    <span class="p_r">{$vo.title}</span>
-</div>
-<div class="panel_middle">
-    <div class="hd">
-      <img  src="__PUBLIC__/images/img2.jpeg" alt="" />
-    </div>
-    <div class="bd">
-      <p>科室:{$vo.department}</p>
-      <p>专长:{$vo.specialism}</p>
-      <p><btn class="show_intro btn btn-xs btn-primary" data-toggle="collapse" data-target="#panle-collapse-{$i}">查看简介</btn></p>
- </div>
-</div>
-<div class="collapse intro" id="panle-collapse-{$i}" data-id="{$vo.doctor_id}">
- <div class="panel_middle_section" style="min-height:100px;" >
-
- </div>
-</div>
-<div class="collapse" id="panle-collapse-{$i}-1">
-<div class="panel_middle_section">
-    <span style="margin-left:90%;"  class="fui-cross-circle panle-collapse-close"  aria-hidden="false"></span><br>
-  <ul class="media-list">
-    <li class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="img-rounded img-responsvie" src="__PUBLIC__/images/img.png" width="64px"height="64px" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <b class="media-heading">一只傻鸟</b>
-        <p>这位医生真是太神了，解决了我常年的风湿病困扰!</p>
-      </div>
-    </li>
-    <li class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object img-rounded img-responsvie" src="__PUBLIC__/images/img.png" width="64px"height="64px" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <b class="media-heading">另一只傻鸟</b>
-        <p>这位医生很有办法!遇到他真是我的幸运！</p>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object img-rounded img-responsvie" src="__PUBLIC__/images/img2.jpeg" width="64px"height="64px" alt="...">
-            </a>
-          </div>
-          <div class="media-body">
-          <b class="media-heading">王xx</b>
-          <p>为患者解决病痛是我的职责！</p>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="media-object img-rounded img-responsvie" src="__PUBLIC__/images/img.png" width="64px"height="64px" alt="...">
-              </a>
-            </div>
-            <div class="media-body">
-              <b class="media-heading">另一只傻鸟</b>
-            <p>现在像您这样的好医生真的不多！</p>
-            </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-<div class="panel_bottom">
-  <p >
-
-    <span class="p_l" >挂号费用:{$vo['cost']}￥</span>
-    <!-- <if condition="$vo['register_remains'] gt 5  "><span class="p_r"><button class="btn btn-xs  btn-success" data="{$vo.doctor_id}" data-toggle="modal" data-target="#myModal">立即预约</button></span>
-    <else/><if condition="$vo['register_remains'] gt 0"><span class="p_r"><button class="btn btn-xs  btn-warning" data="{$vo.doctor_id}" data-toggle="modal" data-target="#myModal">立即预约</button></span>
-      <else/><span class="p_r"><button class="btn btn-xs" data="{$vo.doctor_id}" disabled>暂无号源</button></span>
-    </if>
-    </if> -->
-    <span class="p_r"><button class="btn btn-xs  btn-success" data-toggle="modal" data-target="#register_confirm">立即预约</button></span>
-  </p>
-</div>
-</div>
-</volist>
-<div class="spinner"style="display:none;">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>
+<div id="doc_info" style="min-height:500px;">
 </div>
 
 </div>
@@ -287,80 +172,99 @@ $(function(){
     showIntroPanle(content,$(this));
   });
     var i = 1;
-    var j = 1;
-    //设置当前页数
+
+      var j = 0;
+      $("#preDay").click(function(){/*选择前一天*/
+
+        var datePicker = $("#treat_date").datepicker().data('datepicker');
+        var dateInSeconds = datePicker.date.getTime();
+        var newDate = (new Date(dateInSeconds - 60*60*12*1000));/*当前时间减一天*/
+        if (newDate.getDay()==0){
+          newDate =  (new Date(dateInSeconds - 4*60*60*12*1000))
+        }
+        /*时分秒归0，方便比较时间*/
+        newDate.setUTCHours("-8");/*当前时区为8，归0默认为8点，所以将时区-8，得到标准格林威治时间*/
+        newDate.setUTCMinutes("0");
+        newDate.setUTCSeconds("0");
+
+        if (newDate<tomorrow){ /*如果要选择的日期早于当前时间则将日期选择器归为当前日期*/
+          datePicker.date = tomorrow;
+            datePicker.selectDate(tomorrow);
+          return;
+        }
+
+        datePicker.date = newDate;
+        datePicker.selectDate(newDate);
+        i=1;
+        $("#doc_info").empty();
+        loadDocs(i++,datePicker.date);
+
+
+      });
+      $("#nxtDay").click(function(){/*选择后一天*/
+
+        var datePicker = $("#treat_date").datepicker().data('datepicker');
+
+        var dateInSeconds = datePicker.date.getTime();
+
+        var newDate = (new Date(dateInSeconds + 60*60*24*1000));
+        if (newDate.getDay()==6){
+          newDate =  (new Date(dateInSeconds + 3*60*60*24*1000))
+        }
+        datePicker.date = newDate;
+        datePicker.selectDate(newDate);
+          i=1;
+          $("#doc_info").empty();
+
+          loadDocs(i++,datePicker.date);
+      });
+
+    if (i==1) {
+      console.log("init page");
+      loadDocs(1,$("#treat_date").datepicker().data('datepicker').date);
+    }
     var win = $(window);
     win.scroll(function () {
       if ($(document).height() - win.height() == win.scrollTop()){
            console.log(i);
-            $.getJSON("__URL__-getMore",{num:i},function(json){
-              i++;
 
-                if(json){
-                    var str = "";
-                    $.each(json,function(index,array){
-
-                        var name = array['name'];
-                        var title = array['title'];
-                        var department = array['department'];
-                        var specialism = array['specialism'];
-                        var doctor_id = array['doctor_id'];
-                        //var intro = array['intro'];
-                        //var register_remains = array['register_remains'];
-                        var cost = array['cost'];
-
-                        var panel_top = "<div class=\"panel_top\">"+
-                                        "<span class=\"p_l\">"+name+"</span>"+
-                                        "<span class=\"p_r\">"+title+"</span>"+
-                                        "</div>";
-                        var panel_middle_s1 = "<div class=\"panel_middle\"><div class=\"hd\">"+
-                                               "<img src=\"__PUBLIC__/images/img.png\" alt=\"\" /></div>"+
-                                               "<div class=\"bd\">"+
-                                               "<p>科室:"+department+"</p>"+
-                                               "<p>专长:"+specialism+"</p>"+
-                                               "<p><btn class=\"show_intro btn btn-xs btn-primary\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+(i+3+j)+"\">"+
-                                               "查看简介</btn></p></div></div>";
-                        var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+(i+3+j)+"\" data-id=\""+doctor_id+"\">"+
-                                                 "<div class=\"panel_middle_section\"></div></div>";
-                        var panel_middle_s3 = "<div class=\"collapse\" id=\"panle-collapse-"+(i+3+j)+"-1\">"+
-                                                 "<div class=\"panel_middle_section\">"+
-                                                 "<span style=\"margin-left:90%;\" class=\"fui-cross-circle panle-collapse-close\" aria-hidden=\"false\"></span><br>"+
-                                                  "<a>简介</a>"+
-                                                  "<p>擅长治疗 擅用虫类药治疗疑难病证。对类风湿性关节炎、风湿性关节炎、退行性关节病、结节病、荨麻疹、银屑病、冠心病、糖尿病、浅表性胃炎、有较好的疗效。</p>"+
-                                                  "<a>专家出诊时间:</a>"+
-                                                  "<p>周日：8:30~12:00</p></div></div>";
-                        var panel_bottom = "<div class=\"panel_bottom\">"+
-                                            "<p >"+
-                                            "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
-                                            "<span class=\"p_r\"><button class=\"btn btn-xs  btn-success\">立即预约</button></span></p></div></div></div>";
-                          var str = "<div class=\"panel\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_middle_s3+panel_bottom+"</div>";
-
-
-                        $("#doc_info").append(str);
-                        //为新添加的预约面板添加显示简介事件
-                        var intro = "[data-id="+doctor_id+"]";
-                      $(intro).on('show.bs.collapse', function () {
-                        console.log("collapse show!");
-
-                        var content = $(this).children(".panel_middle_section");
-                        showIntroPanle(content,$(this));
-                      });
-                        j++;
-                    });
-
-                }else{
-
-                    alert("没有更多数据了。。。");
-                    return false;
-                }
-
-
-
-            });
-
+           loadDocs(++i,$("#treat_date").datepicker().data('datepicker').date);
         }
     });
 });
+function loadDocs(num,date){
+  var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):(date.getMonth()+1);
+var dateStr = ""+date.getFullYear()+"-"+month+"-"+date.getDate()+"";
+  $.getJSON("__URL__-getDoc",{num:num,date:dateStr},function(json){
+      // if((json[0]['end'])=='1'){
+      //   console.log(json[0]['end']);
+      //   alert("已经到底部了!");
+      // }
+        if (json!=null){
+          $.each(json,function(index,array){
+              $("#doc_info").append(buildDocPanle(array,(num+index),"__PUBLIC__/images/img2.jpeg",dateStr,date.getDay()));
+              //为新添加的预约面板添加显示简介事件
+              var intro = "[data-id="+array['doctor_id']+"]";
+            $(intro).on('show.bs.collapse', function () {
+              console.log("collapse show!");
+
+              var content = $(this).children(".panel_middle_section");
+              showIntroPanle(content,$(this));
+            });
+
+          });
+        }else{
+          console.log("已经到底部了!");
+
+        }
+
+
+
+
+  });
+}
+
+
 </script>
 <footer >
 <p>Powered by HJW</p>
