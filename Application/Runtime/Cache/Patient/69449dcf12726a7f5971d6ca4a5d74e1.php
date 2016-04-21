@@ -1,13 +1,8 @@
-<?php
-    if(C('LAYOUT_ON')) {
-        echo '{__NOLAYOUT__}';
-    }
-?>
+<?php if (!defined('THINK_PATH')) exit(); if(C('LAYOUT_ON')) { echo ''; } ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <link href="__PUBLIC__/css/flat-ui-pro.min.css" rel="stylesheet">
-  <script src="__PUBLIC__/JS/flat-ui-pro.min.js"></script>
+  <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>跳转提示</title>
 <style type="text/css">

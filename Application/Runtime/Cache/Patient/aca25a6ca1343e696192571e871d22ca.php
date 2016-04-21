@@ -38,7 +38,7 @@
 </head>
 
   <body >
-    <div  class="modal fade" id="register_confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div  class="modal fade" id="order_confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -49,7 +49,7 @@
             <span style="float:left;margin-top:13px;margin-right:5px;" class="fui-document"></span><span ><h6>号源信息</h6></span>
             <table class="table table-striped" width="100%">
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td>就诊日期</td>
                   <td></td>
                 </tr>
@@ -76,18 +76,35 @@
                 <tr>
                   <td>挂号费</td>
                   <td></td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
             <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
           </div>
           <div class="modal-footer">
-            <a type="button" class="btn btn-primary btn-xxs" data-dismiss="modal">确定</a>
-            <a type="button" class="btn btn-default btn-xxs">取消</a>
+            <a type="button" class="btn btn-primary btn-xxs" id="toOrder" >确认挂号</a>
+            <a type="button" class="btn btn-default btn-xxs" id="cancelOrder" >取消挂号</a>
           </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+    $(function(){
+      $("#toOrder").click(function(){
+        var button = document.getElementById("toOrder");
+
+          $.getJSON("/wemedical/index.php/Patient-Appointment-proccessOrder",{doc_id:button.dataset.docid,date:button.dataset.date},function(json){
+               if (json['status']==0) {
+                 alert("挂号成功!");
+               }
+          });
+          $("#order_confirm").modal('hide');
+      });
+      $("#cancelOrder").click(function(){
+         $("#order_confirm").modal('hide');
+      });
+    });
+    </script>
     <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
@@ -101,7 +118,7 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-01">
       <ul class="nav navbar-nav">
         <li ><a href="#fakelink">医院信息</a></li>
-          <li ><a href="#fakelink">登陆注册</a></li>
+          <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
         <li class="active"><a href="#fakelink">预约挂号</a></li>
         <li><a href="#fakelink">我的预约</a></li>
         <li><a href="#fakelink">个人中心</a></li>
@@ -126,7 +143,7 @@
         </div>
         <div class=""style="float:left;text-align:center;width:35%;margin-top:4px;">
           <input type="" id="tomorrow" value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"style="display:none;">
-        <input  class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date" data-language='zh' value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"/>
+        <input  class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-placement="top" data-toggle="tooltip" class="btn btn-default mrs" type="button" data-original-title="至少提前一天预约" data-language='zh' value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"/>
         </div>
         <div class="" style="float:left;margin-top:11.25px;margin-right:22%;margin-left:3%;">
           <span class="fui-arrow-right" id="nxtDay"></span>
@@ -134,19 +151,9 @@
       </div>
 <script type="text/javascript">
 $(function(){
-  //初始化日期选择器
-  var tomorrow = new Date($("#tomorrow").val());
-  tomorrow.setUTCHours("-8");
-  tomorrow.setUTCMinutes("0");
-  tomorrow.setUTCSeconds("0");
 
-  $("#treat_date").datepicker({
-    minDate:tomorrow,
-    startDate:tomorrow,
-    dateFormat:"yyyy-m-dd"
-  })
-  $("#treat_date").datepicker().data('datepicker').date=tomorrow;
-  $("#treat_date").datepicker().data('datepicker').selectDate(tomorrow);
+        $('[data-toggle=tooltip]').tooltip();
+
 
 
 });
@@ -164,6 +171,20 @@ $(function(){
 <script >
 
 $(function(){
+  //初始化日期选择器
+  var tomorrow = new Date($("#tomorrow").val());
+  tomorrow.setUTCHours("-8");
+  tomorrow.setUTCMinutes("0");
+  tomorrow.setUTCSeconds("0");
+
+  $("#treat_date").datepicker({
+    minDate:tomorrow,
+    startDate:tomorrow,
+    dateFormat:"yyyy-m-dd"
+  })
+  $("#treat_date").datepicker().data('datepicker').date=tomorrow;
+  $("#treat_date").datepicker().data('datepicker').selectDate(tomorrow);
+
   //为现有的预约面板添加显示简介事件
   $('.intro').on('show.bs.collapse', function () {
     console.log("collapse show!");
@@ -222,6 +243,23 @@ $(function(){
     if (i==1) {
       console.log("init page");
       loadDocs(1,$("#treat_date").datepicker().data('datepicker').date);
+      $('#order_confirm').on('show.bs.modal', function (e) {
+        var button = e.relatedTarget;
+        var modal = $(this);
+
+        modal.find("tbody").html("<tr><td>就诊日期</td><td>"+button.dataset.date+"</td></tr>"+
+          "<tr><td>就诊星期</td><td>"+button.dataset.week+"</td></tr>"+
+          "<tr><td>就诊时段</td><td>"+button.dataset.period+"</td></tr>"+
+          "<tr><td>就诊科室</td><td>"+button.dataset.dept+"</td></tr>"+
+          "<tr><td>医师姓名</td><td>"+button.dataset.name+"</td></tr>"+
+          "<tr><td>号源类型</td><td>"+button.dataset.title+"</td></tr>"+
+          "<tr><td>挂号费</td><td>"+button.dataset.cost+"</td></tr>");
+          var toOrder = modal.find("#toOrder");
+          toOrder.attr("data-docid",button.dataset.id);
+          toOrder.attr("data-date",button.dataset.date);
+
+    });
+
     }
     var win = $(window);
     win.scroll(function () {
@@ -242,9 +280,11 @@ var dateStr = ""+date.getFullYear()+"-"+month+"-"+date.getDate()+"";
       // }
         if (json!=null){
           $.each(json,function(index,array){
-              $("#doc_info").append(buildDocPanle(array,(num+index),"/wemedical/Public/images/img2.jpeg",dateStr));
+              $("#doc_info").append(buildDocPanle(array,(num+index),"/wemedical/Public/images/img2.jpeg",dateStr,date.getDay()));
               //为新添加的预约面板添加显示简介事件
-              var intro = "[data-id="+array['doctor_id']+"]";
+              var doctor_id = array['doctor_id'];
+              var intro = "[data-id="+doctor_id+"]";
+
             $(intro).on('show.bs.collapse', function () {
               console.log("collapse show!");
 

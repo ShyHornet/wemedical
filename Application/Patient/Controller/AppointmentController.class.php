@@ -32,18 +32,22 @@ class AppointmentController extends Controller {
     $intro = $doc->field('intro,treatment_period as period,work_days')->where($map)->select();
     echo json_encode($intro);
   }
-  public function array_remove(&$arr, $offset)
-  {
-    array_splice($arr, $offset, 1);
+
+  public function proccessOrder($doc_id,$date){
+    if(session('?current_user')&&(session('current_user.user_type')=='patient')){
+    $order = new \Patient\Model\OrderModel();
+    $data = array();
+    $data["doctor_id"] = $doc_id;
+    $data["patient_id"] = session('current_user.user_id');
+    $data["date"] = $date;
+    $order->data($data)->add();
+    $returnInfo['status']=0;
+    $returnInfo['info']="挂号成功!";
+     $this->ajaxReturn($returnInfo);
+   }else {
+     $this->error("预约请先登录!",'Home-Login-Index');
+
+   }
+   }
+
   }
-  function notInSelectedDate($var,$date){
-    if($var['Order'] !=array()){
-      foreach ($var['Order'] as $key => $value) {
-        if ($value['date']!=$date) {
-        array_remove($var['Order'],$key+1);
-        }
-      }
-      return $var;
-    }
-  }
-}

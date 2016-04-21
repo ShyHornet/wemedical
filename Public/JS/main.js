@@ -122,7 +122,7 @@ function buildDocPanle(docInfoArray,pageNum,tumbImgUrl,date,week){
        }
 
   })
-  var weekStr=["星期日","星期一","星期二"，"星期三","星期四","星期五","星期六"];
+  var weekStr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
   //var intro = array['intro'];
   //var register_remains = array['register_remains'];
   var cost = docInfoArray['cost'];
@@ -143,7 +143,7 @@ var period = docInfoArray['period']==0?"8:30~12:00":"14:30~18:00";
   var panel_bottom = "<div class=\"panel_bottom\">"+
                       "<p >"+
                       "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
-                      "<span class=\"p_r\"><button class=\"btn btn-xs btn-success \" id=\"order_btn"+doctor_id+"\" data-id=\""+doctor_id+"\" data-date=\""+date+"\" data-ttle=\""+name+"\" data-dept=\""+department+"\" data data-cost=\""+cost+"\" data-period=\""+period+"\" data-week=\""+weekStr[week]+"\">立即预约</button></span></p></div></div></div>";
+                      "<span class=\"p_r\"><button class=\"btn btn-xs btn-success \"  id=\"order_btn"+doctor_id+"\" data-toggle=\"modal\" data-target=\"#order_confirm\" data-id=\""+doctor_id+"\" data-date=\""+date+"\" data-name=\""+name+"\" data-title=\""+title+"\" data-dept=\""+department+"\" data data-cost=\""+cost+" ￥\" data-period=\""+period+"\" data-week=\""+weekStr[week]+"\">立即预约</button></span></p></div></div></div>";
     var str = "<div class=\"panel\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_bottom+"</div>";
     return str;
 
