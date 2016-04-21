@@ -1,6 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<html lang="en">
-<!--  -->
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
 <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
 
@@ -37,7 +35,40 @@
   <script src="/wemedical/Public/JS/main.js"></script>
 </head>
 
-  <body >
+<body>
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+    <span class="sr-only">Toggle navigation</span>
+  </button>
+    <div class="navbar-brand" style="padding-top:5px;">
+      <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
+    </div>
+
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse-01">
+  <ul class="nav navbar-nav">
+    <li ><a href="#fakelink">医院信息</a></li>
+      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" action="#" role="search">
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
+        <span class="input-group-btn">
+          <button type="submit" class="btn"><span class="fui-search"></span></button>
+        </span>
+      </div>
+    </div>
+  </form>
+</div><!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+
+
+<!--  -->
     <div  class="modal fade" id="order_confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -49,34 +80,6 @@
             <span style="float:left;margin-top:13px;margin-right:5px;" class="fui-document"></span><span ><h6>号源信息</h6></span>
             <table class="table table-striped" width="100%">
               <tbody>
-                <!-- <tr>
-                  <td>就诊日期</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>就诊星期</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>就诊时段</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>就诊科室</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>医师姓名</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>号源类型</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>挂号费</td>
-                  <td></td>
-                </tr> -->
               </tbody>
             </table>
             <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
@@ -105,36 +108,7 @@
       });
     });
     </script>
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-        <div class="navbar-brand" style="padding-top:5px;">
-          <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
-        </div>
 
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-01">
-      <ul class="nav navbar-nav">
-        <li ><a href="#fakelink">医院信息</a></li>
-          <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
-        <li class="active"><a href="#fakelink">预约挂号</a></li>
-        <li><a href="#fakelink">我的预约</a></li>
-        <li><a href="#fakelink">个人中心</a></li>
-      </ul>
-      <form class="navbar-form navbar-right" action="#" role="search">
-        <div class="form-group">
-          <div class="input-group">
-            <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
-            <span class="input-group-btn">
-              <button type="submit" class="btn"><span class="fui-search"></span></button>
-            </span>
-          </div>
-        </div>
-      </form>
-    </div><!-- /.navbar-collapse -->
-    </nav><!-- /navbar -->
     <div class="container-fluid">
 
       <div class="row"width="100%" style="background:#1abc9c;height:50px;margin-top:-30px;">
@@ -306,11 +280,11 @@ var dateStr = ""+date.getFullYear()+"-"+month+"-"+date.getDate()+"";
 
 
 </script>
+
 <footer >
 <p>Powered by HJW</p>
 <p>weMedical © All rights reserved 2016 </p>
 </footer>
 
-  </body>
-
+</body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 namespace Patient\Controller;
-header("Content-Type:text/html; charset=utf8");
 use Think\Controller;
 class AppointmentController extends Controller {
   public function index() {

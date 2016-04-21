@@ -4,7 +4,7 @@ use Think\Controller;
 define("TOKEN", "weixin");
 class IndexController extends Controller {
     public function index(){
-      $wechatObj = new wechatCallbackapiTest();
+      $wechatObj = new wechat();
       if (isset($_GET['echostr'])) {
           $wechatObj->valid();
       }else{
@@ -13,7 +13,7 @@ class IndexController extends Controller {
     }
     public function oAuth(){
       $appId = "wx422634c7132ba93b";
-      $appsercret = "9812ed4394deee07a0f07192f43091a2";
+      $appsecret = "9812ed4394deee07a0f07192f43091a2";
       //获得code
       if (isset($_GET['code'])){
 
@@ -21,7 +21,7 @@ class IndexController extends Controller {
         //用code换取access_token
         $access_token_params = array(
           'appid' =>$appId,
-          'secret'=>$appsercret,
+          'secret'=>$appsecret,
           'code'=>$code,
           'grant_type'=>'authorization_code'
         );
@@ -32,10 +32,15 @@ class IndexController extends Controller {
           $access_token = $access_token_json['access_token'];
              $openid = $access_token_json['openid'];
              $userInfoURL = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid";
-              $userInfoJson = json_decode(httpGet($userInfoURL),true);
+              $userInfoArray = json_decode(httpGet($userInfoURL),true);
 
-              var_dump($userInfoJson);
-
+              if (session('?current_user')&&(session('current_user.user_type')=='patient')) {
+                $pat = M('Patient');
+                $data['openid'] = $userInfoArray['openid'];
+                $condition['patient_id'] = session('current_user.user_id');
+                $pat->where($condition)->save();
+                $this->success("微信绑定成功!","Patient-Me-index");
+              }
         }else{
           echo "NO ACCESS_TOKEN";
         }

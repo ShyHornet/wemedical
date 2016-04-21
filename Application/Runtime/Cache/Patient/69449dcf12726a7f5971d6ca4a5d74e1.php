@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
+  <script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>跳转提示</title>
 <style type="text/css">

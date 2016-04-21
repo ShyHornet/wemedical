@@ -26,39 +26,39 @@
   <script src="/wemedical/Public/JS/main.js"></script>
 </head>
 
-
-
 <body>
   <nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-      <div class="navbar-brand" style="padding-top:5px;">
-        <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
-      </div>
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+    <span class="sr-only">Toggle navigation</span>
+  </button>
+    <div class="navbar-brand" style="padding-top:5px;">
+      <svg class="icon icon-logo" style=""><use xlink:href="/wemedical/Public/svg/symbol-defs.svg#icon-logo"></use></svg>
+    </div>
 
-  </div>
-  <div class="collapse navbar-collapse" id="navbar-collapse-01">
-    <ul class="nav navbar-nav">
-      <li ><a href="#fakelink">医院信息</a></li>
-        <li class="active"><a href="#fakelink">登陆注册</a></li>
-      <li><a href="#fakelink">预约挂号</a></li>
-      <li><a href="#fakelink">我的预约</a></li>
-      <li><a href="#fakelink">个人中心</a></li>
-    </ul>
-    <!-- <form class="navbar-form navbar-right" action="#" role="search">
-      <div class="form-group">
-        <div class="input-group">
-          <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
-          <span class="input-group-btn">
-            <button type="submit" class="btn"><span class="fui-search"></span></button>
-          </span>
-        </div>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse-01">
+  <ul class="nav navbar-nav">
+    <li ><a href="#fakelink">医院信息</a></li>
+      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" action="#" role="search">
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
+        <span class="input-group-btn">
+          <button type="submit" class="btn"><span class="fui-search"></span></button>
+        </span>
       </div>
-    </form> -->
-  </div><!-- /.navbar-collapse -->
-  </nav><!-- /navbar -->
+    </div>
+  </form>
+</div><!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+
+
     <div class="container-fluid"style="margin-top:40px;margin-bottom:120px;">
         <div class="content">
           <div class="alert" id="login_result" role="alert" style="display:none;"></div>
@@ -174,11 +174,11 @@ $.validator.addMethod("checkId",function(value,element,params){
 });
 
     </script>
-</body>
 
 <footer>
 <p>Powered by HJW</p>
 <p>weMedical © All rights reserved 2016 </p>
 </footer>
 
+</body>
 </html>
