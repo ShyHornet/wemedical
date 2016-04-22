@@ -49,10 +49,10 @@
 <div class="collapse navbar-collapse" id="navbar-collapse-01">
   <ul class="nav navbar-nav">
     <li ><a href="#fakelink">医院信息</a></li>
-      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
-    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
-    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
-    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">

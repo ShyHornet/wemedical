@@ -44,7 +44,7 @@ use Think\Controller;
                }
          }
        }elseif ($userType==0) {//如果登陆角色是医生
-         
+
        }
 
 
@@ -69,9 +69,7 @@ use Think\Controller;
                  $Patient = new \Patient\Model\PatientModel();
                 //  $_POST['create_time'] = time();
                  if ($Patient->create()) {
-                      if  ($_POST['veriCode'] == 0){//短信验证码不正确
 
-                      }
                      if ($Patient->add()) {
                            $this->success("注册成功!");
 

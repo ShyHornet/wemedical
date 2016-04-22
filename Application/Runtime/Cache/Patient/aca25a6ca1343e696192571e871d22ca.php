@@ -49,10 +49,10 @@
 <div class="collapse navbar-collapse" id="navbar-collapse-01">
   <ul class="nav navbar-nav">
     <li ><a href="#fakelink">医院信息</a></li>
-      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
-    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
-    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
-    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">
@@ -85,21 +85,25 @@
             <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
           </div>
           <div class="modal-footer">
-            <a type="button" class="btn btn-primary btn-xxs" id="toOrder" >确认挂号</a>
-            <a type="button" class="btn btn-default btn-xxs" id="cancelOrder" >取消挂号</a>
+            <a type="button" class="btn btn-primary btn-xxs btn-embossed" id="toOrder" >确认挂号</a>
+            <a type="button" class="btn btn-default btn-xxs btn-embossed" id="cancelOrder" >取消挂号</a>
           </div>
         </div>
       </div>
     </div>
     <script type="text/javascript">
     $(function(){
+      $(function(){
+          $("#aptPage").addClass("active");
+      });
       $("#toOrder").click(function(){
         var button = document.getElementById("toOrder");
 
           $.getJSON("/wemedical/index.php/Patient-Appointment-proccessOrder",{doc_id:button.dataset.docid,date:button.dataset.date},function(json){
-               if (json['status']==0) {
-                 alert("挂号成功!");
-               }
+              //  if (json['status']==1) {
+              //    alert("挂号成功!");
+              //  }
+
           });
           $("#order_confirm").modal('hide');
       });
@@ -134,8 +138,9 @@ $(function(){
 
 </script>
 
-
+<div ></div>
 <div id="doc_info" style="min-height:500px;">
+
 </div>
 
 </div>
@@ -150,12 +155,17 @@ $(function(){
   tomorrow.setUTCHours("-8");
   tomorrow.setUTCMinutes("0");
   tomorrow.setUTCSeconds("0");
+  var tomorrow_week = tomorrow.getDay();
+  if (tomorrow_week==6||tomorrow_week==0){
+       tomorrow = tomorrow==6? new  Date(tomorrow.getTime()+ 3*60*60*24*1000):new  Date(tomorrow.getTime()+ 2*60*60*24*1000);
 
+  }
   $("#treat_date").datepicker({
     minDate:tomorrow,
     startDate:tomorrow,
     dateFormat:"yyyy-m-dd"
   })
+
   $("#treat_date").datepicker().data('datepicker').date=tomorrow;
   $("#treat_date").datepicker().data('datepicker').selectDate(tomorrow);
 

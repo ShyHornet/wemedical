@@ -49,10 +49,10 @@
 <div class="collapse navbar-collapse" id="navbar-collapse-01">
   <ul class="nav navbar-nav">
     <li ><a href="#fakelink">医院信息</a></li>
-      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
-    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
-    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
-    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">
@@ -67,11 +67,16 @@
 </div><!-- /.navbar-collapse -->
 </nav><!-- /navbar -->
 
+<script type="text/javascript">
+$(function(){
+    $("#mePage").addClass("active");
+});
 
+</script>
 <div class="container-fluid">
   <div class="row-fluid">
 <div  class="panel panel-default">
-  <div  class="modal-header">
+  <div  class="panel-heading">
     <b>个人信息</b>
     <?php echo ($isBindWexin); ?>
 
@@ -83,7 +88,7 @@
       <div>
         <span class="btn btn-primary btn-embossed btn-file">
            <span class="fileinput-new"><span class="fui-image"></span>上传头像</span>
-           <span class="fileinput-exists"><span class="fui-gear"></span>替换头像</span>
+           <span class="fileinput-exists"><span class="fui-gear"></span>更换头像</span>
            <input type="file" name="...">
         </span>
         <a href="#" class="btn btn-primary btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>删除头像</a>
@@ -101,8 +106,8 @@
    <li class="list-group-item"><b>居住地:</b><span style="margin-left:10px;"><?php echo ($location); ?></span></li>
   </ul>
   <div class="modal-footer">
-       <a type="button"id="bindWexin" class="btn btn-primary ">绑定微信</a>
-        <a type="button"id="logout" class="btn btn-danger">注销</a>
+       <a type="button"id="bindWexin" class="btn btn-primary btn-embossed">绑定微信</a>
+        <a type="button"id="logout" href="/wemedical/index.php/Patient-Me-logOut" class="btn btn-danger btn-embossed">注销</a>
   </div>
 </div>
 </div>

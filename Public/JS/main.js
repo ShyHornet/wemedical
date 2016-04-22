@@ -136,14 +136,14 @@ var period = docInfoArray['period']==0?"8:30~12:00":"14:30~18:00";
                          "<div class=\"bd\">"+
                          "<p><b>科室: </b>"+department+"</p>"+
                          "<p><b>专长: </b>"+specialism+"</p>"+
-                         "<p><btn class=\"show_intro btn btn-xs btn-primary\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+pageNum+"\">"+
-                         "查看简介</btn><span class=\"btn btn-xs btn-success\" style=\"margin-left:25px;\">剩余号源:"+remain_orders+"</span></p></div></div>";
+                         "<p><btn class=\"show_intro btn btn-xs btn-primary btn-embossed\" data-toggle=\"collapse\" data-target=\"#panle-collapse-"+pageNum+"\">"+
+                         "查看简介</btn><span class=\"btn btn-xs btn-success btn-embossed\" style=\"margin-left:25px;\">剩余号源:"+remain_orders+"</span></p></div></div>";
   var panel_middle_s2 = "<div class=\"collapse intro\" id=\"panle-collapse-"+pageNum+"\" data-id=\""+doctor_id+"\">"+
                            "<div class=\"panel_middle_section\"></div></div>";
   var panel_bottom = "<div class=\"panel_bottom\">"+
                       "<p >"+
                       "<span class=\"p_l\">挂号费用:"+cost+"￥</span>"+
-                      "<span class=\"p_r\"><button class=\"btn btn-xs btn-success \"  id=\"order_btn"+doctor_id+"\" data-toggle=\"modal\" data-target=\"#order_confirm\" data-id=\""+doctor_id+"\" data-date=\""+date+"\" data-name=\""+name+"\" data-title=\""+title+"\" data-dept=\""+department+"\" data data-cost=\""+cost+" ￥\" data-period=\""+period+"\" data-week=\""+weekStr[week]+"\">立即预约</button></span></p></div></div></div>";
+                      "<span class=\"p_r\"><button class=\"btn btn-xs btn-success btn-embossed\"  id=\"order_btn"+doctor_id+"\" data-toggle=\"modal\" data-target=\"#order_confirm\" data-id=\""+doctor_id+"\" data-date=\""+date+"\" data-name=\""+name+"\" data-title=\""+title+"\" data-dept=\""+department+"\" data data-cost=\""+cost+" ￥\" data-period=\""+period+"\" data-week=\""+weekStr[week]+"\">立即预约</button></span></p></div></div></div>";
     var str = "<div class=\"panel\" >"+panel_top+panel_middle_s1+panel_middle_s2+panel_bottom+"</div>";
     return str;
 

@@ -97,7 +97,7 @@
       </div>
     <div class="weui_cells_tips" align="center" > <a href="/wemedical/index.php/Home-Login-signup" target="_self" >没有账号？立即注册</a></div>
     <center>
-        <button class="btn btn-hg btn-primary btn-wide" style="margin-top:20px;width:90%;" id="login">登录</button>
+        <button class="btn btn-hg btn-primary btn-wide btn-embossed" style="margin-top:20px;width:90%;" id="login">登录</button>
     </center>
     </form>
       </div>
@@ -129,6 +129,11 @@ $("select").change(function(){
         console.log(data);
         if(data.status==1||data.status==2){
         $('#login_result').addClass("alert-success").html(data.info).show();
+        setTimeout(function(){
+
+          window.location.href = './Patient-Appointment-index';
+
+        },500);
 
         }else {
          $('#login_result').addClass("alert-danger").html(data.info).show();
@@ -154,7 +159,7 @@ $("select").change(function(){
 $.validator.addMethod("checkName",function(value,element,params){
   $("#name_error").html("").hide();
   var nameRegex = /^[\u4e00-\u9fa5]{2,}$/;
-  return this.optional(element)||nameRegex.test(value);
+  return element&&nameRegex.test(value);
 },function(){
     $("#name_error").html("姓名至少为两位中文字符").show();
     $("#name_animate_box").removeClass("shake animated");
@@ -164,7 +169,7 @@ $.validator.addMethod("checkId",function(value,element,params){
   $("#id_card_error").html("").hide();
   var idRegex15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
   var idRegex18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
-  return this.optional(element)||idRegex15.test(value)||idRegex18.test(value);
+  return element&&(idRegex15.test(value)||idRegex18.test(value));
 },function(){
     $("#id_card_error").html("身份证号格式不正确").show();
     $("#id_card_num_animate_box").removeClass("shake animated");

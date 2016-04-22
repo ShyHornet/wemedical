@@ -33,18 +33,18 @@ class AppointmentController extends Controller {
   }
 
   public function proccessOrder($doc_id,$date){
-    if(session('?current_user')&&(session('current_user.user_type')=='patient')){
+    if(session("?current_user")&&(session("current_user.user_type")=="patient")){
     $order = new \Patient\Model\OrderModel();
     $data = array();
     $data["doctor_id"] = $doc_id;
     $data["patient_id"] = session('current_user.user_id');
     $data["date"] = $date;
     $order->data($data)->add();
-    $returnInfo['status']=0;
+    $returnInfo['status']=1;
     $returnInfo['info']="挂号成功!";
      $this->ajaxReturn($returnInfo);
    }else {
-     $this->error("预约请先登录!",'Home-Login-Index');
+     $this->error("预约请先登录!",U('Home-Login-Index'));
 
    }
    }

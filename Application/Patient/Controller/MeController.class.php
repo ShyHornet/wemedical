@@ -14,8 +14,13 @@ class MeController extends Controller {
         $this->assign('location',$data['location']);
         $this->display('index');
       }else{
+
         $this->error("进入个人中心请先登录!","Home-Login-Index");
       }
 
+  }
+  public function logOut(){
+    session("current_user",null);
+    $this->success("注销成功，正在转跳至登陆界面!","Home-Login-Index");
   }
 }
