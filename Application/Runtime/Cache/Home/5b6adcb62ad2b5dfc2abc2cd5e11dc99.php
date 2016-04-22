@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<meta name="viewport" charset="UTF-8" content="width=0.8*device-width, initial-scale=1,user-scalable=no">
 
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -40,10 +40,10 @@
 <div class="collapse navbar-collapse" id="navbar-collapse-01">
   <ul class="nav navbar-nav">
     <li ><a href="#fakelink">医院信息</a></li>
-      <li ><a href="/wemedical/Home-Login-Index">登陆注册</a></li>
-    <li ><a href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
-    <li><a href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
-    <li><a href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
+    <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+    <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+    <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">
@@ -59,7 +59,7 @@
 </nav><!-- /navbar -->
 
 
-    <div class="container-fluid"style="margin-top:40px;margin-bottom:120px;">
+    <div class="container-fluid"style="margin-top:40px;margin-bottom:40px">
         <div class="content">
           <div class="alert" id="login_result" role="alert" style="display:none;"></div>
   <form id="loginForm" method="post" action="/wemedical/index.php/Home-Login-checkLogin">

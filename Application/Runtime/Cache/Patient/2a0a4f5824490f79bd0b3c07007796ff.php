@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<meta name="viewport" charset="UTF-8" content="width=0.8*device-width, initial-scale=0.8,user-scalable=no">
 
 <!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">

@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1,user-scalable=no">
 
 <!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -82,7 +82,6 @@
               <tbody>
               </tbody>
             </table>
-            <span style="float:left;margin-bottom:13px;margin-right:5px;" class="fui-new"></span><span><h6>挂号信息</h6></span>
           </div>
           <div class="modal-footer">
             <a type="button" class="btn btn-primary btn-xxs btn-embossed" id="toOrder" >确认挂号</a>
@@ -93,16 +92,15 @@
     </div>
     <script type="text/javascript">
     $(function(){
-      $(function(){
+
           $("#aptPage").addClass("active");
-      });
       $("#toOrder").click(function(){
         var button = document.getElementById("toOrder");
 
           $.getJSON("/wemedical/index.php/Patient-Appointment-proccessOrder",{doc_id:button.dataset.docid,date:button.dataset.date},function(json){
-              //  if (json['status']==1) {
-              //    alert("挂号成功!");
-              //  }
+               if (json['status']==1) {
+                 alert("挂号成功!");
+               }
 
           });
           $("#order_confirm").modal('hide');
@@ -120,8 +118,8 @@
         <span  class="fui-arrow-left" id="preDay" ></span>
         </div>
         <div class=""style="float:left;text-align:center;width:35%;margin-top:4px;">
-          <input type="" id="tomorrow" value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"style="display:none;">
-        <input  class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-placement="top" data-toggle="tooltip" class="btn btn-default mrs" type="button" data-original-title="至少提前一天预约" data-language='zh' value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"/>
+          <input type="text" id="tomorrow" value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"style="display:none;">
+        <input  type="text" readonly="readonly" class="form-control datepicker-here active" style="text-align:center;border-color:#1abc9c;" id="treat_date"  data-placement="top" data-toggle="tooltip" class="btn btn-default mrs" type="button" data-original-title="至少提前一天预约" data-language='zh' value="<?php echo date('Y-m-d',strtotime("+1 day")); ?>"/>
         </div>
         <div class="" style="float:left;margin-top:11.25px;margin-right:22%;margin-left:3%;">
           <span class="fui-arrow-right" id="nxtDay"></span>
@@ -130,7 +128,7 @@
 <script type="text/javascript">
 $(function(){
 
-        $('[data-toggle=tooltip]').tooltip();
+        // $('[data-toggle=tooltip]').tooltip();
 
 
 
@@ -139,7 +137,7 @@ $(function(){
 </script>
 
 <div ></div>
-<div id="doc_info" style="min-height:500px;">
+<div id="doc_info" style="min-height:450px;">
 
 </div>
 
