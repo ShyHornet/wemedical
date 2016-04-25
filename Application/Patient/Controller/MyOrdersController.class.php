@@ -22,5 +22,12 @@ class MyOrdersController extends Controller {
     }
     echo json_encode($list);
   }
+  public function orderDetail($id){
+    $orders =new \Patient\Model\OrderModel("Order");
+    $patient_id = session("current_user.user_id");
+    $condition['order_id'] = $id
+    $order = $orders->$orders->where($condition)->find(1);
+    
+  }
 
 }

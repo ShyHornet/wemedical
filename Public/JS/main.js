@@ -1,4 +1,12 @@
-
+init()
+//初始化store.js
+    function init() {
+        if (!store.enabled) {
+            alert('Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.')
+            return
+        }
+        // ... and so on ...
+    }
 //短信验证码发送&倒计时
 var wait=60;
 function textCountDown(){

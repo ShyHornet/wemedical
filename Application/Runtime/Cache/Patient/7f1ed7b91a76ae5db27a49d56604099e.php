@@ -68,12 +68,14 @@
 </nav><!-- /navbar -->
 
 
-<div class="btn-group btn-group-justified">
+<div class="btn-group btn-group-justified" style="margin-top:-30px;" >
               <a class="btn btn-primary" id="tab-left" href="#">当前预约</a>
               <a class="btn btn-default" href="#" id="tab-right">历史预约</a>
             </div>
 <div class="container-fluid"style="min-height:420px;padding-top:50px;padding-bottom:30px;">
-<table class="table table-striped table-bordered">
+
+  <a title="" data-placement="top" data-toggle="tooltip" class="" type="button" data-original-title="点击预约编号查看详情"><span class="fui-info-circle" style="margin-left:10px;"></span></a>
+<table class="table table-striped table-bordered" >
         <thead>
           <tr>
             <th>#</th>
@@ -89,9 +91,10 @@
 </div>
 <script type="text/javascript">
 $(function(){
-
+   $('[data-toggle="tooltip"]').tooltip()
+  getOrders(1);
   $("#tab-left").click(function(){
-  
+
       getOrders(1);
   });
   $("#tab-right").click(function(){
