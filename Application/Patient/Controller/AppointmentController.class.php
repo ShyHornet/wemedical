@@ -7,11 +7,12 @@ class AppointmentController extends Controller {
   }
   public function getDoc($num,$date = null){
     $doc =new \Doctor\Model\DoctorModel("Doctor");
-    if ($num>1){
+    $num--;
+    if ($num>0){
       $num += 2;
     }
     $start = $num;
-    $num_per_time = $num==1?3:1;
+    $num_per_time = $num==0?3:1;
     $dateConvert = date('Y-n-d',strtotime($date));
     $week =date('w', strtotime($date));
     // echo $week;
@@ -26,10 +27,16 @@ class AppointmentController extends Controller {
 
   }
   public function getIntro($id){
+    if(F('intro'.$id)){
+      echo json_encode(F('intro'.$id));
+    }else{
     $doc = M("Doctor");
     $map['doctor_id'] = $id;
     $intro = $doc->field('intro,treatment_period as period,work_days')->where($map)->select();
+    F('intro'.$id,$intro);
+
     echo json_encode($intro);
+  }
   }
 
   public function proccessOrder($doc_id,$date){

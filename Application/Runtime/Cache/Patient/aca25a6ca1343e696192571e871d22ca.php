@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1,user-scalable=no">
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.9,user-scalable=no">
 
 <!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -19,7 +19,7 @@
 <title>微信挂号平台</title>
 <script src="/wemedical/Public/JS/jquery-2.2.3.min.js"></script>
 <script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
-
+<script src="/wemedical/Public/JS/store.min.js"></script>
 <!-- <script src="/wemedical/Public/JS/banneralert.min.js"></script> -->
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
 
@@ -126,13 +126,6 @@
         </div>
       </div>
 <script type="text/javascript">
-$(function(){
-
-        // $('[data-toggle=tooltip]').tooltip();
-
-
-
-});
 
 </script>
 
@@ -146,7 +139,15 @@ $(function(){
 
 
 <script >
-
+init()
+    function init() {
+        if (!store.enabled) {
+            alert('Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.')
+            return
+        }
+        var user = store.get('user')
+        // ... and so on ...
+    }
 $(function(){
   //初始化日期选择器
   var tomorrow = new Date($("#tomorrow").val());
@@ -155,7 +156,7 @@ $(function(){
   tomorrow.setUTCSeconds("0");
   var tomorrow_week = tomorrow.getDay();
   if (tomorrow_week==6||tomorrow_week==0){
-       tomorrow = tomorrow==6? new  Date(tomorrow.getTime()+ 3*60*60*24*1000):new  Date(tomorrow.getTime()+ 2*60*60*24*1000);
+       tomorrow = tomorrow_week==6? new  Date(tomorrow.getTime()+ 3*60*60*24*1000):new  Date(tomorrow.getTime()+ 2*60*60*24*1000);
 
   }
   $("#treat_date").datepicker({
@@ -262,9 +263,10 @@ var dateStr = ""+date.getFullYear()+"-"+month+"-"+date.getDate()+"";
       // }
         if (json!=null){
           $.each(json,function(index,array){
-              $("#doc_info").append(buildDocPanle(array,(num+index),"/wemedical/Public/images/img2.jpeg",dateStr,date.getDay()));
+                var doctor_id = array['doctor_id'];
+              $("#doc_info").append(buildDocPanle(array,(num+index),"/wemedical/Public/images/doctors/doc"+doctor_id+".jpeg",dateStr,date.getDay()));
               //为新添加的预约面板添加显示简介事件
-              var doctor_id = array['doctor_id'];
+
               var intro = "[data-id="+doctor_id+"]";
 
             $(intro).on('show.bs.collapse', function () {

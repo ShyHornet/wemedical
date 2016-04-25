@@ -1,0 +1,76 @@
+[ 2016-04-23T20:04:53+08:00 ] 192.168.1.2 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001509s ]
+
+[ 2016-04-23T20:04:54+08:00 ] 192.168.1.2 /wemedical/index.php/Patient-Appointment-getDoc?num=1&date=2016-04-26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0020s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost`,`orders_per_day`,`treatment_period` AS `period`,`work_days` FROM `wemedical_doctor` WHERE ( work_days like'%2%' ) ORDER BY doctor_id LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='2' ) ORDER BY order_id  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='3' ) ORDER BY order_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='6' ) ORDER BY order_id  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-23T20:05:47+08:00 ] 192.168.1.2 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-04-23T20:05:47+08:00 ] 192.168.1.2 /wemedical/index.php/Patient-Appointment-getDoc?num=1&date=2016-04-26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost`,`orders_per_day`,`treatment_period` AS `period`,`work_days` FROM `wemedical_doctor` WHERE ( work_days like'%2%' ) ORDER BY doctor_id LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='2' ) ORDER BY order_id  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='3' ) ORDER BY order_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='6' ) ORDER BY order_id  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+

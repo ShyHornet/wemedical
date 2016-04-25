@@ -155,54 +155,73 @@ function showIntroPanle(contentToFill,showIntroLink){
     contentToFill.html("<span style=\"margin-left:90%;\"  class=\"fui-cross-circle panle-collapse-close\"  aria-hidden=\"false\"></span><br><a>简介</a>");
     var id   = showIntroLink.attr("data-id");
     console.log(id);
-   $.getJSON("Patient-Appointment-getIntro",{id:id},function(json){
-     if (json) {
-       $.each(json,function(index,array){
-         console.log(array);
-         contentToFill.append("<p>"+array['intro']+"</p>");
-         var period_convert = "";
-         if(array['period']=="0"){
-           period_convert = "8:30~12:00";
-         }else{
-            period_convert = "14:30~18:00";
+    var docIntro = "docIntro"+id+"";
+    //如果存在本地缓存
+    if (store.get("docIntro"+id+"")) {
+        var intro = $.parseJSON(store.get("docIntro"+id+""));
+        contentToFill.append("<p>"+intro['intro']+"</p>");
+        contentToFill.append("<a>医生出诊时间:</a><p>"+convertPeriod(intro['period'])+"</p>");
+        contentToFill.append("<p>"+convertWorkDay(intro['work_days'])+"出诊。"+"</p>");
+    }else{
+      //不存在本地缓存就去服务器抓取
+    $.getJSON("Patient-Appointment-getIntro",{id:id},function(json){
+     if (json[0]) {
+         contentToFill.append("<p>"+json[0]['intro']+"</p>");
+         contentToFill.append("<a>医生出诊时间:</a><p>"+convertPeriod(json[0]['period'])+"</p>");
+         contentToFill.append("<p>"+convertWorkDay(json[0]['work_days'])+"出诊。"+"</p>");
+         store.set(docIntro, JSON.stringify(json[0]));
+       }else {
+         return;
+       }
 
-         }
+    });
 
-         contentToFill.append("<a>医生出诊时间:</a><p>"+period_convert+"</p>");
-          var work_days = array['work_days'];
-          var work_days_trans = "每星期";
-          for (var i = 0; i < work_days.length; i++) {
-
-              switch (work_days[i]) {
-                case '1':work_days_trans+="一、";
-                break;
-                case '2':work_days_trans+="二、";
-                break;
-                case '3':work_days_trans+="三、";
-                break;
-                case '4':work_days_trans+="四、";
-                break;
-                case '5':work_days_trans+="五、 ";
-                  break;
-                default:break;
-
-              }
-
-
-          }
-          contentToFill.append("<p>"+work_days_trans.substring(0,work_days_trans.length-1)+"出诊。"+"</p>");
-     });
-   }
-   });
    $(".panle-collapse-close").click(function(){
      //用于关闭预约面板的中间页
+        $(this).parent(".panel_middle_section").parent(".collapse").collapse('hide');
+    });
 
-   $(this).parent(".panel_middle_section").parent(".collapse").collapse('hide');
-   });
- }else {
-   return;
- }
+    }
+    if (localStorage.length >=100) {
+      //缓存条数多于100条清除
+      store.clear();
+
+    }
+  }
 }
+function convertPeriod(period){
+  var period_convert = "";
+  if(period=="0"){
+    period_convert = "8:30~12:00";
+  }else{
+     period_convert = "14:30~18:00";
+
+  }
+  return period_convert;
+}
+function convertWorkDay(work_days){
+  var work_days_trans = "每星期";
+  for (var i = 0; i < work_days.length; i++) {
+
+      switch (work_days[i]) {
+        case '1':work_days_trans+="一、";
+        break;
+        case '2':work_days_trans+="二、";
+        break;
+        case '3':work_days_trans+="三、";
+        break;
+        case '4':work_days_trans+="四、";
+        break;
+        case '5':work_days_trans+="五、 ";
+          break;
+        default:break;
+
+        }
+      }
+      return  work_days_trans.substring(0,work_days_trans.length-1);
+  }
+  //我的预约模块
+
 (function () {
     'use strict';
     if (window && window.addEventListener) {

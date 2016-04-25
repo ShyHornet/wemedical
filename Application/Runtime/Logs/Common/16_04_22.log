@@ -136,3 +136,9 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
 ERR: 无法加载模块:Public/css/jquery
 
+[ 2016-04-22T20:41:19+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+ERR: 无法加载模块:Public/css/jquery
+

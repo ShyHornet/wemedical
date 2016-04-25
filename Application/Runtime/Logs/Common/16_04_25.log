@@ -1,0 +1,72 @@
+[ 2016-04-25T10:21:41+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T10:24:03+08:00 ] ::1 /wemedical/__URL__-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+ERR: 无法加载模块:__URL__
+
+[ 2016-04-25T10:24:03+08:00 ] ::1 /wemedical/__URL__-getOrders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+ERR: 无法加载模块:__URL__
+
+[ 2016-04-25T11:51:49+08:00 ] 192.168.1.9 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T11:52:01+08:00 ] 192.168.1.3 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T11:58:23+08:00 ] 192.168.1.2 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T21:24:19+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T21:25:16+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T21:28:04+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T21:28:14+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T21:28:20+08:00 ] ::1 /wemedical/Public/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+ERR: 无法加载模块:Public/css/jquery
+
+[ 2016-04-25T22:09:34+08:00 ] ::1 /wemedical/store.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+ERR: 无法加载模块:Store.min
+

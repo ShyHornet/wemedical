@@ -8,6 +8,7 @@ class OrderModel extends RelationModel{
          'mapping_type'      => self::BELONGS_TO,
          'class_name'        => 'Doctor',
          'foreign_key'=>'doctor_id',
+         'as_fields' => 'title,department:dpt,order_cost:cost',
          ),
          'Patient'=>array(
            'mapping_type'      => self::BELONGS_TO,

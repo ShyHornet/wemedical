@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.9,user-scalable=no">
 
 <!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -19,7 +19,7 @@
 <title>微信挂号平台</title>
 <script src="/wemedical/Public/JS/jquery-2.2.3.min.js"></script>
 <script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
-
+<script src="/wemedical/Public/JS/store.min.js"></script>
 <!-- <script src="/wemedical/Public/JS/banneralert.min.js"></script> -->
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
 
@@ -67,9 +67,82 @@
 </div><!-- /.navbar-collapse -->
 </nav><!-- /navbar -->
 
-<div class="container-fluid">
-<h6>我的预约。。。建设中</h6>
+
+<div class="btn-group btn-group-justified">
+              <a class="btn btn-primary" id="tab-left" href="#">当前预约</a>
+              <a class="btn btn-default" href="#" id="tab-right">历史预约</a>
+            </div>
+<div class="container-fluid"style="min-height:420px;padding-top:50px;padding-bottom:30px;">
+<table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>日期</th>
+            <th>号源类型</th>
+            <th>科室</th>
+            <th>挂号费</th>
+          </tr>
+        </thead>
+        <tbody id="orders">
+        </tbody>
+      </table>
 </div>
+<script type="text/javascript">
+$(function(){
+
+  $("#tab-left").click(function(){
+  
+      getOrders(1);
+  });
+  $("#tab-right").click(function(){
+    getOrders(0);
+
+  });
+});
+function getOrders(time){
+
+    if(time==1){
+      //获取当前预约
+      $("#orders").html("");
+      $.getJSON("/wemedical/index.php/Patient-MyOrders-getOrders",{time:1},function(json){
+            if (json!=null){
+              $.each(json,function(index,array){
+                console.log(array);
+
+            $("#orders").
+            append("<tr data-id="+array['order_id']+" ></tr>");
+            $("[data-id="+array['order_id']+"]")
+            .append("<td><a>"+array['order_id']+"</a></td>")
+            .append("<td>"+array['date']+"</td>")
+            .append("<td>"+array['title']+"</td>")
+            .append("<td>"+array['dpt']+"</td>")
+            .append("<td>"+array['cost']+"￥</td>");
+
+              });
+            }
+            });
+    }else{
+      //获取历史预约
+      $("#orders").html("");
+      $.getJSON("/wemedical/index.php/Patient-MyOrders-getOrders",{time:0},function(json){
+            if (json!=null){
+              $.each(json,function(index,array){
+
+                $("#orders").
+                append("<tr data-id="+array['order_id']+" ></tr>");
+                $("[data-id="+array['order_id']+"]")
+                .append("<td><a>"+array['order_id']+"</a></td>")
+                .append("<td>"+array['date']+"</td>")
+                .append("<td>"+array['title']+"</td>")
+                .append("<td>"+array['dpt']+"</td>")
+                .append("<td>"+array['cost']+"￥</td>");
+              });
+            }
+            });
+         }
+
+}
+</script>
 
 <footer >
 <p>Powered by HJW</p>
