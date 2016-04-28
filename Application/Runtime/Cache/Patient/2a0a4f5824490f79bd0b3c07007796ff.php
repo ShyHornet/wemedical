@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=0.8*device-width, initial-scale=0.8,user-scalable=no">
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.9,user-scalable=no">
 
 <!-- <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css"> -->
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -19,7 +19,7 @@
 <title>微信挂号平台</title>
 <script src="/wemedical/Public/JS/jquery-2.2.3.min.js"></script>
 <script src="/wemedical/Public/JS/flat-ui-pro.min.js"></script>
-
+<script src="/wemedical/Public/JS/store.min.js"></script>
 <!-- <script src="/wemedical/Public/JS/banneralert.min.js"></script> -->
 <script src="/wemedical/Public/JS/jquery.validate.min.js"></script>
 

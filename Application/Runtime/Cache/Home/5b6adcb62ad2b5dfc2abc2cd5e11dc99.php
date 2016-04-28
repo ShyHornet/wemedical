@@ -22,8 +22,9 @@
 
 <script src="/wemedical/Public/JS/jquery.form.js"></script>
 <script src="/wemedical/Public/JS/jquery.cookie.js"></script>
-
+  <script src="/wemedical/Public/JS/store.min.js"></script>
   <script src="/wemedical/Public/JS/main.js"></script>
+
 </head>
 
 <body>

@@ -1,0 +1,768 @@
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/css/bootstrap.min14ed.css?v=3.3.6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Css/bootstrap.min14ed
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/css/animate.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+ERR: 无法加载模块:Css/animate.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/css/font-awesome.min93e3.css?v=4.4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Css/font
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/css/style.min862f.css?v=4.1.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+ERR: 无法加载模块:Css/style.min862f
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:40:40+08:00 ] ::1 /wemedical/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-04-28T16:41:10+08:00 ] ::1 /wemedical/css/font-awesome.min93e3.css?v=4.4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载模块:Css/font
+
+[ 2016-04-28T16:41:10+08:00 ] ::1 /wemedical/css/bootstrap.min14ed.css?v=3.3.6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+ERR: 无法加载模块:Css/bootstrap.min14ed
+
+[ 2016-04-28T16:41:10+08:00 ] ::1 /wemedical/css/style.min862f.css?v=4.1.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+ERR: 无法加载模块:Css/style.min862f
+
+[ 2016-04-28T16:41:10+08:00 ] ::1 /wemedical/css/animate.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:Css/animate.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:43:16+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:43:17+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:43:18+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:43:18+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000090s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/.../css/font-awesome.min93e3.css?v=4.4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+ERR: 无法加载模块:.../css/font
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/.../css/bootstrap.min14ed.css?v=3.3.6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+ERR: 无法加载模块:.../css/bootstrap.min14ed
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/.../css/animate.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载模块:.../css/animate.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/.../css/style.min862f.css?v=4.1.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+ERR: 无法加载模块:.../css/style.min862f
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:43:31+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:48:10+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:48:11+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/img/profile_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+ERR: 无法加载模块:Img/profile_small
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/jquery.min.js?v=2.1.4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+ERR: 无法加载模块:Js/jquery.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+ERR: 无法加载模块:Js/bootstrap.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/index_v148b2.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+ERR: 无法加载模块:Index_v148b2
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/plugins/metisMenu/jquery.metisMenu.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+ERR: 无法加载模块:Js/plugins/metisMenu/jquery.metisMenu
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/plugins/slimscroll/jquery.slimscroll.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+ERR: 无法加载模块:Js/plugins/slimscroll/jquery.slimscroll.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/plugins/layer/layer.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+ERR: 无法加载模块:Js/plugins/layer/layer.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/hplus.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+ERR: 无法加载模块:Js/hplus.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/plugins/pace/pace.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+ERR: 无法加载模块:Js/plugins/pace/pace.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/js/contabs.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+ERR: 无法加载模块:Js/contabs.min
+
+[ 2016-04-28T16:48:14+08:00 ] ::1 /wemedical/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+ERR: 无法加载模块:Img/a7
+
+[ 2016-04-28T16:48:15+08:00 ] ::1 /wemedical/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+ERR: 无法加载模块:Img/a4
+
+[ 2016-04-28T16:48:15+08:00 ] ::1 /wemedical/img/a1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载模块:Img/a1
+
+[ 2016-04-28T16:48:15+08:00 ] ::1 /wemedical/img/a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+ERR: 无法加载模块:Img/a2
+
+[ 2016-04-28T16:48:15+08:00 ] ::1 /wemedical/img/a3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+ERR: 无法加载模块:Img/a3
+
+[ 2016-04-28T16:48:15+08:00 ] ::1 /wemedical/img/a8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+ERR: 无法加载模块:Img/a8
+
+[ 2016-04-28T16:49:55+08:00 ] ::1 /wemedical/index_v1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+ERR: 无法加载模块:Index_v1
+
+[ 2016-04-28T16:50:01+08:00 ] ::1 /wemedical/docManage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载模块:DocManage
+
+[ 2016-04-28T16:50:28+08:00 ] ::1 /wemedical/docManage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+ERR: 无法加载模块:DocManage
+

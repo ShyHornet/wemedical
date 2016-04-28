@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
-<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet">
@@ -22,8 +21,9 @@
 
 <script src="/wemedical/Public/JS/jquery.form.js"></script>
 <script src="/wemedical/Public/JS/jquery.cookie.js"></script>
-
+  <script src="/wemedical/Public/JS/store.min.js"></script>
   <script src="/wemedical/Public/JS/main.js"></script>
+
 </head>
 
 <body>
@@ -124,7 +124,7 @@ return element&&(idRegex15.test(value)||idRegex18.test(value));
   <div class="col-sm-6">
     <div class="input-group form-group">
       <span class="input-group-addon login-field-icon glyphicon glyphicon-earphone" style="top:0px;"></span>
-        <input class="form-control" type="text" name="phone_num"  placeholder="请输入手机号码" />
+        <input class="form-control" type="text" name="phone_num" id="phone"  placeholder="请输入手机号码" />
     </div>
   </div>
 </div>
@@ -141,6 +141,8 @@ return element&&(idRegex15.test(value)||idRegex18.test(value));
     </div>
   </div>
 </div>
+<div class="alert alert-success" id="vcodeAlert" role="alert" style="display:none;"></div>
+
 <div class="alert alert-danger" id="vcode_error" role="alert"style="display:none;"></div>
 <div class="alert alert-success" id="vcode_ok" role="alert"style="display:none;"></div>
 <input type="text" style="display:none;" name="vcode" id="vcode_status" value="0" >

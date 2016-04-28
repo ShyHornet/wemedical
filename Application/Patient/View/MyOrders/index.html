@@ -27,9 +27,15 @@ $(function(){
   $("#tab-left").click(function(){
 
       getOrders(1);
+      $(this).addClass("btn-primary");
+      $("#tab-right").removeClass("btn-primary").addClass("btn-default");
+
+
   });
   $("#tab-right").click(function(){
     getOrders(0);
+    $(this).addClass("btn-primary");
+    $("#tab-left").removeClass("btn-primary").addClass("btn-default");
 
   });
 });

@@ -2,7 +2,57 @@
 namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-    public function index(){
-        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+    public function getAllDocs($order){
+      $doc =new \Doctor\Model\DoctorModel("Doctor");
+      // echo $week;
+      $orderStr = array();
+      if ($order=="asc"){
+          $orderStr = array('order','doctor_id'=>'asc');
+      }else{
+        $orderStr = array('order','doctor_id'=>'desc');
+      }
+      //$fields = array('doctor_id','name','title','department','specialism','order_cost' =>'cost','orders_per_day','treatment_period' =>'period','work_days','intro');
+       $list= $doc->order('doctor_id')->select();
+
+       if (count($list)==0) {
+         echo null;
+         return;
+       }
+      echo json_encode($list);
+    }
+    public function updateDoc($id){
+      $data = array();
+      $doc = M("Doctor");
+       if (isset($_POST['name'])) {
+            $data['name'] = $_POST['name'];
+       }
+       if (isset($_POST['id_card'])) {
+            $data['id_card'] = $_POST['id_card'];
+       }
+       if (isset($_POST['title'])) {
+
+              $data['title'] = $titles[$_POST['title']];
+       }
+       if (isset($_POST['gender'])) {
+            $data['gender'] = $_POST['gender'];
+       }
+       if (isset($_POST['phone'])) {
+        $data['phone'] = $_POST['phone'];
+       }
+       if (isset($_POST['department'])) {
+
+            $data['department'] = $_POST['department'];
+       }
+
+
+       $doc-> where('id='.$id)->setField($data);
+
+    }
+    public function delDoc($id){
+      $doc = M('Doctor');
+      $doc->delete($id);
+      //连带删除其预约单
+      $orders = M("Order");
+      $orders->where('doctor_id='.$id)->delete();
     }
 }

@@ -16,7 +16,7 @@ function textCountDown(){
 if (wait == 0){
   $.removeCookie('vcode',{path:'/'});
  $("#vcode").removeAttr("disabled");
-  $("#vcode").val("点击获取");
+  $("#vcode").html("点击获取");
   wait = 60;
 }else {
   if ($("#phone_num").val() == '') {
@@ -40,7 +40,7 @@ function sendTextVCode(){
   $.cookie('vcode',Math.floor(Math.random() * (999999 - 111111) + 111111),{expires:7,path:'/'});
   var vcode = $.cookie('vcode');
   console.log(vcode);
-  phone_num = $("#phone_num").val();
+  phone_num = $("#phone").val();
   if (phone_num == ''){      //判断手机号是否填写
   //    $("#phone_num").parent(".form-group").addClass("has-error");
   // $("#phone_num").parent(".form-group").removeClass("has-error");
@@ -49,21 +49,26 @@ function sendTextVCode(){
 
       //  $("#phone_num").parent(".form-group").removeClass("has-error", 2000, "easeOut");
 
-  var apikey = "08174a006a0fcb9c4b00a704a0253a2d";
-  var base_url = "http://apis.baidu.com/kingtto_media/106sms/106sms";//基础url
-  var header = {"apikey":apikey};//设置http-get请求头部
+  var base_url = "http://apis.baidu.com/kingtto_media/106sms/106sms";
+  //基础url
+  var header = {"apikey":"08174a006a0fcb9c4b00a704a0253a2d"};
+  //设置http-get请求头部
    var content = "【微信挂号平台】感谢您注册微信挂号平台，请在一分钟内输入您的验证码！验证码: "+ vcode;
   var data = {
     "mobile":phone_num,
-    "tag":2,//返回json数据
-    "content":content
-    }//配置数据
+    "tag":2,
+    "content":content,
+    }
+    //配置数据
 
 
 $.ajax({
+  type: "GET",
    url:base_url,
-   headers:header,
    data:data,
+   beforeSend: function(XMLHttpRequest) {
+         XMLHttpRequest.setRequestHeader("apikey","08174a006a0fcb9c4b00a704a0253a2d");
+       },
    success:function(data){
      var json = $.parseJSON(data);
      if (json.returnstatus=="Success") {
@@ -92,20 +97,20 @@ $.ajax({
 }
 //验证短信验证码是否正确
 function veriCode(code){
+  $("#vcodeAlert").hide();
   if (code == ''){
-     $("#vocde").parent().parent(".input-group").addClass("has-error");
+     $("#vcodeAlert").removeClass("alert-success").addClass("alert-danger").html("验证码不能为空").show();
       return;
   }
-  $("#vocde").parent().parent().removeClass("has-success");//去除输入框的错误或正确提示色
-  $("#vocde").parent().parent().removeClass("has-error");
+
   var vcode = $.cookie('vcode');
     if (code == vcode ) {//验证成功
       //将页面中隐藏的短信验证成功的标志置为1
       $("#vcode_status").val("1");
 
-      $("#vocde").parent().parent(".input-group").addClass("has-success");
+      $("#vcodeAlert").addClass("alert-success").html("短信验证成功").show();
     }else{
-    $("#vocde").parent().parent(".input-group").addClass("has-error");
+    $("#vcodeAlert").addClass("alert-danger").html("短信验证码错误").show();
 
     }
 
