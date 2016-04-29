@@ -20,7 +20,12 @@ class IndexController extends Controller {
        }
       echo json_encode($list);
     }
-    public function updateDoc($id){
+    public function updateDoc(){
+      $dptSets =array(
+      	"心血管内科","呼吸内科", "神经内科", "肾病内科", "消化内科","血液病内科","内分泌内科","普通外科","肝胆外科","胃肠外科","痔漏外科","心脏外科","骨头外科","神经外科","泌尿外科","整形外科","烧伤外科","妇科","产科","辅助生殖","儿科","眼科","口腔科","耳鼻喉科","皮肤科",
+      	"中西医结合科","传染科"
+      	);
+      	$titles =array("副主治医师","主治医师","副主任医师","主任医师");
       $data = array();
       $doc = M("Doctor");
        if (isset($_POST['name'])) {
@@ -41,18 +46,27 @@ class IndexController extends Controller {
        }
        if (isset($_POST['department'])) {
 
-            $data['department'] = $_POST['department'];
+            $data['department'] =   $dptSets[$_POST['department']];
        }
 
 
-       $doc-> where('id='.$id)->setField($data);
+       $doc-> where('doctor_id='.$_POST['doctor_id'])->setField($data);
+       echo json_encode(array('status'=>'success'));
 
     }
     public function delDoc($id){
-      $doc = M('Doctor');
-      $doc->delete($id);
+      echo json_encode($id);
+        $doc = M('Doctor');
+        $orders = M("Order");
+      foreach ($id as $key => $value) {
+        $orders->where('doctor_id='.$value)->delete();
+        $doc->delete($value);
+
+      }
+      echo json_encode(array("status"=>"success"));
+    //  $doc->delete($id);
       //连带删除其预约单
-      $orders = M("Order");
-      $orders->where('doctor_id='.$id)->delete();
+
+      //$orders->where('doctor_id='.$id)->delete();
     }
 }
