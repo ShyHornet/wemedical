@@ -69,4 +69,27 @@ class IndexController extends Controller {
 
       //$orders->where('doctor_id='.$id)->delete();
     }
+    //七牛上传凭证
+    public function uptoken(){
+      Vendor('Qiniu.Auth');
+        Vendor('Qiniu.Config');
+        Vendor('Qiniu.functions');
+        Vendor('Qiniu.Http.Client');
+        Vendor('Qiniu.Http.Request');
+        Vendor('Qiniu.Http.Response');
+        Vendor('Qiniu.Storage.BucketManager');
+        Vendor('Qiniu.Storage.UploadManager');
+    header('Access-Control-Allow-Origin:*');
+      $bucket = 'wemedical';
+      $accessKey = 'aAul9IYjjVq6TWfsOLzuwY72bssajGYhGsK-WUVT';
+      $secretKey = 'BwB5L-W2VKFo_HnWPM6CsrsSO_WvxUK8QD6WwHWI';
+      $auth = new  \Qiniu\Auth($accessKey, $secretKey);
+    //   $policy = array(
+    // // 'returnUrl' => 'http://localhost/wemedical-admin/',
+    // 'returnBody' => '{"key": $(key), "hash": $(etag), "w": $(imageInfo.width), "h": $(imageInfo.height)}'
+    //  );
+    //   $upToken = $auth->uploadToken($bucket,null,3600,$policy);
+    $upToken = $auth->uploadToken($bucket);
+        echo  json_encode(array('uptoken'=>$upToken));
+    }
 }
