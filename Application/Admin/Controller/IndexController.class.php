@@ -28,6 +28,9 @@ class IndexController extends Controller {
       	$titles =array("副主治医师","主治医师","副主任医师","主任医师");
       $data = array();
       $doc = M("Doctor");
+      if (isset($_POST['img_url'])) {
+           $data['img_url'] = $_POST['img_url'];
+      }
        if (isset($_POST['name'])) {
             $data['name'] = $_POST['name'];
        }
@@ -84,12 +87,33 @@ class IndexController extends Controller {
       $accessKey = 'aAul9IYjjVq6TWfsOLzuwY72bssajGYhGsK-WUVT';
       $secretKey = 'BwB5L-W2VKFo_HnWPM6CsrsSO_WvxUK8QD6WwHWI';
       $auth = new  \Qiniu\Auth($accessKey, $secretKey);
-    //   $policy = array(
-    // // 'returnUrl' => 'http://localhost/wemedical-admin/',
-    // 'returnBody' => '{"key": $(key), "hash": $(etag), "w": $(imageInfo.width), "h": $(imageInfo.height)}'
-    //  );
-    //   $upToken = $auth->uploadToken($bucket,null,3600,$policy);
-    $upToken = $auth->uploadToken($bucket);
+      $policy = array(
+         "saveKey"=>'$(x:fname)',
+    // 'returnUrl' => 'http://localhost/wemedical-admin/',
+    'returnBody' => '{"fname":$(x:fname), "key": $(key), "hash": $(etag), "w": $(imageInfo.width), "h": $(imageInfo.height)}'
+     );
+      $upToken = $auth->uploadToken($bucket,null,3600,$policy);
+    //$upToken = $auth->uploadToken($bucket);
         echo  json_encode(array('uptoken'=>$upToken));
+    }
+    //七牛删除图片
+    public function delImg($key){
+      Vendor('Qiniu.Auth');
+        Vendor('Qiniu.Config');
+        Vendor('Qiniu.functions');
+        Vendor('Qiniu.Http.Client');
+        Vendor('Qiniu.Http.Request');
+        Vendor('Qiniu.Http.Error');
+        Vendor('Qiniu.Http.Response');
+        Vendor('Qiniu.Storage.BucketManager');
+        Vendor('Qiniu.Storage.UploadManager');
+        header('Content-Type:   application/x-www-form-urlencoded');
+      $bucket = 'wemedical';
+      $accessKey = 'aAul9IYjjVq6TWfsOLzuwY72bssajGYhGsK-WUVT';
+      $secretKey = 'BwB5L-W2VKFo_HnWPM6CsrsSO_WvxUK8QD6WwHWI';
+      $auth = new  \Qiniu\Auth($accessKey, $secretKey);
+      $BucketManage = new \Qiniu\Storage\BucketManager($auth);
+      echo $BucketManage->delete('wemedical',$key);
+    //$upToken = $auth->uploadToken($bucket);
     }
 }
