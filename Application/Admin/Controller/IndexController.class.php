@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+use Think\Model;
 class IndexController extends Controller {
     public function getAllDocs($order){
       $doc =new \Doctor\Model\DoctorModel("Doctor");
@@ -26,35 +27,50 @@ class IndexController extends Controller {
       	"中西医结合科","传染科"
       	);
       	$titles =array("副主治医师","主治医师","副主任医师","主任医师");
-      $data = array();
+        //数据转换
+        if (isset($_POST['title'])) {
+
+              $_POST['title'] = $titles[$_POST['title']];
+        }
+        if (isset($_POST['department'])) {
+
+            $_POST['department'] =   $dptSets[$_POST['department']];
+        }
+
       $doc = M("Doctor");
-      if (isset($_POST['img_url'])) {
-           $data['img_url'] = $_POST['img_url'];
+      if($doc->create($_POST,Model::MODEL_UPDATE)){
+            $doc->save(); // 写入数据到数据库
+            // 如果主键是自动增长型 成功后返回值就是最新插入的值
+            //返回更新成功和更新医生信息的医生id
+            echo json_encode(array('status'=>'success'));
+
+        }else{
+           echo json_encode(array('status'=>'failed'));
+        }
+
+
+
+    }
+    public function addDoc(){
+      $dptSets =array(
+        "心血管内科","呼吸内科", "神经内科", "肾病内科", "消化内科","血液病内科","内分泌内科","普通外科","肝胆外科","胃肠外科","痔漏外科","心脏外科","骨头外科","神经外科","泌尿外科","整形外科","烧伤外科","妇科","产科","辅助生殖","儿科","眼科","口腔科","耳鼻喉科","皮肤科",
+        "中西医结合科","传染科"
+        );
+        $titles =array("副主治医师","主治医师","副主任医师","主任医师");
+      $doc = M("Doctor");
+      if ($doc->create()) {
+
+          if ($doc->add()) {
+                $this->success("注册成功!");
+
+          } else {
+                $this->error("注册失败!");
+
+          }
+      } else {
+          exit($this->error($Patient->getError()));
       }
-       if (isset($_POST['name'])) {
-            $data['name'] = $_POST['name'];
-       }
-       if (isset($_POST['id_card'])) {
-            $data['id_card'] = $_POST['id_card'];
-       }
-       if (isset($_POST['title'])) {
 
-              $data['title'] = $titles[$_POST['title']];
-       }
-       if (isset($_POST['gender'])) {
-            $data['gender'] = $_POST['gender'];
-       }
-       if (isset($_POST['phone'])) {
-        $data['phone'] = $_POST['phone'];
-       }
-       if (isset($_POST['department'])) {
-
-            $data['department'] =   $dptSets[$_POST['department']];
-       }
-
-
-       $doc-> where('doctor_id='.$_POST['doctor_id'])->setField($data);
-       echo json_encode(array('status'=>'success'));
 
     }
     public function delDoc($id){
