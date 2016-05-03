@@ -143,10 +143,11 @@ class wechat
 								switch ($MsgType) {
 
                     case 'event':
-                      trace($event,"event triggered!",'INFO',true);
+                      trace($MsgType,": event triggered!",'INFO',true);
   										$this->responsEvent($postObj);
   										break;
                       case 'text':
+                      trace($MsgType,": text sended!",'INFO',true);
     									$this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
     										break;
 									default:
