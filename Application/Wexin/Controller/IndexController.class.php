@@ -166,7 +166,7 @@ class wechat
 			}
 	}
   function responsEvent($postObj){
-  	$event = $postObj->Event;
+  	$event = trim($postObj->Event);
   	switch ($event) {
   		//关注事件
   		case 'subscribe':
