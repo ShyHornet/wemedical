@@ -143,7 +143,9 @@ class wechat
 									case 'text':
 										responsTextMsg($postObj);
 										break;
-
+                    case 'text':
+  										responsEvent($postObj);
+  										break;
 									default:
 										# code...
 										break;
