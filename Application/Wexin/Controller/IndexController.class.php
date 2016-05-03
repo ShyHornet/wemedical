@@ -59,25 +59,25 @@ class wechat
 {
 	var $appid = "wx422634c7132ba93b";
 	var $appsecret = "9812ed4394deee07a0f07192f43091a2";
-   public function __construct($appid = null,$appsecret = null){
-		 if ($appid&&$appsecret) {
-		 	$this->appid = $appid;
-			$this->appsecret = $appsecret;
-		 }
-
-		 $this->lasttime = 1395049256;
-		 $this->access_token = "6F228uoH06yFJ9Rv57CBdeIv2VvyaJsBFs_gQazRQTIxzZCWbdj8X2YiZiEJiAFerrpK9bVC5mXroWEQyRKm6BSxiecwrkFwWgRSjbvmRiIOwevVNplXTRIn7BJv3O-wWQVbAJAGAF";
-		 if(time()>($this->lasttime + 7200)){
-			 $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->$appid."&secret=".$this->$appsecret;
-			 $res = httpGet($url);
-			 $result = json_decode($res,true);
-
-			 $this->access_token = $result["access_token"];
-			 $this->lasttime = time();
-			 var_dump($this->lasttime);
-			 var_dump($this->access_token);
-		 }
-	 }
+  //  public function __construct($appid = null,$appsecret = null){
+	// 	 if ($appid&&$appsecret) {
+	// 	 	$this->appid = $appid;
+	// 		$this->appsecret = $appsecret;
+	// 	 }
+   //
+	// 	 $this->lasttime = 1395049256;
+	// 	 $this->access_token = "6F228uoH06yFJ9Rv57CBdeIv2VvyaJsBFs_gQazRQTIxzZCWbdj8X2YiZiEJiAFerrpK9bVC5mXroWEQyRKm6BSxiecwrkFwWgRSjbvmRiIOwevVNplXTRIn7BJv3O-wWQVbAJAGAF";
+	// 	 if(time()>($this->lasttime + 7200)){
+	// 		 $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->$appid."&secret=".$this->$appsecret;
+	// 		 $res = httpGet($url);
+	// 		 $result = json_decode($res,true);
+   //
+	// 		 $this->access_token = $result["access_token"];
+	// 		 $this->lasttime = time();
+	// 		 var_dump($this->lasttime);
+	// 		 var_dump($this->access_token);
+	// 	 }
+	//  }
 	 //验证消息是否来自微信
 	public function valid()
     {
@@ -135,11 +135,11 @@ class wechat
 							libxml_disable_entity_loader(true);
 							$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 							$keyword = trim($postObj->Content);
-							$MsgType = $postObj->MsgType;
+							$MsgType = trim($postObj->MsgType);
 						//如果消息不为空
 			if(!empty( $keyword ))
 							{
-								switch （$MsgType) {
+								switch ($MsgType) {
 									case 'text':
 										responsTextMsg($postObj);
 										break;
@@ -169,7 +169,7 @@ function responsEvent($postObj){
       $pat = M("Patient");
       $data['openid'] = $postObj->fromUsername;
       $pat->data($data)->add();
-      
+
 			break;
 
 		default:
