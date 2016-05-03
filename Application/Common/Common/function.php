@@ -1,8 +1,10 @@
 <?php
 use Think\Model;
+
 //微信类
 class wechat
 {
+	define("TOKEN", "weixin");
 	var $appid = "wx422634c7132ba93b";
 	var $appsecret = "9812ed4394deee07a0f07192f43091a2";
   //  public function __construct($appid = null,$appsecret = null){
