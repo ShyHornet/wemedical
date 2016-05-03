@@ -143,10 +143,10 @@ class wechat
 								switch ($MsgType) {
 
                     case 'event':
-  										$result = $this->responsEvent($postObj);
+  										$this->responsEvent($postObj);
   										break;
                       case 'text':
-    									$result =	 $this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
+    									$this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
     										break;
 									default:
 										# code...
@@ -156,7 +156,6 @@ class wechat
 							// $msgType = "text";
 							// $contentStr = "Openid:$fromUsername";
 							// $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-							 echo $result;
 							}else{
 								echo "输入为空!";
 							}
@@ -202,7 +201,7 @@ function responsTextMsg($postObj,$content){
 </xml>";
   $msgType = "text";
   $resultStr = sprintf($textTpl,  $postObj->FromUserName, $postObj->ToUserName, time(), $content);
-  return $resultStr;
+  echo $resultStr;
 }
 
 
