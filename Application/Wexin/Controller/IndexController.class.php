@@ -174,7 +174,7 @@ function responsEvent($postObj){
 		case 'subscribe':
       //默认新建患者用户,将openid存入患者表
       $pat = M("Patient");
-      $data['openid'] = $postObj->fromUsername;
+      $data['openid'] = $postObj->fromUserName;
       $pat->data($data)->add();
 
 			break;
