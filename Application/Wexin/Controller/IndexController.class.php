@@ -127,8 +127,7 @@ class wechat
 	public function responseMsg()
 	{
 	//获取post数据
-	$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-
+	$postStr = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : file_get_contents("php://input");;
 			//解包post数据
 	if (!empty($postStr)){
 							//读取xml数据
