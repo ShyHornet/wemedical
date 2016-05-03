@@ -9,8 +9,7 @@ class IndexController extends Controller {
       if (isset($_GET['echostr'])) {
           $wechatObj->valid();
       }else{
-          	$postStr = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : file_get_contents("php://input");
-          $wechatObj->responseMsg($postStr);
+          $wechatObj->responseMsg();
       }
     }
     public function oAuth(){
@@ -125,8 +124,11 @@ class wechat
 		return json_decode($res,true);
 
 	}
-	public function responseMsg($postStr)
+	public function responseMsg()
 	{
+	//获取post数据
+	$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+
 			//解包post数据
 	if (!empty($postStr)){
 							//读取xml数据
@@ -171,7 +173,7 @@ function responsEvent($postObj){
 	switch ($event) {
 		//关注事件
 		case 'subscribe':
-      $content = "感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!";
+  $this->responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
       //默认新建患者用户,将openid存入患者表
       $pat = M("Patient");
       $data['openid'] = $postObj->fromUserName;
@@ -182,11 +184,9 @@ function responsEvent($postObj){
 			break;
       case "unsubscribe":
        $content = "取消关注";
-
        break;
 	}
-  $result = $this->responsEvent($postObj,$content);
-return $result;
+
 
 }
 function responsTextMsg($postObj,$content){
