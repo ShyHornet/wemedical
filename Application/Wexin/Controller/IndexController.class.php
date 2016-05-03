@@ -176,7 +176,9 @@ function responsEvent($postObj){
       //默认新建患者用户,将openid存入患者表
       $pat = M("Patient");
       $data['openid'] = $postObj->fromUserName;
-      $pat->data($data)->add();
+      $pat->create($data);
+
+      $pat->add();
 
 			break;
 
