@@ -9,7 +9,8 @@ class IndexController extends Controller {
       if (isset($_GET['echostr'])) {
           $wechatObj->valid();
       }else{
-          $wechatObj->responseMsg();
+          	$postStr = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : file_get_contents("php://input");
+          $wechatObj->responseMsg($postStr);
       }
     }
     public function oAuth(){
@@ -124,10 +125,8 @@ class wechat
 		return json_decode($res,true);
 
 	}
-	public function responseMsg()
+	public function responseMsg($postStr)
 	{
-	//获取post数据
-	$postStr = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : file_get_contents("php://input");;
 			//解包post数据
 	if (!empty($postStr)){
 							//读取xml数据
