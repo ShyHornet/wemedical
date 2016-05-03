@@ -165,44 +165,44 @@ class wechat
 				exit;
 			}
 	}
+  function responsEvent($postObj){
+  	$event = $postObj->Event;
+  	switch ($event) {
+  		//关注事件
+  		case 'subscribe':
+    $this->responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
+        //默认新建患者用户,将openid存入患者表
+        $pat = M("Patient");
+        $data['openid'] = $postObj->fromUserName;
+        $pat->create($data);
 
+        $pat->add();
+
+  			break;
+        case "unsubscribe":
+         $content = "取消关注";
+         break;
+  	}
+
+
+  }
+  function responsTextMsg($postObj,$content){
+    $fromUsername = $postObj->FromUserName;
+    $toUsername = $postObj->ToUserName;
+    $time = time();
+    $textTpl = "<xml>
+  <ToUserName><![CDATA[%s]]></ToUserName>
+  <FromUserName><![CDATA[%s]]></FromUserName>
+  <CreateTime>%s</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[%s]]></Content>
+  </xml>";
+    $msgType = "text";
+    $resultStr = sprintf($textTpl,  $postObj->FromUserName, $postObj->ToUserName, time(), $content);
+    echo $resultStr;
+  }
 }
-function responsEvent($postObj){
-	$event = $postObj->Event;
-	switch ($event) {
-		//关注事件
-		case 'subscribe':
-  $this->responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
-      //默认新建患者用户,将openid存入患者表
-      $pat = M("Patient");
-      $data['openid'] = $postObj->fromUserName;
-      $pat->create($data);
 
-      $pat->add();
-
-			break;
-      case "unsubscribe":
-       $content = "取消关注";
-       break;
-	}
-
-
-}
-function responsTextMsg($postObj,$content){
-  $fromUsername = $postObj->FromUserName;
-  $toUsername = $postObj->ToUserName;
-  $time = time();
-  $textTpl = "<xml>
-<ToUserName><![CDATA[%s]]></ToUserName>
-<FromUserName><![CDATA[%s]]></FromUserName>
-<CreateTime>%s</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[%s]]></Content>
-</xml>";
-  $msgType = "text";
-  $resultStr = sprintf($textTpl,  $postObj->FromUserName, $postObj->ToUserName, time(), $content);
-  echo $resultStr;
-}
 
 
 //公共方法
