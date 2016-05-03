@@ -141,12 +141,13 @@ class wechat
 			if(!empty( $keyword ))
 							{
 								switch ($MsgType) {
-									case 'text':
-										responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
-										break;
-                    case 'text':
+
+                    case 'event':
   										responsEvent($postObj);
   										break;
+                      case 'text':
+    										responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
+    										break;
 									default:
 										# code...
 										break;
