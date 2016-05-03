@@ -80,23 +80,39 @@ class wechat
 							//读取xml数据
 							libxml_disable_entity_loader(true);
 							$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+							$fromUsername = $postObj->FromUserName;
+							$toUsername = $postObj->ToUserName;
+							$keyword = trim($postObj->Content);
+							$time = time();
+							$textTpl = "<xml>
+						<ToUserName><![CDATA[%s]]></ToUserName>
+						<FromUserName><![CDATA[%s]]></FromUserName>
+						<CreateTime>%s</CreateTime>
+						<MsgType><![CDATA[%s]]></MsgType>
+						<Content><![CDATA[%s]]></Content>
+						<FuncFlag>0</FuncFlag>
+						</xml>";
 							$keyword = trim($postObj->Content);
 							$MsgType = trim($postObj->MsgType);
 						//如果消息不为空
 			if(!empty( $keyword ))
 							{
-								switch ($MsgType) {
-									case 'text':
-										responsTextMsg($postObj);
-										break;
-                    case 'text':
-  										responsEvent($postObj);
-  										break;
-									default:
-										# code...
-										break;
-								}
+								// switch ($MsgType) {
+								// 	case 'text':
+								// 		responsTextMsg($postObj);
+								// 		break;
+                //     case 'text':
+  							// 			responsEvent($postObj);
+  							// 			break;
+								// 	default:
+								// 		# code...
+								// 		break;
+								// }
 
+							$msgType = "text";
+							$contentStr = "Openid:$fromUserName";
+							$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+							echo $resultStr;
 							}else{
 								echo "输入为空!";
 							}
@@ -126,22 +142,7 @@ function responsEvent($postObj){
 	}
 }
 function responsTextMsg($postObj){
-	$fromUsername = $postObj->FromUserName;
-	$toUsername = $postObj->ToUserName;
-	$keyword = trim($postObj->Content);
-	$time = time();
-	$textTpl = "<xml>
-<ToUserName><![CDATA[%s]]></ToUserName>
-<FromUserName><![CDATA[%s]]></FromUserName>
-<CreateTime>%s</CreateTime>
-<MsgType><![CDATA[%s]]></MsgType>
-<Content><![CDATA[%s]]></Content>
-<FuncFlag>0</FuncFlag>
-</xml>";
-$msgType = "text";
-$contentStr = "Openid:$fromUserName";
-$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-echo $resultStr;
+
 }
 
 
