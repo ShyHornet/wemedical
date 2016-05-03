@@ -143,10 +143,10 @@ class wechat
 								switch ($MsgType) {
 
                     case 'event':
-  										responsEvent($postObj);
+  										$result = $this->responsEvent($postObj);
   										break;
                       case 'text':
-    										responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
+    									$result =	 $this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
     										break;
 									default:
 										# code...
@@ -156,7 +156,7 @@ class wechat
 							// $msgType = "text";
 							// $contentStr = "Openid:$fromUsername";
 							// $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-							// echo $resultStr;
+							 echo $result;
 							}else{
 								echo "输入为空!";
 							}
@@ -173,7 +173,7 @@ function responsEvent($postObj){
 	switch ($event) {
 		//关注事件
 		case 'subscribe':
-  responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
+      $content = "感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!";
       //默认新建患者用户,将openid存入患者表
       $pat = M("Patient");
       $data['openid'] = $postObj->fromUserName;
@@ -182,11 +182,14 @@ function responsEvent($postObj){
       $pat->add();
 
 			break;
+      case "unsubscribe":
+       $content = "取消关注";
 
-		default:
-			# code...
-			break;
+       break;
 	}
+  $result = $this->responsEvent($postObj,$content);
+return $result;
+
 }
 function responsTextMsg($postObj,$content){
   $fromUsername = $postObj->FromUserName;
@@ -196,13 +199,12 @@ function responsTextMsg($postObj,$content){
 <ToUserName><![CDATA[%s]]></ToUserName>
 <FromUserName><![CDATA[%s]]></FromUserName>
 <CreateTime>%s</CreateTime>
-<MsgType><![CDATA[%s]]></MsgType>
+<MsgType><![CDATA[text]]></MsgType>
 <Content><![CDATA[%s]]></Content>
-<FuncFlag>0</FuncFlag>
 </xml>";
   $msgType = "text";
-  $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $content);
-  echo $resultStr;
+  $resultStr = sprintf($textTpl,  $postObj->FromUserName, $postObj->ToUserName, time(), $content);
+  return $resultStr;
 }
 
 
