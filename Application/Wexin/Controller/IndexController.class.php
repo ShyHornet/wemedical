@@ -142,12 +142,12 @@ class wechat
 							{
 								switch ($MsgType) {
 
-                    case 'event':
-                      trace($MsgType,": event triggered!",'INFO',true);
+                    case "event":
+                      trace($MsgType,"event triggered!",'INFO',true);
   										$this->responsEvent($postObj);
   										break;
                       case 'text':
-                      trace($MsgType,": text sended!",'INFO',true);
+                      trace($MsgType,"text sended!",'INFO',true);
     									$this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
     										break;
 									default:
@@ -171,7 +171,7 @@ class wechat
   	$event = trim($postObj->Event);
   	switch ($event) {
   		//关注事件
-  		case 'subscribe':
+  		case "subscribe":
       trace($event,"subscribe event triggered!",'INFO',true);
     $this->responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
         //默认新建患者用户,将openid存入患者表
