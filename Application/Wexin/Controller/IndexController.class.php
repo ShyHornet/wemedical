@@ -164,7 +164,7 @@ class wechat
 								// }
 
 							$msgType = "text";
-							$contentStr = "Openid:$fromUserName";
+							$contentStr = "Openid:$fromUsername";
 							$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
 							echo $resultStr;
 							}else{
