@@ -139,7 +139,7 @@ class wechat
 							$MsgType = trim($postObj->MsgType);
 						//如果消息不为空
 			if(!empty( $keyword ))
-							{
+							{   trace($MsgType,"msg send!",'INFO',true);
 								switch ($MsgType) {
 
                     case "event":
