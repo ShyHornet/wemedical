@@ -1,0 +1,12 @@
+[ 2016-05-04T18:22:05+08:00 ] ::1 /wemedical/Public/images/icons/android1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+ERR: 无法加载模块:Public/images/icons/android1
+
+[ 2016-05-04T18:23:57+08:00 ] ::1 /wemedical/Public/images/icons/android1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+ERR: 无法加载模块:Public/images/icons/android1
+
