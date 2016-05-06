@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<meta name="viewport" charset="UTF-8" content="width=0.8*device-width, initial-scale=1,user-scalable=no">
+<meta name="viewport" charset="UTF-8" content="width=0.8*device-width, initial-scale=0.9,user-scalable=no">
 
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/weui.min.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
@@ -142,10 +142,6 @@ $("select").change(function(){
       },
       dataType:'json'
     });
-
-
-
-
 		$("#loginForm").validate({
 		rules:{
 			name:{
@@ -155,6 +151,8 @@ $("select").change(function(){
         checkId:true
       }
 			  }
+},function(){
+        $('#loginForm').submit();
 });
 $.validator.addMethod("checkName",function(value,element,params){
   $("#name_error").html("").hide();
