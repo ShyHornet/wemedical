@@ -37,26 +37,27 @@
     </div>
 
 </div>
-<div class="collapse navbar-collapse" id="navbar-collapse-01">
-  <ul class="nav navbar-nav">
-    <li ><a href="#fakelink">医院信息</a></li>
-      <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
-    <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
-    <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
-    <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
-  </ul>
-  <form class="navbar-form navbar-right" action="#" role="search">
-    <div class="form-group">
-      <div class="input-group">
-        <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
-        <span class="input-group-btn">
-          <button type="submit" class="btn"><span class="fui-search"></span></button>
-        </span>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav">
+      <li ><a href="#fakelink">医院信息</a></li>
+        <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
+      <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
+      <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
+      <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
+        <li id="HelpPage"><a  href="/wemedical/Help-Menu">帮助中心</a></li>
+    </ul>
+    <form class="navbar-form navbar-right" action="#" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" id="navbarInput-01" type="search" placeholder="查找医生号源">
+          <span class="input-group-btn">
+            <button type="submit" class="btn"><span class="fui-search"></span></button>
+          </span>
+        </div>
       </div>
-    </div>
-  </form>
-</div><!-- /.navbar-collapse -->
-</nav><!-- /navbar -->
+    </form>
+  </div><!-- /.navbar-collapse -->
+  </nav><!-- /navbar -->
 
 
     <div class="container-fluid"style="margin-top:40px;margin-bottom:40px">
