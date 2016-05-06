@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/main.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/banneralert.css">
 <link rel="stylesheet" type="text/css" href="/wemedical/Public/css/font.css">
-<link rel="stylesheet" type="text/css" href="/wemedical/Public/css/jquery-weui.css">
 <link href="/wemedical/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/flat-ui-pro.min.css" rel="stylesheet">
 <link href="/wemedical/Public/css/animate.min.css" rel="stylesheet">
