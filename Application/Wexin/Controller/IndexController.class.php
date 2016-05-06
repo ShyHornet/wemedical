@@ -13,8 +13,8 @@ class IndexController extends Controller {
       }
     }
     public function oAuth(){
-      $appId = "wx9bc6a722e1517399";
-      $appsecret = "ffcb8743f9669e5a2de37dd349073aa7";
+      $appId = "wx422634c7132ba93b";
+      $appsecret = "9812ed4394deee07a0f07192f43091a2";
       //获得code
       if (isset($_GET['code'])){
 
@@ -127,26 +127,27 @@ class wechat
 	public function responseMsg()
 	{
 	//获取post数据
-	$postStr = file_get_contents("php://input");
+	$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
 
 			//解包post数据
 	if (!empty($postStr)){
 							//读取xml数据
 							libxml_disable_entity_loader(true);
 							$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-               trace($postObj,"msg recevied!",'INFO',true);
+
 							$keyword = trim($postObj->Content);
 							$MsgType = trim($postObj->MsgType);
 						//如果消息不为空
-								switch ($postObj->MsgType) {
+			if(!empty( $keyword ))
+							{   trace($MsgType,"msg send!",'INFO',true);
+								switch ($MsgType) {
 
-                      case 'event':
+                    case "event":
                       trace($MsgType,"event triggered!",'INFO',true);
   										$this->responsEvent($postObj);
   										break;
                       case 'text':
                       trace($MsgType,"text sended!",'INFO',true);
-
     									$this->responsTextMsg($postObj,"openid: ".$postObj->FromUserName);
     										break;
 									default:
@@ -157,6 +158,9 @@ class wechat
 							// $msgType = "text";
 							// $contentStr = "Openid:$fromUsername";
 							// $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+							}else{
+								echo "输入为空!";
+							}
 
 			}else {
 				echo "";
@@ -165,31 +169,21 @@ class wechat
 	}
   function responsEvent($postObj){
   	$event = trim($postObj->Event);
-    $openid = "".$postObj->FromUserName;
   	switch ($event) {
   		//关注事件
   		case "subscribe":
       trace($event,"subscribe event triggered!",'INFO',true);
-
-      trace($openid,"patient openid ".$openid,'INFO',true);
-      $pat = M("Patient");
-
-      $data['openid'] = $openid;
-      if (array()==$pat->where("openid = '".$openid."'")->find()) {
-        $pat->data($data)->add();
-      }
-
-
     $this->responsTextMsg($postObj,"感谢您关注微信挂号平台，点击注册登录选项，进行注册并登录后即可开始预约挂号!祝您就医愉快，早日康复!");
         //默认新建患者用户,将openid存入患者表
+        $pat = M("Patient");
+        $data['openid'] = $postObj->fromUserName;
+        $pat->create($data);
 
+        $pat->add();
 
   			break;
         case "unsubscribe":
-        trace($event,"unsubscribe event triggered!",'INFO',true);
-          //删除取消订阅且未在挂号平台注册的用户
-           $pat = M("Patient");
-           $pat->where("openid = '".$openid."' AND name is null ")->delete();
+         $content = "取消关注";
          break;
   	}
 

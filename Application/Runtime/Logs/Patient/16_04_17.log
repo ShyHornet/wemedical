@@ -1,0 +1,1725 @@
+[ 2016-04-17T10:14:09+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001823s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0033s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001566s ]
+
+[ 2016-04-17T10:14:19+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-04-17T10:14:24+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 1  [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-04-17T10:14:29+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0058s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-17T10:14:29+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0059s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-04-17T10:14:30+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-04-17T10:14:30+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0059s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-17T10:24:43+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-04-17T10:24:44+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-17T10:24:45+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0059s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-04-17T10:24:46+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0054s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-04-17T10:34:46+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-04-17T10:39:01+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-04-17T10:40:19+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 256 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-04-17T10:43:44+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-04-17T10:44:08+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0058s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-04-17T10:44:34+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-04-17T10:44:45+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0061s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-04-17T10:47:23+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 265 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 266 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 265 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 266 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 265 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 266 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-04-17T10:49:30+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-04-17T10:50:07+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011429s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-04-17T10:50:38+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-04-17T10:51:51+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T10:52:05+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0062s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-04-17T10:52:13+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0059s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 262 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-04-17T10:59:32+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-04-17T10:59:45+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-04-17T11:00:14+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0061s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 260 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 261 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-04-17T11:07:42+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T11:07:45+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-04-17T11:07:48+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-17T11:08:10+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+
+[ 2016-04-17T11:08:12+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-04-17T11:08:33+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+
+[ 2016-04-17T11:08:43+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-04-17T11:13:40+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-04-17T11:16:31+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-04-17T11:16:42+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-04-17T11:16:44+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-04-17T11:16:59+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-04-17T11:20:17+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+ERR: 参数错误或者未定义:date
+
+[ 2016-04-17T11:20:51+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+ERR: 参数错误或者未定义:date
+
+[ 2016-04-17T11:20:52+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+ERR: 参数错误或者未定义:date
+
+[ 2016-04-17T11:20:58+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+ERR: 参数错误或者未定义:date
+
+[ 2016-04-17T11:20:59+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+ERR: 参数错误或者未定义:date
+
+[ 2016-04-17T11:21:46+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000100s ]
+
+[ 2016-04-17T17:08:20+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2016-04-17T17:08:41+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-04-17T17:08:44+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0057s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-04-17T17:08:47+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2016-04-17T17:08:52+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0028s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-17T17:08:54+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-04-17T17:08:56+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0061s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-04-17T17:08:57+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-04-17T17:08:59+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-04-17T17:09:12+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-17T17:10:20+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-04-17T17:10:22+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:10:55+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-17T17:10:55+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-04-17T17:10:56+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0062s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-04-17T17:10:58+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-04-17T17:10:58+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0057s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-04-17T17:13:25+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011210s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-04-17T17:13:51+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000128s ]
+
+[ 2016-04-17T17:13:53+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-04-17T17:13:55+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-04-17T17:14:20+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-04-17T17:14:20+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000154s ]
+
+[ 2016-04-17T17:14:23+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-04-17T17:14:23+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:14:24+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-04-17T17:15:58+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-04-17T17:15:59+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-04-17T17:16:00+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:16:01+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-17T17:16:01+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-04-17T17:17:51+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0057s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 5  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000156s ]
+
+[ 2016-04-17T17:17:54+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0057s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 7,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-17T17:21:18+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-04-17T17:21:18+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-04-17T17:21:19+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:21:19+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-04-17T17:21:20+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-04-17T17:26:25+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 263 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-17T17:26:29+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-04-17T17:26:29+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 4,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-04-17T17:26:30+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 5,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-17T17:26:30+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 6,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:26:33+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 6  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-04-17T17:47:00+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 1  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2016-04-17T17:57:28+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,order_cost as cost FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 213 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 214 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 213 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 214 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 213 行.
+NOTIC: [8] Undefined index: register_remains /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/aca25a6ca1343e696192571e871d22ca.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000102s ]
+
+[ 2016-04-17T17:57:29+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0055s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 1  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-04-17T17:57:32+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0060s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000210s ]
+
+[ 2016-04-17T17:57:35+08:00 ] ::1 /wemedical/Patient-Appointment-getIntro?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0056s ]
+SQL: SELECT `intro`,treatment_period as period,`work_days` FROM `wemedical_doctor` WHERE `doctor_id` = 3  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-17T17:57:55+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0059s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-04-17T17:57:55+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getMore?num=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost` FROM `wemedical_doctor` ORDER BY doctor_id LIMIT 3,1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
