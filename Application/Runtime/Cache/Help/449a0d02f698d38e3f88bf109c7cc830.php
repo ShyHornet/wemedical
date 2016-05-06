@@ -155,5 +155,10 @@
 
 </div>
 
+<footer style="margin-top:100px;">
+<p>Powered by HJW</p>
+<p>weMedical © All rights reserved 2016 </p>
+</footer>
+
 </body>
 </html>
