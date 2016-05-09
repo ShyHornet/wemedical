@@ -79,7 +79,7 @@ $(function(){
   tomorrow.setUTCSeconds("0");
   var tomorrow_week = tomorrow.getDay();
   if (tomorrow_week==6||tomorrow_week==0){
-       tomorrow = tomorrow_week==6? new  Date(tomorrow.getTime()+ 3*60*60*24*1000):new  Date(tomorrow.getTime()+ 2*60*60*24*1000);
+       tomorrow = tomorrow_week==6? new  Date(tomorrow.getTime()+ 2*60*60*24*1000):new  Date(tomorrow.getTime()+ 60*60*24*1000);
 
   }
   $("#treat_date").datepicker({

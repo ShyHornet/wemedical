@@ -53,6 +53,7 @@
     <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
     <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
     <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="HelpPage"><a  href="/wemedical/Help-Menu">帮助中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">

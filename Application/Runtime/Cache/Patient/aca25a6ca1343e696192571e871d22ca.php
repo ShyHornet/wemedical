@@ -53,6 +53,7 @@
     <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
     <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
     <li id="mePage"><a  href="/wemedical/Patient-Me-Index">个人中心</a></li>
+      <li id="HelpPage"><a  href="/wemedical/Help-Menu">帮助中心</a></li>
   </ul>
   <form class="navbar-form navbar-right" action="#" role="search">
     <div class="form-group">
@@ -148,7 +149,7 @@ $(function(){
   tomorrow.setUTCSeconds("0");
   var tomorrow_week = tomorrow.getDay();
   if (tomorrow_week==6||tomorrow_week==0){
-       tomorrow = tomorrow_week==6? new  Date(tomorrow.getTime()+ 3*60*60*24*1000):new  Date(tomorrow.getTime()+ 2*60*60*24*1000);
+       tomorrow = tomorrow_week==6? new  Date(tomorrow.getTime()+ 2*60*60*24*1000):new  Date(tomorrow.getTime()+ 60*60*24*1000);
 
   }
   $("#treat_date").datepicker({

@@ -142,10 +142,6 @@ $("select").change(function(){
       },
       dataType:'json'
     });
-
-
-
-
 		$("#loginForm").validate({
 		rules:{
 			name:{
@@ -155,6 +151,8 @@ $("select").change(function(){
         checkId:true
       }
 			  }
+},function(){
+        $('#loginForm').submit();
 });
 $.validator.addMethod("checkName",function(value,element,params){
   $("#name_error").html("").hide();
