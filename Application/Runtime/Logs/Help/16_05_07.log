@@ -1,0 +1,44 @@
+[ 2016-05-07T21:57:35+08:00 ] ::1 /wemedical/Help-Menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000353s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001680s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in /Applications/MAMP/htdocs/wemedical/Application/Help/Controller/MenuController.class.php on line 6 and defined /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002450s ]
+
+[ 2016-05-07T21:57:42+08:00 ] ::1 /wemedical/Help-Feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in /Applications/MAMP/htdocs/wemedical/Application/Help/Controller/FeedbackController.class.php on line 6 and defined /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005234s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+

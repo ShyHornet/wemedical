@@ -57,8 +57,8 @@ class IndexController extends Controller {
 class wechat
 {
 
-	var $appid = "wx422634c7132ba93b";
-	var $appsecret = "9812ed4394deee07a0f07192f43091a2";
+	private var $appid = "wx422634c7132ba93b";
+	private var $appsecret = "9812ed4394deee07a0f07192f43091a2";
   //  public function __construct($appid = null,$appsecret = null){
 	// 	 if ($appid&&$appsecret) {
 	// 	 	$this->appid = $appid;
@@ -211,7 +211,77 @@ class wechat
     echo $resultStr;
   }
 }
+function createMenu(){
 
+$url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$this->appid&secret=$this->appsecret";
+
+$output = httpsGet($url);
+$jsoninfo = json_decode($output, true);
+
+$access_token = $jsoninfo["access_token"];
+
+
+$jsonmenu = '{
+      "button":[
+      {
+            "name":"用户中心",
+           "sub_button":[
+            {
+               "type":"view",
+               "name":"注册登录",
+               "key":"Loginsignup"
+            },
+            {
+               "type":"view",
+               "name":"预约挂号",
+               "key":"appointment"
+            },
+            {
+               "type":"click",
+               "name":"广州天气",
+               "key":"天气广州"
+            },
+            {
+               "type":"click",
+               "name":"深圳天气",
+               "key":"天气深圳"
+            },
+            {
+                "type":"view",
+                "name":"本地天气",
+                "url":"http://m.hao123.com/a/tianqi"
+            }]
+
+
+       },
+       {
+           "name":"方倍工作室",
+           "sub_button":[
+            {
+               "type":"click",
+               "name":"公司简介",
+               "key":"company"
+            },
+            {
+               "type":"click",
+               "name":"趣味游戏",
+               "key":"游戏"
+            },
+            {
+                "type":"click",
+                "name":"讲个笑话",
+                "key":"笑话"
+            }]
+
+
+       }]
+ }';
+
+
+$url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
+$result = httpsGet($url, $jsonmenu);
+var_dump($result);
+}
 
 
 //公共方法
