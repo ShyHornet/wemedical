@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          号源信息
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        <li class="list-group-item">就诊日期:   {$date}</li>
+        <li class="list-group-item">就诊星期:   {$week}</li>
+        <li class="list-group-item">就诊时段:   {$period}</li>
+        <li class="list-group-item">就诊科室:   {$department}</li>
+        <li class="list-group-item">号源类型:   {$title}</li>
+        <li class="list-group-item">挂号费:   {$cost}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        医生信息
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <ul class="list-group">
+        <li class="list-group-item">医生姓名:   {$doc_name}</li>
+        <li class="list-group-item">性别:   {$doc_gender}</li>
+        <li class="list-group-item">职称:   {$title1}</li>
+        <li class="list-group-item">科室:   {$department1}</li>
+        <li class="list-group-item">专长:   {$specialism}</li>
+        <li class="list-group-item">简介:   {$intro}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          患者信息
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <ul class="list-group">
+        <li class="list-group-item">患者姓名:   {$pat_name}</li>
+        <li class="list-group-item">性别:   {$pat_gender}</li>
+        <li class="list-group-item">年龄:   {$age}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

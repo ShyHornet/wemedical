@@ -1,0 +1,3054 @@
+[ 2016-05-09T10:12:11+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-09T10:12:25+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0029s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:12:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:13:03+08:00 ] ::1 /wemedical/Patient-MyOrders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000753s ]
+
+[ 2016-05-09T10:13:17+08:00 ] ::1 /wemedical/Patient-Appointment-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Patient/View/User/Index/header.html): failed to open stream: No such file or directory /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-05-09T10:13:17+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getDoc?num=1&date=2016-05-10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0027s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost`,`orders_per_day`,`treatment_period` AS `period`,`work_days` FROM `wemedical_doctor` WHERE ( work_days like'%2%' ) ORDER BY doctor_id LIMIT 0,3   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='1' ) ORDER BY order_id  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='6' ) ORDER BY order_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='7' ) ORDER BY order_id  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-05-09T10:13:25+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0058s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:13:27+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:13:29+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:13:33+08:00 ] ::1 /wemedical/index.php/Patient-Appointment-getDoc?num=1&date=2016-05-10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0058s ]
+SQL: SELECT `doctor_id`,`name`,`title`,`department`,`specialism`,`order_cost` AS `cost`,`orders_per_day`,`treatment_period` AS `period`,`work_days` FROM `wemedical_doctor` WHERE ( work_days like'%2%' ) ORDER BY doctor_id LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='1' ) ORDER BY order_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='6' ) ORDER BY order_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( DATEDIFF(date,CURDATE())>=1 AND doctor_id='7' ) ORDER BY order_id  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-05-09T10:13:36+08:00 ] ::1 /wemedical/Patient-MyOrders-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-05-09T10:13:36+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-05-09T10:13:38+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-05-09T10:13:39+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T10:13:40+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-05-09T10:14:01+08:00 ] ::1 /wemedical/Patient-MyOrders-Index-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-05-09T10:14:01+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-05-09T10:15:16+08:00 ] ::1 /wemedical/Patient-MyOrders-Index-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-05-09T10:15:16+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-05-09T10:15:19+08:00 ] ::1 /wemedical/Patient-MyOrders-Index-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-05-09T10:15:19+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-05-09T10:15:37+08:00 ] ::1 /wemedical/Patient-MyOrders-Index-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-05-09T10:15:37+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+
+[ 2016-05-09T10:15:38+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-05-09T10:15:40+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-05-09T10:15:41+08:00 ] ::1 /wemedical/Patient-MyOrders-Index-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-05-09T10:15:41+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000142s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000222s ]
+
+[ 2016-05-09T10:15:43+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-05-09T10:15:44+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-05-09T10:16:09+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:16:19+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0058s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:16:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:17:48+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:17:50+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:17:52+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0058s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:18:00+08:00 ] 127.0.0.1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:18:19+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:18:21+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:18:27+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:18:40+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+NOTIC: [4096] Object of class Patient\Model\OrderModel could not be converted to string /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+NOTIC: [8] Object of class Patient\Model\OrderModel to string conversion /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 29 行.
+
+[ 2016-05-09T10:19:29+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000127s ]
+
+[ 2016-05-09T10:20:19+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-05-09T10:20:30+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-05-09T10:28:06+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2016-05-09T10:28:33+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-05-09T10:28:50+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-05-09T10:29:30+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-05-09T10:32:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-05-09T10:34:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T10:35:44+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-05-09T10:36:11+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-05-09T10:36:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-05-09T10:37:31+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T10:37:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-05-09T10:38:59+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007725s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2016-05-09T10:41:21+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-05-09T10:46:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 78 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 79 行.
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 108 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 109 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 125 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 126 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 127 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 141 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 142 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 143 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 144 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 145 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-05-09T10:47:15+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 84 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 85 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 86 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 87 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 88 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 89 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-05-09T10:48:06+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 84 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 85 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 86 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 87 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 88 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 89 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-05-09T10:52:19+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+
+[ 2016-05-09T10:52:46+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 84 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 85 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 86 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 87 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 88 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 89 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-05-09T10:53:24+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 84 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 85 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 86 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 87 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 88 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 89 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php:30) /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-05-09T10:57:40+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined variable: date /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 84 行.
+NOTIC: [8] Undefined variable: week /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 85 行.
+NOTIC: [8] Undefined variable: period /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 86 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 87 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 88 行.
+NOTIC: [8] Undefined variable: cost /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 89 行.
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 104 行.
+NOTIC: [8] Undefined variable: department /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 105 行.
+NOTIC: [8] Undefined variable: specialism /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 106 行.
+NOTIC: [8] Undefined variable: intro /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 107 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: title /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006966s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-05-09T11:08:53+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: epartment /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 221 行.
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-05-09T11:09:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: epartment /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 221 行.
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: specialism /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 40 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-05-09T11:10:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: epartment /Applications/MAMP/htdocs/wemedical/ThinkPHP/Library/Think/Model/RelationModel.class.php 第 221 行.
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: specialism /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 40 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-05-09T11:11:05+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: specialism /Applications/MAMP/htdocs/wemedical/Application/Patient/Controller/MyOrdersController.class.php 第 40 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 121 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-05-09T11:13:49+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000196s ]
+
+[ 2016-05-09T11:14:43+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: doc_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 103 行.
+NOTIC: [8] Undefined variable: pat_name /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 122 行.
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-05-09T11:17:09+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000178s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000195s ]
+
+[ 2016-05-09T11:17:24+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-05-09T11:18:23+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-05-09T11:19:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-05-09T11:21:42+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-05-09T11:25:43+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-05-09T11:26:58+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2016-05-09T11:27:23+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-05-09T11:27:50+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: age /Applications/MAMP/htdocs/wemedical/Application/Runtime/Cache/Patient/5df459e8cf45a75c0c7183c2c96173c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-05-09T11:34:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-05-09T11:36:16+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-05-09T11:36:30+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-05-09T11:38:30+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-05-09T11:38:47+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T11:39:26+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-05-09T11:39:41+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-05-09T11:39:51+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-05-09T11:40:10+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-05-09T11:40:25+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-05-09T11:40:30+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-05-09T11:40:35+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-05-09T11:40:42+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-05-09T11:40:48+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-05-09T11:40:52+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-05-09T11:40:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-05-09T11:40:58+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005840s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-05-09T11:41:11+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-05-09T11:41:21+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-05-09T11:41:23+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-05-09T11:41:57+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000129s ]
+
+[ 2016-05-09T11:42:07+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-05-09T11:42:21+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-05-09T11:42:22+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004966s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-05-09T11:42:24+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-05-09T11:43:38+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-05-09T11:43:46+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005841s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-05-09T11:43:48+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-05-09T11:44:59+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000154s ]
+
+[ 2016-05-09T11:45:39+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE `order_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-05-09T11:46:35+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-05-09T11:46:56+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-05-09T11:47:00+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2016-05-09T11:47:05+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-05-09T11:47:11+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-05-09T11:47:16+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-05-09T11:47:39+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-40
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-05-09T11:47:50+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '22' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T11:47:54+08:00 ] ::1 /wemedical/Patient-MyOrders-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-05-09T11:47:54+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-05-09T11:47:55+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2016-05-09T11:50:32+08:00 ] ::1 /wemedical/Patient-MyOrders-Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-05-09T11:50:32+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-05-09T11:50:33+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000168s ]
+
+[ 2016-05-09T11:50:34+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '22' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-05-09T11:50:37+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-05-09T11:50:39+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-05-09T11:50:40+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '20' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-05-09T11:50:42+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-05-09T11:50:44+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-05-09T11:50:47+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '22' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-05-09T11:50:49+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-05-09T11:50:51+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-05-09T11:50:53+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '16' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-05-09T11:50:55+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-05-09T11:50:56+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-05-09T11:50:59+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '16' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-05-09T11:51:00+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date>='2016-05-09' ) ORDER BY date desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-05-09T11:51:49+08:00 ] ::1 /wemedical/index.php/Patient-MyOrders-getOrders?time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( patient_id='1'AND date<'2016-05-09' ) ORDER BY date desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-05-09T11:51:50+08:00 ] ::1 /wemedical/Patient-MyOrders-orderDetail-id-22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `wemedical_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemedical_order` WHERE ( order_id = '22' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_doctor` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wemedical_doctor` WHERE ( 1=1 AND doctor_id='4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemedical_patient` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wemedical_patient` WHERE ( 1=1 AND patient_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+

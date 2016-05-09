@@ -47,7 +47,7 @@ class AppointmentController extends Controller {
     $data["doctor_id"] = $doc_id;
     $data["patient_id"] = session('current_user.user_id');
     $data["date"] = $date;
-    $order->data($data)->add();
+    $order_id = $order->data($data)->add();
     $pat = M("Patient");
     $patInfo = $pat->where("patient_id='".session('current_user.user_id')."'")->find();
     if(array()!=$patInfo){
@@ -60,8 +60,8 @@ class AppointmentController extends Controller {
       if ($openid) {
           trace($patInfo,"预约患者信息",'INFO',true);
           $template = array('touser'=>$openid,
-                            'template_id'=>"enSFs3n6Czl5tAB8GswzfadvxQ8xHy_cr5puaLKxK_4",
-                            'url'=>"http://121.42.48.201/wemedical/Patient-MyOrders",
+                            'template_id'=>"Qaj-WlNT9jAFJGZ7Pu528ZoiIYrAxmSBKST5N8h1-74",
+                            'url'=>"http://121.42.48.201/wemedical/Patient-MyOrders-orderDetail-id-".$order_id,
                             'data'=>array(
                                   'name' =>array('value'=>urlencode($docInfo['name']),
                                                   'color'=>"#1abc9c"
