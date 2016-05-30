@@ -163,6 +163,9 @@ body {
   height: 42px;
   fill: currentColor;
 }
+.break{
+  margin:10px auto;border-radius:5px; border-bottom:2.5px solid #bac1c8;width:100%;
+}
 svg {
   color: #26bd9f;
 }

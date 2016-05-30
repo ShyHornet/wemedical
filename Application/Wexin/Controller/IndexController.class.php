@@ -93,7 +93,6 @@ class IndexController extends Controller {
     }
 
 }
-<<<<<<< HEAD
 class wechat
 {
 
@@ -269,51 +268,29 @@ $jsonmenu = '{
             {
                "type":"view",
                "name":"注册登录",
-               "key":"Loginsignup"
+               "key":"Loginsignup",
+               "url":"http://121.42.48.201/wemedical/Home-Login-index"
             },
             {
                "type":"view",
-               "name":"预约挂号",
-               "key":"appointment"
+               "name":"我的挂号",
+               "key":"MyOrder",
+               "url":"http://121.42.48.201/wemedical/Patient-MyOrders"
             },
             {
-               "type":"click",
-               "name":"广州天气",
-               "key":"天气广州"
-            },
-            {
-               "type":"click",
-               "name":"深圳天气",
-               "key":"天气深圳"
-            },
-            {
-                "type":"view",
-                "name":"本地天气",
-                "url":"http://m.hao123.com/a/tianqi"
-            }]
+               "type":"view",
+               "name":"我",
+               "key":"Me",
+               "url":"http://121.42.48.201/wemedical/"
+            }
+            ]
 
 
        },
-       {
-           "name":"方倍工作室",
-           "sub_button":[
-            {
-               "type":"click",
-               "name":"公司简介",
-               "key":"company"
-            },
-            {
-               "type":"click",
-               "name":"趣味游戏",
-               "key":"游戏"
-            },
-            {
-                "type":"click",
-                "name":"讲个笑话",
-                "key":"笑话"
-            }]
-
-
+       {  "type":"view",
+          "name":"预约挂号",
+          "key":"Appointment",
+          "url":"http://121.42.48.201/wemedical/Patient-Appointment-index"
        }]
  }';
 
