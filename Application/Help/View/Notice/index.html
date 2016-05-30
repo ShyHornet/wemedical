@@ -1,0 +1,41 @@
+<div class="container">
+    <h5><span class="fui-mail"></span>最新通知</h5>
+  <!-- <div class="alert alert-info">
+            <button type="button" class="close fui-cross" data-dismiss="alert"></button>
+            <b>2016年5月30日</b><br>
+            Your computer restarted <a href="#fakelink">because of a problem</a>. Sorry for any inconvenience and appreciate your patient.
+  </div>
+  <div class="alert alert-info">
+            <button type="button" class="close fui-cross" data-dismiss="alert"></button>
+            Your computer restarted <a href="#fakelink">because of a problem</a>. Sorry for any inconvenience and appreciate your patient.
+  </div> -->
+  <volist name="noticelist" id="vo">
+              <div class="alert alert-info" >
+              <button type="button" class="close fui-cross" data-dismiss="alert" value="{$vo.notice_id}" onclick="delNotice(this)"></button>
+              <b>{$vo.notice_date}</b><br>
+              <p>{$vo.notice_content}</p>
+          </div>
+  </volist>
+</div>
+<script type="text/javascript">
+function delNotice(obj){
+var noticeId = $(obj).val();
+$.ajax({
+      type:"POST",
+      url:"Help-Notice-delNotice",
+      data:"notice_id="+noticeId,
+      dataType:"json",
+      success:function(data){
+        if (!data) {
+            alert("通知删除成功!");
+        }else {
+            alert("通知删除失败!");
+        }
+
+      },
+      error:function(){
+
+      }
+})
+}
+</script>
