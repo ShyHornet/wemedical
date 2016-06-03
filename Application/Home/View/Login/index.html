@@ -82,6 +82,7 @@ $("select").change(function(){
       },
       dataType:'json'
     });
+    if($('#userType').val()==1){
 		$("#loginForm").validate({
 		rules:{
 			name:{
@@ -93,7 +94,7 @@ $("select").change(function(){
 			  }
 },function(){
         $('#loginForm').submit();
-});
+});}
 $.validator.addMethod("checkName",function(value,element,params){
   $("#name_error").html("").hide();
   var nameRegex = /^[\u4e00-\u9fa5]{2,}$/;

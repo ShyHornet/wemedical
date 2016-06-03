@@ -11,6 +11,11 @@ class MyOrdersController extends Controller {
           $this->error("查看我的预约请先登录!","Home-Login-Index");
       }
   }
+  public function cancelOrder($id){
+      $order =new \Patient\Model\OrderModel();
+      $order->where('order_id= '.$id)->delete();
+      echo 0;
+  }
   public function getOrders($time=1){
     $orders =new \Patient\Model\OrderModel();
     $list = array();
@@ -27,7 +32,7 @@ class MyOrdersController extends Controller {
     $orders = new \Patient\Model\OrderModel();
     $patient_id = session("current_user.user_id");
     $order = $orders->where("order_id = '".$id."'")->relation(true)->find();
-
+    $this->assign("id",$order['order_id']);
     $this->assign("date","<a>".$order['date']."</a>");
     $this->assign("week","<a>".$week[date('w',strtotime($order['date'])-1)]."</a>");
     $this->assign("period","<a>".($order['period']==0?"上午":"下午")."</a>");

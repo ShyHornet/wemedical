@@ -67,7 +67,24 @@ use Think\Controller;
 
       public function insert() {
                  $Patient = new \Patient\Model\PatientModel();
-                //  $_POST['create_time'] = time();
+                 $pat = $Patient->where('openid='.session('wexin_user.openid'))->find(1);
+                 if (isset($_SESSION['wexin_user'])&&($pat!=array())) {
+                   # code...
+                   $_POST['openid'] = session('wexin_user.openid');
+                   $_POST['patient_id'] = $pat['patient_id'];
+                   if ($Patient->create($_POST)) {
+
+                       if ($Patient->save()) {
+                             $this->success("注册成功!");
+
+                       } else {
+                             $this->error("注册失败!");
+
+                       }
+                   } else {
+                       exit($this->error($Patient->getError()));
+                   }
+                 }else{
                  if ($Patient->create()) {
 
                      if ($Patient->add()) {
@@ -80,7 +97,7 @@ use Think\Controller;
                  } else {
                      exit($this->error($Patient->getError()));
                  }
-
+               }
              }
       public function verify_c(){
       $Verify = new \Think\Verify();

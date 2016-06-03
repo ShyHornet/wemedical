@@ -3,6 +3,159 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Model;
 class IndexController extends Controller {
+  public function getOrders($order){
+    $orders = M('order');
+  $list = array();
+  if ($order=="asc"){
+      $orderStr = array('order_id'=>'asc');
+  }else{
+    $orderStr = array('order_id'=>'desc');
+  }
+  //$fields = array('doctor_id','name','title','department','specialism','order_cost' =>'cost','orders_per_day','treatment_period' =>'period','work_days','intro');
+   $list= $orders->order($orderStr)->select();
+
+   if (count($list)==0) {
+     echo null;
+     return;
+   }
+  echo json_encode($list);
+  }
+  public function delOrder($id){
+    $order = M('Order');
+  foreach ($id as $key => $value) {
+    $order->where('order_id='.$value)->delete();
+
+  }
+  echo json_encode(array("status"=>"success"));
+}
+  public function getFeedbacks($order){
+    $feedback = M('Feedback');
+  $list = array();
+  if ($order=="asc"){
+      $orderStr = array('feedback_id'=>'asc');
+  }else{
+    $orderStr = array('feedback_id'=>'desc');
+  }
+  //$fields = array('doctor_id','name','title','department','specialism','order_cost' =>'cost','orders_per_day','treatment_period' =>'period','work_days','intro');
+   $list= $feedback->order($orderStr)->select();
+
+   if (count($list)==0) {
+     echo null;
+     return;
+   }
+  echo json_encode($list);
+  }
+  public function delFeedbacks($id){
+    $feedback = M('feedback');
+  foreach ($id as $key => $value) {
+    $feedback->where('feedback_id='.$value)->delete();
+
+  }
+  echo json_encode(array("status"=>"success"));
+  }
+  public function getPatients($order){
+    $pat = M('Patient');
+  $list = array();
+  if ($order=="asc"){
+      $orderStr = array('patient_id'=>'asc');
+  }else{
+    $orderStr = array('patient_id'=>'desc');
+  }
+  //$fields = array('doctor_id','name','title','department','specialism','order_cost' =>'cost','orders_per_day','treatment_period' =>'period','work_days','intro');
+   $list= $pat->order($orderStr)->select();
+
+   if (count($list)==0) {
+     echo null;
+     return;
+   }
+  echo json_encode($list);
+  }
+  public function getHelpInfo(){
+    $helpInfos = array();
+    for ($i=0; $i <=4; $i++) {
+      $helpInfos[] = file_get_contents(T('Public/helpInfo'.$i));
+    }
+    echo json_encode($helpInfos);
+  }
+  public function updateHelpInfo($data){
+    foreach ($data as $key => $value) {
+
+      file_put_contents('./Application/Admin/View/Public/helpInfo'.$key.'.html',$value);
+
+    }
+    echo 0;
+  }
+  public function getHospitalImg(){
+    $content = file_get_contents('./Application/Admin/View/Public/hospitalImg.json');
+    echo $content;
+  }
+    public function updateHospitalImg($data){
+
+        if (!file_put_contents('./Application/Admin/View/Public/hospitalImg.json',json_encode($data))){
+          echo 1;
+        }else {
+          echo 0;
+        }
+
+    }
+  public function updateHospitalIntro($content){
+
+    if (!file_put_contents(T('Public/hospitalIntro'), $_POST['content'])){
+      echo 1;
+    }else {
+      echo 0;
+    }
+
+    // file_put_contents(WEB_PUBLIC_URL.'/hospitalIntro.html',$content);
+  }
+  public function getHospitalIntro(){
+    $content = file_get_contents(T('Public/hospitalIntro'));
+  echo $content;
+
+    // file_put_contents(WEB_PUBLIC_URL.'/hospitalIntro.html',$content);
+  }
+  public function getNotices($order){
+    $notice = M('Notice');
+  $list = array();
+  if ($order=="asc"){
+      $orderStr = array('order','notice_id'=>'asc');
+  }else{
+    $orderStr = array('order','notice_id'=>'desc');
+  }
+  //$fields = array('doctor_id','name','title','department','specialism','order_cost' =>'cost','orders_per_day','treatment_period' =>'period','work_days','intro');
+   $list= $notice->order('notice_id')->select();
+
+   if (count($list)==0) {
+     echo null;
+     return;
+   }
+  echo json_encode($list);
+  }
+  public function addNotice(){
+    $not = M("Notice");
+    if ($not->create()) {
+
+        if ($not->add()) {
+              $this->success("发布成功!");
+
+        } else {
+              $this->error("发布失败!");
+
+        }
+    } else {
+        exit($this->error($not->getError()));
+    }
+
+
+  }
+  public function delNotice($id){
+    $not = M('Notice');
+  foreach ($id as $key => $value) {
+    $not->where('notice_id='.$value)->delete();
+
+  }
+  echo json_encode(array("status"=>"success"));
+}
     public function getAllDocs($order){
       $doc =new \Doctor\Model\DoctorModel("Doctor");
       // echo $week;
@@ -74,7 +227,6 @@ class IndexController extends Controller {
 
     }
     public function delDoc($id){
-      echo json_encode($id);
         $doc = M('Doctor');
         $orders = M("Order");
       foreach ($id as $key => $value) {

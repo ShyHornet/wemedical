@@ -16,4 +16,19 @@ class NoticeController extends Controller {
       echo "0";
     }
     }
+    
+    public function addNotice(){
+      $notice = M('Notice');
+      if($notice->create()){
+          if($notice->add()){
+            echo "0";
+          }else{
+            echo "1";
+          }
+      }else{
+        echo "1";
+      }
+
+    }
+
 }

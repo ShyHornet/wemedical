@@ -1,6 +1,9 @@
 <div class="container">
   <div class="col-md-12">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="order_id" hidden>
+        {$id}
+      </div>
   <div class="panel panel-success">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
@@ -56,5 +59,22 @@
     </div>
   </div>
 </div>
+<div class="col-lg-12">
+<a type="button"   class="btn btn-danger btn-wide btn-hg btn-embossed" style="width=90%;">取消预约</a>
+</div>
+
   </div>
 </div>
+<script type="text/javascript">
+  $(".btn").click(function(){
+      $.post('__URL__-cancelOrder',{id:$('.order_id').html()},function(data){
+          if(data=='0'){
+            alert('成功取消预约');
+            setTimeout(function(){
+              window.location.href = '__URL__-index';
+            },1000);
+
+          }
+      })
+  });
+</script>

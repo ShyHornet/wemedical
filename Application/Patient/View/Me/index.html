@@ -9,37 +9,18 @@ $(function(){
 <div  class="panel panel-default">
   <div  class="panel-heading">
     <b>个人信息</b>
-    {$isBindWexin}
 
   </div>
   <div  class="panel-body">
-    <div class="form-group">
-    <div class="fileinput fileinput-new" data-provides="fileinput">
-      <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width:180px;max-height:200px;min-width:150px;min-height:167px" ><img src="__PUBLIC__/images/placeholder/patImgHolder.png" alt="" /></div>
-      <div>
-        <span class="btn btn-primary btn-embossed btn-file">
-           <span class="fileinput-new"><span class="fui-image"></span>上传头像</span>
-           <span class="fileinput-exists"><span class="fui-gear"></span>更换头像</span>
-           <input type="file" name="...">
-        </span>
-        <a href="#" class="btn btn-primary btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>删除头像</a>
-      </div>
-    </div>
-  </div>
   </div>
   <ul class="list-group">
-    <present name="isBindWexin">
-      <li class="list-group-item"><b>微信昵称:</b><span style="margin-left:10px;">{$name}</span></li>
-      <li class="list-group-item"><b>微信号:</b><span style="margin-left:10px;">{$gender}</span></li>
-    </present>
    <li class="list-group-item"><b>姓名:</b><span style="margin-left:10px;">{$name}</span></li>
    <li class="list-group-item"><b>性别:</b><span style="margin-left:10px;">{$gender}</span></li>
    <li class="list-group-item"><b>手机号码:</b><span style="margin-left:10px;">{$phone}</span></li>
    <li class="list-group-item"><b>身份证号:</b><span style="margin-left:10px;">{$id_card}</span></li>
-   <li class="list-group-item"><b>居住地:</b><span style="margin-left:10px;">{$location}</span></li>
+
   </ul>
   <div class="modal-footer">
-       <a type="button"id="bindWexin" class="btn btn-primary btn-embossed">绑定微信</a>
         <a type="button"id="logout" href="__URL__-logOut" class="btn btn-danger btn-embossed">注销</a>
   </div>
 </div>

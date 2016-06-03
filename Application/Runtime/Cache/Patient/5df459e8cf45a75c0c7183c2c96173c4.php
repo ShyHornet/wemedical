@@ -48,7 +48,7 @@
 </div>
 <div class="collapse navbar-collapse" id="navbar-collapse-01">
   <ul class="nav navbar-nav">
-    <li ><a href="#fakelink">医院信息</a></li>
+    <li ><a href="/wemedical/Home-HospitalInfo">医院信息</a></li>
       <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
     <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
     <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
@@ -71,6 +71,9 @@
 <div class="container">
   <div class="col-md-12">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="order_id" hidden>
+        <?php echo ($id); ?>
+      </div>
   <div class="panel panel-success">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
@@ -126,8 +129,25 @@
     </div>
   </div>
 </div>
+<div class="col-lg-12">
+<a type="button"   class="btn btn-danger btn-wide btn-hg btn-embossed" style="width=90%;">取消预约</a>
+</div>
+
   </div>
 </div>
+<script type="text/javascript">
+  $(".btn").click(function(){
+      $.post('/wemedical/index.php/Patient-MyOrders-cancelOrder',{id:$('.order_id').html()},function(data){
+          if(data=='0'){
+            alert('成功取消预约');
+            setTimeout(function(){
+              window.location.href = '/wemedical/index.php/Patient-MyOrders-index';
+            },1000);
+
+          }
+      })
+  });
+</script>
 
 <footer >
 <p>Powered by HJW</p>

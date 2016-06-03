@@ -11,7 +11,6 @@ class MeController extends Controller {
         $this->assign('gender',$data['gender']==1?"男":"女");
         $this->assign('phone',$data['phone']);
         $this->assign('id_card',$data['id_card']);
-        $this->assign('location',$data['location']);
         $this->display('index');
       }else{
 

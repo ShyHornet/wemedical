@@ -3,7 +3,13 @@ namespace Patient\Controller;
 use Think\Controller;
 class AppointmentController extends Controller {
   public function index() {
-      $this->display('index');
+    if(session("?current_user")&&(session("current_user.user_type")=="patient")){
+
+          $this->display('index');
+    }else{
+
+      $this->error("登陆后才能查看预约信息","Patient-MyOrders-Index");
+  }
   }
   public function getDoc($num,$date = null){
     $doc =new \Doctor\Model\DoctorModel("Doctor");

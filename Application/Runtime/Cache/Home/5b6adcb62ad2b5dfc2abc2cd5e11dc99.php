@@ -39,7 +39,7 @@
 </div>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav">
-      <li ><a href="#fakelink">医院信息</a></li>
+      <li ><a href="/wemedical/Home-HospitalInfo">医院信息</a></li>
         <li id="loginPage"><a  href="/wemedical/Home-Login-Index">登陆注册</a></li>
       <li id="aptPage"><a  href="/wemedical/Patient-Appointment-Index">预约挂号</a></li>
       <li id="myOrdersPage"><a  href="/wemedical/Patient-MyOrders-Index">我的预约</a></li>
@@ -143,6 +143,7 @@ $("select").change(function(){
       },
       dataType:'json'
     });
+    if($('#userType').val()==1){
 		$("#loginForm").validate({
 		rules:{
 			name:{
@@ -154,7 +155,7 @@ $("select").change(function(){
 			  }
 },function(){
         $('#loginForm').submit();
-});
+});}
 $.validator.addMethod("checkName",function(value,element,params){
   $("#name_error").html("").hide();
   var nameRegex = /^[\u4e00-\u9fa5]{2,}$/;
